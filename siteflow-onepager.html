@@ -3,137 +3,103 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SiteFlow — Product One-Pager</title>
+<meta name="description" content="Mobile workflow automation for clinical research coordinators">
+<title>SiteFlow · Anish Gudipaati</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=IBM+Plex+Mono:wght@400&amp;display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --color-text-primary: #111827;
-  --color-text-secondary: #4B5563;
-  --color-background-primary: #ffffff;
-  --color-background-secondary: #F3F4F6;
-  --color-border-tertiary: #E5E7EB;
-  --border-radius-sm: 4px;
-  --border-radius-md: 8px;
-  --border-radius-lg: 12px;
+:root { --paper:#EDEAE2; --ink:#1C1B19; --muted:#5B584F; --accent:#9A3324; --line:#C7C1B0; --soft:#DAD5C7; }
+* { box-sizing:border-box; }
+html { scroll-padding-top:24px; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; font-size:1rem; line-height:1.7; -webkit-font-smoothing:antialiased; }
+a { color:inherit; text-decoration-thickness:1px; text-underline-offset:4px; }
+a:hover { color:var(--accent); }
+a:focus-visible { outline:2px solid var(--accent); outline-offset:5px; }
+.document { width:min(100%, 960px); margin:auto; padding:48px 32px 32px; }
+.masthead { display:flex; justify-content:space-between; gap:16px; align-items:baseline; padding:12px 0; border-top:2px solid var(--ink); border-bottom:1px solid var(--line); font-size:.875rem; }
+.masthead span { color:var(--muted); }
+.title-block { padding:44px 0 36px; }
+.eyebrow { margin:0 0 16px; color:var(--accent); font-family:'IBM Plex Mono',monospace; font-size:.8125rem; }
+h1 { margin:0 0 18px; font-family:'Fraunces',Georgia,serif; font-size:clamp(2.8rem,7vw,4.4rem); font-weight:500; line-height:1.05; letter-spacing:-.035em; }
+.lede { font-size:1.2rem; line-height:1.55; max-width:650px; margin:0; }
+.subtitle { color:var(--muted); margin:12px 0 0; max-width:650px; }
+.byline { display:flex; justify-content:space-between; flex-wrap:wrap; column-gap:24px; row-gap:8px; margin-top:28px; font-size:.875rem; color:var(--muted); }
+.byline a { color:var(--ink); }
+.chapter { display:grid; grid-template-columns:160px minmax(0,1fr); gap:40px; border-top:1px solid var(--line); padding:34px 0 38px; }
+.chapter-label { margin:3px 0 0; font-family:'IBM Plex Mono',monospace; font-size:.875rem; font-weight:400; line-height:1.5; color:var(--accent); }
+.chapter-label span { display:block; margin-bottom:7px; font-size:.75rem; color:var(--muted); }
+.chapter-content { min-width:0; }
+.subsection + .subsection { margin-top:30px; }
+h3 { font-family:'Fraunces',Georgia,serif; font-weight:500; font-size:1.5rem; line-height:1.3; letter-spacing:-.015em; margin:0 0 12px; }
+p { margin:0 0 16px; }
+p:last-child { margin-bottom:0; }
+strong { font-weight:500; }
+.citation { font-size:.8125rem; color:var(--accent); white-space:nowrap; }
+.figures { margin:30px 0 0; }
+.figures figcaption { font-size:.875rem; font-weight:500; padding:0 0 10px; border-bottom:1px solid var(--ink); }
+.figures dl { margin:0; }
+.figure-row { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:24px; padding:10px 0; border-bottom:1px solid var(--soft); font-size:.875rem; }
+.figure-row dt { color:var(--muted); }
+.figure-row dd { margin:0; font-variant-numeric:tabular-nums; font-weight:500; }
+.figure-note { color:var(--muted); font-size:.8125rem; margin-top:14px; }
+.references { list-style:none; padding:0; margin:0; }
+.references li { display:grid; grid-template-columns:26px minmax(0,1fr); gap:12px; margin-bottom:9px; font-size:.875rem; line-height:1.5; }
+.references li > span { font-family:'IBM Plex Mono',monospace; font-size:.75rem; color:var(--muted); padding-top:2px; }
+.references a { overflow-wrap:anywhere; text-decoration-color:var(--line); }
+.research-date { color:var(--muted); font-size:.8125rem; margin-bottom:16px; }
+.footer { display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; border-top:1px solid var(--ink); padding-top:18px; font-size:.875rem; }
+.footer span { color:var(--muted); }
+@media(max-width:700px) {
+ .document { padding:24px 22px; }
+ .title-block { padding:32px 0; }
+ .chapter { grid-template-columns:1fr; gap:20px; padding:26px 0 30px; }
+ .chapter-label span { display:inline; margin-right:12px; }
+ .masthead { flex-wrap:wrap; gap:4px 16px; }
+ .subsection + .subsection { margin-top:26px; }
+ .lede { font-size:1.125rem; }
 }
-body {
-  font-family: var(--font-sans);
-  background: #F9FAFB;
-  color: var(--color-text-primary);
-  padding: 32px;
-  max-width: 1100px;
-  margin: 0 auto;
-  -webkit-font-smoothing: antialiased;
+@media print {
+ body { background:#fff; font-size:11pt; }
+ .document { width:auto; padding:0; }
+ .title-block { padding:20px 0; }
+ h1 { font-size:36pt; }
+ .chapter { grid-template-columns:110px minmax(0,1fr); gap:24px; padding:20px 0; }
+ h3,.chapter-label { break-after:avoid; }
+ p,.figure-row,.references li { orphans:3; widows:3; }
+ a { text-decoration:none; }
+ .byline a,.footer a { display:none; }
 }
-.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
-
-.sf-root { font-family: var(--font-sans); padding: 0; }
-.sf-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1.5rem; gap: 1rem; }
-.sf-logo { display: flex; align-items: center; gap: 10px; }
-.sf-logo-mark { width: 36px; height: 36px; border-radius: 8px; background: #1D9E75; display: flex; align-items: center; justify-content: center; }
-.sf-logo-mark i { font-size: 18px; color: #E1F5EE; }
-.sf-logo-text { font-size: 20px; font-weight: 500; color: var(--color-text-primary); }
-.sf-logo-sub { font-size: 12px; color: var(--color-text-secondary); margin-top: 1px; }
-.sf-tagline { font-size: 13px; color: var(--color-text-secondary); text-align: right; max-width: 260px; line-height: 1.5; }
-.sf-divider { height: 0.5px; background: var(--color-border-tertiary); margin: 0 0 1.25rem; }
-.sf-stats { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; margin-bottom: 1.5rem; }
-.sf-stat { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px 14px; }
-.sf-stat-num { font-size: 22px; font-weight: 500; color: #0F6E56; line-height: 1.1; }
-.sf-stat-label { font-size: 11px; color: var(--color-text-secondary); margin-top: 3px; line-height: 1.4; }
-.sf-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 1.25rem; }
-.sf-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px; }
-.sf-card-title { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 10px; }
-.sf-pain-item { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px; font-size: 13px; color: var(--color-text-primary); line-height: 1.45; }
-.sf-dot { width: 6px; height: 6px; border-radius: 50%; background: #D85A30; margin-top: 5px; flex-shrink: 0; }
-.sf-feat { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
-.sf-feat-icon { width: 28px; height: 28px; border-radius: 6px; background: #E1F5EE; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.sf-feat-icon i { font-size: 14px; color: #0F6E56; }
-.sf-feat-body { font-size: 13px; color: var(--color-text-primary); line-height: 1.45; }
-.sf-feat-title { font-weight: 500; }
-.sf-comp-row { display: flex; align-items: center; justify-content: space-between; padding: 6px 0; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: 12.5px; }
-.sf-comp-row:last-child { border-bottom: none; }
-.sf-comp-name { color: var(--color-text-primary); font-weight: 500; }
-.sf-comp-flaw { color: var(--color-text-secondary); flex: 1; padding: 0 12px; }
-.sf-badge { font-size: 10px; padding: 2px 7px; border-radius: 4px; font-weight: 500; white-space: nowrap; }
-.sf-badge-green { background: #E1F5EE; color: #085041; }
-.sf-badge-gray { background: var(--color-background-secondary); color: var(--color-text-secondary); }
-.sf-mot-step { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 8px; font-size: 13px; color: var(--color-text-primary); line-height: 1.45; }
-.sf-step-num { width: 20px; height: 20px; border-radius: 50%; background: #1D9E75; color: #E1F5EE; font-size: 11px; font-weight: 500; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
-.sf-insight { font-size: 13px; color: var(--color-text-primary); line-height: 1.6; padding: 10px 14px; border-left: 2px solid #1D9E75; background: #E1F5EE55; margin-top: 4px; border-radius: 0 4px 4px 0; }
 </style>
 </head>
 <body>
-<div class="sf-root">
-  <h2 class="sr-only">SiteFlow product case study one-pager</h2>
-
-  <div class="sf-header">
-    <div class="sf-logo">
-      <div class="sf-logo-mark"><i class="ti ti-clipboard-check" aria-hidden="true"></i></div>
-      <div>
-        <div class="sf-logo-text">SiteFlow</div>
-        <div class="sf-logo-sub">Mobile workflow automation for clinical research coordinators</div>
-      </div>
-    </div>
-    <div class="sf-tagline">9,700 independent US clinical sites. Zero software built for the people who run them.</div>
-  </div>
-
-  <div class="sf-divider"></div>
-
-  <div class="sf-stats">
-    <div class="sf-stat"><div class="sf-stat-num">9,700</div><div class="sf-stat-label">independent US research sites</div></div>
-    <div class="sf-stat"><div class="sf-stat-num">~20K</div><div class="sf-stat-label">CRC end users, no dedicated tool</div></div>
-    <div class="sf-stat"><div class="sf-stat-num">$199</div><div class="sf-stat-label">per site / month — PI expense approval</div></div>
-    <div class="sf-stat"><div class="sf-stat-num">$1.16M</div><div class="sf-stat-label">ARR at 5% market penetration</div></div>
-  </div>
-
-  <div class="sf-two-col">
-    <div class="sf-card">
-      <div class="sf-card-title">Top pain points — 53 primary sources</div>
-      <div class="sf-pain-item"><div class="sf-dot"></div>Double data entry: paper CRF → EMR → sponsor EDC, every visit</div>
-      <div class="sf-pain-item"><div class="sf-dot"></div>Chronic burnout — one CRC departure paralyzes an entire trial portfolio</div>
-      <div class="sf-pain-item"><div class="sf-dot"></div>Regulatory paranoia — FDA audit risk, paper binders, chasing PI signatures</div>
-      <div class="sf-pain-item"><div class="sf-dot"></div>Six fragmented systems, none integrated (REDCap, Rave, Epic, Veeva…)</div>
-    </div>
-    <div class="sf-card">
-      <div class="sf-card-title">V1 — three features only</div>
-      <div class="sf-feat">
-        <div class="sf-feat-icon"><i class="ti ti-device-tablet" aria-hidden="true"></i></div>
-        <div class="sf-feat-body"><span class="sf-feat-title">Mobile data intake</span> — tablet replaces clipboard at point of care; consumer-grade UX</div>
-      </div>
-      <div class="sf-feat">
-        <div class="sf-feat-icon"><i class="ti ti-shield-check" aria-hidden="true"></i></div>
-        <div class="sf-feat-body"><span class="sf-feat-title">Auto regulatory updater</span> — 21 CFR Part 11 docs auto-generated on data capture</div>
-      </div>
-      <div class="sf-feat">
-        <div class="sf-feat-icon"><i class="ti ti-user-check" aria-hidden="true"></i></div>
-        <div class="sf-feat-body"><span class="sf-feat-title">PI audit portal</span> — mobile dashboard for absentee PI to review and sign compliance logs</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="sf-two-col">
-    <div class="sf-card">
-      <div class="sf-card-title">Competitive landscape</div>
-      <div class="sf-comp-row"><span class="sf-comp-name">Veeva SiteVault</span><span class="sf-comp-flaw">Sponsor-owned UX roadmap</span><span class="sf-badge sf-badge-gray">Free</span></div>
-      <div class="sf-comp-row"><span class="sf-comp-name">Florence eBinders</span><span class="sf-comp-flaw">Rigid, steep learning curve</span><span class="sf-badge sf-badge-gray">Mid</span></div>
-      <div class="sf-comp-row"><span class="sf-comp-name">Medrio</span><span class="sf-comp-flaw">EDC only, no site ops</span><span class="sf-badge sf-badge-gray">Mid</span></div>
-      <div class="sf-comp-row"><span class="sf-comp-name">Ennov / Clinical Conductor</span><span class="sf-comp-flaw">Built for enterprise QA</span><span class="sf-badge sf-badge-gray">Enterprise</span></div>
-      <div class="sf-comp-row"><span class="sf-comp-name" style="color:#0F6E56;">SiteFlow</span><span class="sf-comp-flaw">Site-centric, affordable</span><span class="sf-badge sf-badge-green">$199/mo</span></div>
-    </div>
-    <div class="sf-card">
-      <div class="sf-card-title">Go-to-market motion</div>
-      <div class="sf-mot-step"><div class="sf-step-num">1</div><div>CRC discovers via r/clinicalresearch, ACRP forums, YouTube</div></div>
-      <div class="sf-mot-step"><div class="sf-step-num">2</div><div>Becomes internal champion — solves daily burnout pain</div></div>
-      <div class="sf-mot-step"><div class="sf-step-num">3</div><div>PI sees FDA audit risk reduction in the portal</div></div>
-      <div class="sf-mot-step"><div class="sf-step-num">4</div><div>PI approves as operational expense — no budget committee</div></div>
-      <div class="sf-insight">Veeva structurally cannot serve the CRC first without cannibalizing $2B+ in sponsor revenue. SiteFlow builds in the gap they cannot fill.</div>
-    </div>
-  </div>
-</div>
+<main class="document">
+<div class="masthead"><a href="index.html#work">Anish Gudipaati / Product Memo</a><span>Product case study</span></div>
+<header class="title-block">
+<p class="eyebrow">Clinical research · Workflow software</p>
+<h1>SiteFlow</h1>
+<p class="lede">Mobile workflow automation for clinical research coordinators</p><p class="subtitle">A focused visit-to-review workflow for small independent research sites.</p>
+<div class="byline"><span>Anish Gudipaati</span><a href="siteflow-prd.docx">Read the full PRD ↓</a></div>
+</header>
+<section class="chapter" aria-labelledby="section-1"><h2 class="chapter-label" id="section-1"><span>01</span>Problem &amp; opportunity</h2><div class="chapter-content"><section class="subsection"><h3>Problem and customer</h3><p>A coordinator at a site running 1–10 trials must reconcile visit work across clinical records, sponsor systems, and regulatory documents. Original discovery identified repeated concerns about administrative burden, fragmented systems, and delayed signatures. The initial buyer is the investigator or site director; privacy, sponsor, and institutional approval may also be necessary.</p></section>
+<section class="subsection"><h3>Competitive position</h3><p><strong>Veeva SiteVault</strong> already provides site-focused eISF and related workflows; its eISF tier is free through 20 active studies. <strong>Florence</strong> offers eRegulatory, eSource, and eConsent. <a class="citation" href="#ref-S1">[S1–S3]</a></p>
+<p>SiteFlow must prove a faster, easier visit-to-review task for the chosen practice. A paid product must justify itself against a free alternative. Sponsor EDC integration and multi-site administration are deferred.</p></section></div></section><section class="chapter" aria-labelledby="section-2"><h2 class="chapter-label" id="section-2"><span>02</span>Product approach</h2><div class="chapter-content"><section class="subsection"><h3>Product decision</h3><p>Start with one study and one approved visit workflow. A coordinator captures a checklist, reviews a prepared documentation packet, and routes the exact record version for investigator review. Measure the whole process, including rework and external EDC entry, before claiming a productivity gain.</p></section>
+<section class="subsection"><h3>V1 scope and user flow</h3><p><strong>1 · Mobile intake</strong><br>Study-specific fields, save state, and template versions. Offline changes remain pending until reconciled.</p>
+<p><strong>2 · Documentation preparation</strong><br>Prepare source-linked entries for review. Unsupported events become exception tasks, not generated compliance claims.</p>
+<p><strong>3 · Investigator review</strong><br>Authorized reviewer, exact record version, and retained signature history. Material changes require renewed review.</p></section></div></section><section class="chapter" aria-labelledby="section-3"><h2 class="chapter-label" id="section-3"><span>03</span>Requirements</h2><div class="chapter-content"><section class="subsection"><h3>Acceptance criteria that matter</h3><p>No silent overwrites when two devices edit a record. Signed versions stay immutable. Missing required items block completion. Exports preserve relevant metadata and history. Offline signing is blocked until server reconciliation.</p>
+<p>FDA guidance makes validation and record integrity part of the implementation. Real-data pilots require applicable privacy agreements and approved procedures. <a class="citation" href="#ref-S4">[S4–S6]</a></p></section></div></section><section class="chapter" aria-labelledby="section-4"><h2 class="chapter-label" id="section-4"><span>04</span>Validation</h2><div class="chapter-content"><section class="subsection"><h3>Pilot and success measures</h3><p>Proposed study: six sites, two baseline weeks, four pilot weeks, with comparable visit types.</p>
+<p><strong>Primary gate:</strong> ≥30% lower median administrative time without worse completeness. Measure review delay, correction rates, and support effort.</p>
+<p>Retain the original ≥4 weekly active CRC sessions/site target; test paid continuation with at least three of six pilot sites. Targets are not pilot results.</p></section></div></section><section class="chapter" aria-labelledby="section-5"><h2 class="chapter-label" id="section-5"><span>05</span>Economics</h2><div class="chapter-content"><section class="subsection"><h3>Economics and acquisition</h3><p>9,700 × 5% × $199 × 12 = <strong>$1,158,180 annualized revenue</strong>. The site count and adoption rate are scenario inputs.</p>
+<p>At an illustrative $40/hour, the subscription requires about five hours of monthly savings before onboarding costs. Recruit coordinator champions and test the buyer’s actual approval process; do not assume $199 bypasses procurement.</p></section><figure class="figures"><figcaption>Research &amp; planning figures</figcaption><dl><div class="figure-row"><dt>sources in original discovery</dt><dd>53</dd></div><div class="figure-row"><dt>sites in the planning scenario</dt><dd>9,700</dd></div><div class="figure-row"><dt>proposed monthly site price</dt><dd>$199</dd></div><div class="figure-row"><dt>ARR scenario at 5% adoption</dt><dd>$1.16M</dd></div></dl></figure></div></section><section class="chapter" aria-labelledby="section-6"><h2 class="chapter-label" id="section-6"><span>06</span>Next decisions</h2><div class="chapter-content"><section class="subsection"><h3>What would change the decision</h3><p>Narrow or stop if benefits disappear after sponsor-system reconciliation, if each protocol needs extensive custom engineering, or if the buyer prefers an existing free tool after a fair task comparison.</p>
+<p>The next evidence should be observed workflow results, a tested record-integrity implementation, and paid-pilot decisions.</p></section></div></section>
+<section class="chapter" aria-labelledby="sources"><h2 class="chapter-label" id="sources">References</h2><div class="chapter-content"><p class="research-date">Research references</p><ol class="references"><li id="ref-S1"><span>S1</span><a href="https://sites.veeva.com/solutions/eisf" target="_blank" rel="noopener noreferrer">Veeva SiteVault eISF</a></li>
+<li id="ref-S2"><span>S2</span><a href="https://sites.veeva.com/" target="_blank" rel="noopener noreferrer">Veeva SiteVault product overview</a></li>
+<li id="ref-S3"><span>S3</span><a href="https://www.florencehc.com/pillar-page-eregulatory/" target="_blank" rel="noopener noreferrer">Florence eRegulatory overview</a></li>
+<li id="ref-S4"><span>S4</span><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/electronic-systems-electronic-records-and-electronic-signatures-clinical-investigations-questions" target="_blank" rel="noopener noreferrer">FDA electronic systems guidance October 2024</a></li>
+<li id="ref-S5"><span>S5</span><a href="https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/fda-bioresearch-monitoring-information/guidance-industry-computerized-systems-used-clinical-trials" target="_blank" rel="noopener noreferrer">FDA computerized systems used in clinical trials</a></li>
+<li id="ref-S6"><span>S6</span><a href="https://www.hhs.gov/hipaa/for-professionals/special-topics/health-information-technology/cloud-computing/index.html" target="_blank" rel="noopener noreferrer">HHS guidance on HIPAA and cloud computing</a></li>
+</ol></div></section>
+<footer class="footer"><a href="siteflow-prd.docx">Read the complete product requirements document ↓</a><span>Anish Gudipaati · Product case study · v2</span></footer>
+</main>
 </body>
 </html>

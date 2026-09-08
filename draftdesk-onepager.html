@@ -3,172 +3,110 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DraftDesk — Product One-Pager</title>
+<meta name="description" content="Context-aware QBRs and escalation summaries with source-linked facts and human review">
+<title>DraftDesk · Anish Gudipaati</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=IBM+Plex+Mono:wght@400&amp;display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --color-text-primary: #111827;
-  --color-text-secondary: #4B5563;
-  --color-background-primary: #ffffff;
-  --color-background-secondary: #F3F4F6;
-  --color-border-tertiary: #E5E7EB;
-  --border-radius-sm: 4px;
-  --border-radius-md: 8px;
-  --border-radius-lg: 12px;
+:root { --paper:#EDEAE2; --ink:#1C1B19; --muted:#5B584F; --accent:#9A3324; --line:#C7C1B0; --soft:#DAD5C7; }
+* { box-sizing:border-box; }
+html { scroll-padding-top:24px; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; font-size:1rem; line-height:1.7; -webkit-font-smoothing:antialiased; }
+a { color:inherit; text-decoration-thickness:1px; text-underline-offset:4px; }
+a:hover { color:var(--accent); }
+a:focus-visible { outline:2px solid var(--accent); outline-offset:5px; }
+.document { width:min(100%, 960px); margin:auto; padding:48px 32px 32px; }
+.masthead { display:flex; justify-content:space-between; gap:16px; align-items:baseline; padding:12px 0; border-top:2px solid var(--ink); border-bottom:1px solid var(--line); font-size:.875rem; }
+.masthead span { color:var(--muted); }
+.title-block { padding:44px 0 36px; }
+.eyebrow { margin:0 0 16px; color:var(--accent); font-family:'IBM Plex Mono',monospace; font-size:.8125rem; }
+h1 { margin:0 0 18px; font-family:'Fraunces',Georgia,serif; font-size:clamp(2.8rem,7vw,4.4rem); font-weight:500; line-height:1.05; letter-spacing:-.035em; }
+.lede { font-size:1.2rem; line-height:1.55; max-width:650px; margin:0; }
+.subtitle { color:var(--muted); margin:12px 0 0; max-width:650px; }
+.byline { display:flex; justify-content:space-between; flex-wrap:wrap; column-gap:24px; row-gap:8px; margin-top:28px; font-size:.875rem; color:var(--muted); }
+.byline a { color:var(--ink); }
+.chapter { display:grid; grid-template-columns:160px minmax(0,1fr); gap:40px; border-top:1px solid var(--line); padding:34px 0 38px; }
+.chapter-label { margin:3px 0 0; font-family:'IBM Plex Mono',monospace; font-size:.875rem; font-weight:400; line-height:1.5; color:var(--accent); }
+.chapter-label span { display:block; margin-bottom:7px; font-size:.75rem; color:var(--muted); }
+.chapter-content { min-width:0; }
+.subsection + .subsection { margin-top:30px; }
+h3 { font-family:'Fraunces',Georgia,serif; font-weight:500; font-size:1.5rem; line-height:1.3; letter-spacing:-.015em; margin:0 0 12px; }
+p { margin:0 0 16px; }
+p:last-child { margin-bottom:0; }
+strong { font-weight:500; }
+.citation { font-size:.8125rem; color:var(--accent); white-space:nowrap; }
+.figures { margin:30px 0 0; }
+.figures figcaption { font-size:.875rem; font-weight:500; padding:0 0 10px; border-bottom:1px solid var(--ink); }
+.figures dl { margin:0; }
+.figure-row { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:24px; padding:10px 0; border-bottom:1px solid var(--soft); font-size:.875rem; }
+.figure-row dt { color:var(--muted); }
+.figure-row dd { margin:0; font-variant-numeric:tabular-nums; font-weight:500; }
+.figure-note { color:var(--muted); font-size:.8125rem; margin-top:14px; }
+.references { list-style:none; padding:0; margin:0; }
+.references li { display:grid; grid-template-columns:26px minmax(0,1fr); gap:12px; margin-bottom:9px; font-size:.875rem; line-height:1.5; }
+.references li > span { font-family:'IBM Plex Mono',monospace; font-size:.75rem; color:var(--muted); padding-top:2px; }
+.references a { overflow-wrap:anywhere; text-decoration-color:var(--line); }
+.research-date { color:var(--muted); font-size:.8125rem; margin-bottom:16px; }
+.footer { display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; border-top:1px solid var(--ink); padding-top:18px; font-size:.875rem; }
+.footer span { color:var(--muted); }
+@media(max-width:700px) {
+ .document { padding:24px 22px; }
+ .title-block { padding:32px 0; }
+ .chapter { grid-template-columns:1fr; gap:20px; padding:26px 0 30px; }
+ .chapter-label span { display:inline; margin-right:12px; }
+ .masthead { flex-wrap:wrap; gap:4px 16px; }
+ .subsection + .subsection { margin-top:26px; }
+ .lede { font-size:1.125rem; }
 }
-body {
-  font-family: var(--font-sans);
-  background: #F9FAFB;
-  color: var(--color-text-primary);
-  padding: 32px;
-  max-width: 1100px;
-  margin: 0 auto;
-  -webkit-font-smoothing: antialiased;
+@media print {
+ body { background:#fff; font-size:11pt; }
+ .document { width:auto; padding:0; }
+ .title-block { padding:20px 0; }
+ h1 { font-size:36pt; }
+ .chapter { grid-template-columns:110px minmax(0,1fr); gap:24px; padding:20px 0; }
+ h3,.chapter-label { break-after:avoid; }
+ p,.figure-row,.references li { orphans:3; widows:3; }
+ a { text-decoration:none; }
+ .byline a,.footer a { display:none; }
 }
-.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
-
-.op-root { font-family: var(--font-sans); padding: 0; }
-.op-header { background: #1B2A4A; border-radius: var(--border-radius-lg); padding: 36px 40px 32px; margin-bottom: 16px; }
-.op-logo { font-size: 26px; font-weight: 500; color: #fff; letter-spacing: 0.04em; margin-bottom: 6px; }
-.op-tagline { font-size: 15px; color: #7FA8C9; margin-bottom: 20px; }
-.op-header-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-.op-stat { background: rgba(255,255,255,0.07); border-radius: var(--border-radius-md); padding: 14px 16px; }
-.op-stat-num { font-size: 22px; font-weight: 500; color: #fff; line-height: 1.1; }
-.op-stat-label { font-size: 11px; color: #7FA8C9; margin-top: 3px; }
-.op-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
-.op-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 20px 22px; }
-.op-card-title { font-size: 11px; font-weight: 500; color: #0F7B6C; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
-.op-body { font-size: 13px; color: var(--color-text-secondary); line-height: 1.65; }
-.op-jtbd { background: #E8F0F7; border-left: 3px solid #1B2A4A; border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; padding: 12px 16px; font-size: 13px; color: #1B2A4A; font-style: italic; line-height: 1.6; margin-top: 10px; }
-.op-pill { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 20px; margin: 3px 3px 3px 0; font-weight: 500; }
-.op-pill-p0 { background: #FDECEA; color: #A32D2D; }
-.op-pill-p1 { background: #FFF8E1; color: #854F0B; }
-.op-pill-p2 { background: #EAF3DE; color: #3B6D11; }
-.op-comp-row { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: 13px; }
-.op-comp-row:last-child { border-bottom: none; padding-bottom: 0; }
-.op-comp-name { font-weight: 500; color: var(--color-text-primary); min-width: 148px; flex-shrink: 0; }
-.op-comp-gap { color: var(--color-text-secondary); line-height: 1.5; }
-.op-x { color: #A32D2D; font-weight: 500; margin-right: 4px; }
-.op-metric-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: 13px; }
-.op-metric-row:last-child { border-bottom: none; padding-bottom: 0; }
-.op-metric-label { color: var(--color-text-secondary); }
-.op-metric-val { font-weight: 500; color: var(--color-text-primary); }
-.op-roadmap-row { display: flex; gap: 10px; padding: 7px 0; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: 13px; align-items: flex-start; }
-.op-roadmap-row:last-child { border-bottom: none; padding-bottom: 0; }
-.op-phase-badge { font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 20px; min-width: 68px; text-align: center; white-space: nowrap; flex-shrink: 0; margin-top: 1px; }
-.op-phase-a { background: #E8F0F7; color: #1B2A4A; }
-.op-phase-b { background: #E1F5EE; color: #085041; }
-.op-phase-c { background: #FFF8E1; color: #633806; }
-.op-roadmap-text { color: var(--color-text-secondary); line-height: 1.5; }
-.op-footer { background: #1B2A4A; border-radius: var(--border-radius-lg); padding: 18px 28px; display: flex; justify-content: space-between; align-items: center; }
-.op-footer-ns { font-size: 13px; color: #7FA8C9; }
-.op-footer-ns span { color: #fff; font-weight: 500; }
-.op-pricing { display: flex; gap: 10px; margin-top: 10px; }
-.op-price-card { flex: 1; border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 12px 14px; }
-.op-price-tier { font-size: 11px; font-weight: 500; color: #0F7B6C; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 4px; }
-.op-price-num { font-size: 20px; font-weight: 500; color: var(--color-text-primary); }
-.op-price-desc { font-size: 11px; color: var(--color-text-secondary); margin-top: 3px; line-height: 1.5; }
-.op-dilemma { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px 14px; margin-top: 10px; font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; }
-.op-dilemma strong { color: var(--color-text-primary); font-weight: 500; }
 </style>
 </head>
 <body>
-<div class="op-root">
-  <!-- Header -->
-  <div class="op-header">
-    <div class="op-logo">DraftDesk</div>
-    <div class="op-tagline">AI writing co-pilot for non-technical knowledge workers — structured, context-aware, workflow-ready drafts</div>
-    <div class="op-header-stats">
-      <div class="op-stat"><div class="op-stat-num">70M+</div><div class="op-stat-label">US knowledge workers</div></div>
-      <div class="op-stat"><div class="op-stat-num">$18/seat</div><div class="op-stat-label">Pro monthly price</div></div>
-      <div class="op-stat"><div class="op-stat-num">$1.6M</div><div class="op-stat-label">ARR at 7,500 seats</div></div>
-      <div class="op-stat"><div class="op-stat-num">4–6 hrs</div><div class="op-stat-label">Saved per user per week</div></div>
-    </div>
-  </div>
-
-  <!-- Row 1 -->
-  <div class="op-grid">
-    <div class="op-card">
-      <div class="op-card-title">Problem</div>
-      <div class="op-body">Enterprises have bought ChatGPT Enterprise, Copilot, and Gemini at scale — but abandonment is high. Knowledge workers in CS, marketing, and procurement spend 4–6 hours per week on first drafts that follow the same structure every time. Horizontal AI tools give them a blank prompt box. Most can't use it effectively.</div>
-      <div class="op-jtbd">"When I sit down to write a QBR, I want a complete first draft pre-loaded with my account's context — so I can spend my time on strategy, not formatting."</div>
-    </div>
-    <div class="op-card">
-      <div class="op-card-title">Solution</div>
-      <div class="op-body">DraftDesk eliminates the blank prompt state. Workers select a role-specific template (QBR, RFP response, campaign brief, escalation summary), confirm auto-injected context pulled from Salesforce and Gong, and receive a complete, structured first draft in under 60 seconds — not a chat reply, but a reviewable, client-ready document.</div>
-      <div style="margin-top: 12px;">
-        <span class="op-pill op-pill-p0">Role templates</span>
-        <span class="op-pill op-pill-p0">CRM context injection</span>
-        <span class="op-pill op-pill-p0">60s draft generation</span>
-        <span class="op-pill op-pill-p1">Approval workflow</span>
-        <span class="op-pill op-pill-p1">Team template library</span>
-        <span class="op-pill op-pill-p2">Slack bot</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Row 2 -->
-  <div class="op-grid">
-    <div class="op-card">
-      <div class="op-card-title">Primary Persona</div>
-      <div style="display: flex; gap: 12px; align-items: flex-start;">
-        <div style="width: 40px; height: 40px; border-radius: 50%; background: #E8F0F7; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 500; color: #1B2A4A; flex-shrink: 0;">PM</div>
-        <div>
-          <div style="font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 2px;">Priya, 31 — Sr. Customer Success Manager</div>
-          <div class="op-body">Series C SaaS · 40 accounts · $2.4M ARR managed · produces 8–12 QBRs, renewals, and escalation summaries per month · owns tool adoption without IT approval</div>
-        </div>
-      </div>
-      <div style="margin-top: 14px;">
-        <div class="op-card-title" style="margin-bottom: 6px;">Secondary personas</div>
-        <div class="op-body">Marcus (Marketing Ops, campaign briefs) · Elena (Procurement, RFP responses)</div>
-      </div>
-    </div>
-    <div class="op-card">
-      <div class="op-card-title">Innovator's Dilemma</div>
-      <div class="op-comp-row"><div class="op-comp-name">Microsoft Copilot</div><div class="op-comp-gap"><span class="op-x">✗</span>Must stay horizontal — vertical templates fragment enterprise licensing</div></div>
-      <div class="op-comp-row"><div class="op-comp-name">Google Gemini</div><div class="op-comp-gap"><span class="op-x">✗</span>Same horizontal constraint — no CRM context layer possible</div></div>
-      <div class="op-comp-row"><div class="op-comp-name">Notion AI</div><div class="op-comp-gap"><span class="op-x">✗</span>Document tool, not workflow tool — no persistent account context</div></div>
-      <div class="op-comp-row"><div class="op-comp-name">RFPIO / Loopio</div><div class="op-comp-gap"><span class="op-x">✗</span>$30K+/yr enterprise pricing — inaccessible to mid-market ICs</div></div>
-      <div class="op-dilemma"><strong>DraftDesk's moat:</strong> the integration pipeline that pulls live account context from Salesforce + Gong into a structured template. No horizontal player can build this without becoming a vertical SaaS company.</div>
-    </div>
-  </div>
-
-  <!-- Row 3 -->
-  <div class="op-grid">
-    <div class="op-card">
-      <div class="op-card-title">Metrics Framework</div>
-      <div class="op-metric-row"><div class="op-metric-label">🌟 North star</div><div class="op-metric-val">3+ drafts / active user / week by Day 60</div></div>
-      <div class="op-metric-row"><div class="op-metric-label">Draft-to-send rate</div><div class="op-metric-val">≥ 60%</div></div>
-      <div class="op-metric-row"><div class="op-metric-label">Integration connect rate</div><div class="op-metric-val">≥ 60% at onboarding</div></div>
-      <div class="op-metric-row"><div class="op-metric-label">Team seat expansion</div><div class="op-metric-val">25%+ within 90 days</div></div>
-      <div class="op-metric-row"><div class="op-metric-label">Month 3 retention</div><div class="op-metric-val">≥ 70%</div></div>
-      <div class="op-metric-row"><div class="op-metric-label">Integration error rate</div><div class="op-metric-val">&lt; 5%</div></div>
-    </div>
-    <div class="op-card">
-      <div class="op-card-title">13-Week Roadmap</div>
-      <div class="op-roadmap-row"><div class="op-phase-badge op-phase-a">Wks 1–4</div><div class="op-roadmap-text">Foundation — template engine, Salesforce integration, draft generation engine v1</div></div>
-      <div class="op-roadmap-row"><div class="op-phase-badge op-phase-b">Wks 5–9</div><div class="op-roadmap-text">Core product — Gong integration, all 4 templates, export, onboarding, design partner beta</div></div>
-      <div class="op-roadmap-row"><div class="op-phase-badge op-phase-c">Wks 10–13</div><div class="op-roadmap-text">Closed beta — approval workflow, team templates, hardening, public waitlist launch</div></div>
-      <div style="margin-top: 14px;">
-        <div class="op-card-title" style="margin-bottom: 6px;">Pricing</div>
-        <div class="op-pricing">
-          <div class="op-price-card"><div class="op-price-tier">Free</div><div class="op-price-num">$0</div><div class="op-price-desc">5 drafts/mo · 2 templates · 1 integration</div></div>
-          <div class="op-price-card" style="border-color: #0F7B6C;"><div class="op-price-tier">Pro</div><div class="op-price-num">$18<span style="font-size:13px;font-weight:400">/seat</span></div><div class="op-price-desc">Unlimited · all templates · all integrations</div></div>
-          <div class="op-price-card"><div class="op-price-tier">Team</div><div class="op-price-num">$14<span style="font-size:13px;font-weight:400">/seat</span></div><div class="op-price-desc">5+ seats · approval workflow · team templates</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <div class="op-footer">
-    <div class="op-footer-ns">GTM wedge: <span>CS managers at Series B–C SaaS</span> → community-led via CSInsider + Reddit → team expansion</div>
-    <div style="font-size: 13px; color: #7FA8C9;">Prepared by <span style="color: #fff; font-weight: 500;">Anish Gudipaati</span> · 2025</div>
-  </div>
-</div>
+<main class="document">
+<div class="masthead"><a href="index.html#work">Anish Gudipaati / Product Memo</a><span>Product case study</span></div>
+<header class="title-block">
+<p class="eyebrow">Customer success · Productivity software</p>
+<h1>DraftDesk</h1>
+<p class="lede">Context-aware QBRs and escalation summaries with source-linked facts and human review</p>
+<div class="byline"><span>Anish Gudipaati</span><a href="draftdesk-prd.docx">Read the full PRD ↓</a></div>
+</header>
+<section class="chapter" aria-labelledby="section-1"><h2 class="chapter-label" id="section-1"><span>01</span>Problem &amp; opportunity</h2><div class="chapter-content"><section class="subsection"><h3>Problem and initial user</h3><p>CS managers repeatedly turn account data, call notes, and internal knowledge into QBRs and escalation summaries. Gathering and checking context can take as much effort as writing.</p>
+<p>Start with a CS manager and a team-lead buyer. The original persona manages 40 accounts and produces 8–12 account documents monthly; the product must fit that actual cadence.</p></section>
+<section class="subsection"><h3>Competitive position</h3><p>Microsoft already offers CRM-aware account summaries and meeting preparation, including Salesforce support. Notion added Salesforce search in March 2026. <a class="citation" href="#ref-D1">[D1–D3]</a></p>
+<p>DraftDesk must prove lower end-to-end preparation and review time for a specific CS document. An integration pipeline alone is insufficient differentiation.</p></section></div></section><section class="chapter" aria-labelledby="section-2"><h2 class="chapter-label" id="section-2"><span>02</span>Product approach</h2><div class="chapter-content"><section class="subsection"><h3>Product decision</h3><p>Start with two related outputs and a complete review loop: choose account and template → collect permitted evidence → confirm context → generate → verify and edit → export.</p>
+<p>QBRs need supported progress and next actions. Escalations need reliable chronology and commitments. RFP responses and marketing briefs follow after the first source and quality contracts work.</p></section></div></section><section class="chapter" aria-labelledby="section-3"><h2 class="chapter-label" id="section-3"><span>03</span>Requirements</h2><div class="chapter-content"><section class="subsection"><h3>Context and permissions</h3><p>Gong OAuth authorization is organization-level and requires a tech admin. Integration access does not automatically authorize every DraftDesk user to view every call. <a class="citation" href="#ref-D4">[D4, D5]</a></p>
+<p>Map each customer’s Salesforce fields explicitly and preserve record, object, and field permissions. Missing or inaccessible context stays visible; the model must not fill it with plausible facts. <a class="citation" href="#ref-D6">[D6]</a></p></section>
+<section class="subsection"><h3>Acceptance criteria</h3><p>Revenue, renewal dates, customer outcomes, and commitments link to evidence or explicit user confirmation. Conflicting sources require a decision. Regeneration preserves accepted edits through version history.</p>
+<p>Export uses the reviewed version and preserves document structure. A downloaded draft is not counted as sent to a customer.</p></section></div></section><section class="chapter" aria-labelledby="section-4"><h2 class="chapter-label" id="section-4"><span>04</span>Validation</h2><div class="chapter-content"><section class="subsection"><h3>AI quality evaluation</h3><p>Proposed release suite: 40 approved or simulated account packets, split between QBRs and escalations. Include stale data, contradictions, missing fields, wrong-account matches, and malicious instructions inside transcripts.</p>
+<p><strong>Gates:</strong> 100% fidelity for critical numbers and dates in the suite; ≥95% supported claims; zero critical unsupported claims or unauthorized disclosures.</p></section>
+<section class="subsection"><h3>Pilot and success metrics</h3><p>Run a proposed five-team pilot against each team’s actual current workflow. Compare matched tasks and blind-review output quality.</p>
+<p><strong>Primary gate:</strong> ≥30% less total human preparation and review time at equal or better quality. Retain ≥70% acceptance with fewer than two substantive revision rounds and 3+ weekly drafts as targets, segmented by document cadence.</p>
+<p>Generation latency target: p95 ≤60 seconds; it is not a measured result.</p></section></div></section><section class="chapter" aria-labelledby="section-5"><h2 class="chapter-label" id="section-5"><span>05</span>Economics</h2><div class="chapter-content"><section class="subsection"><h3>Pricing and cost discipline</h3><p>Proposed Free: 5 drafts/month. Pro: $18/seat/month. Team: $14/seat/month for 5+ seats.</p>
+<p>7,500 seats yield $1.62M annualized at all-Pro pricing, $1.26M at all-Team pricing, or $1.44M at a 50/50 mix.</p>
+<p>At $14 and a 75% contribution margin, variable cost must stay ≤$3.50 per seat/month. Validate generation, connector, and support costs before promising unlimited usage.</p></section><figure class="figures"><figcaption>Research &amp; planning figures</figcaption><dl><div class="figure-row"><dt>broad market context</dt><dd>70M+</dd></div><div class="figure-row"><dt>proposed Pro price</dt><dd>$18/seat</dd></div><div class="figure-row"><dt>ARR scenario at 7,500 Pro seats</dt><dd>$1.62M</dd></div><div class="figure-row"><dt>weekly drafting burden in original research</dt><dd>4–6 hrs</dd></div></dl></figure></div></section><section class="chapter" aria-labelledby="section-6"><h2 class="chapter-label" id="section-6"><span>06</span>Next decisions</h2><div class="chapter-content"><section class="subsection"><h3>13-week sequence</h3><p>Weeks 1–2: observe work, qualify partners, define permissions and evaluation.<br>Weeks 3–5: two templates, manual context, evidence review, and versioned editing.<br>Weeks 6–8: approved connectors and reliable DOCX export.<br>Weeks 9–11: pilot and paired workflow measurement.<br>Weeks 12–13: hardening and paid-continuation decisions.</p>
+<p>Expansion is gated on quality and buyer evidence.</p></section>
+<section class="subsection"><h3>What would change the decision</h3><p>Stop affected retrieval after a permission failure. Hold expansion if fact-checking erases the writing-time savings. Reconsider the wedge if the team’s existing Microsoft, Notion, or Gong workflow performs equally well.</p>
+<p>The next investment case rests on an evaluation report, observed time savings, a tested permissions design, and paid-pilot decisions—not an assumed launch ranking.</p></section></div></section>
+<section class="chapter" aria-labelledby="sources"><h2 class="chapter-label" id="sources">References</h2><div class="chapter-content"><p class="research-date">Research references</p><ol class="references"><li id="ref-D1"><span>D1</span><a href="https://learn.microsoft.com/en-us/microsoft-sales-copilot/use-sales-chat" target="_blank" rel="noopener noreferrer">Microsoft Sales agent in Microsoft 365 Copilot</a></li>
+<li id="ref-D2"><span>D2</span><a href="https://learn.microsoft.com/en-us/microsoft-sales-copilot/sales-m365-copilot-faq" target="_blank" rel="noopener noreferrer">Microsoft Sales agent FAQ</a></li>
+<li id="ref-D3"><span>D3</span><a href="https://www.notion.com/releases/2026-03-11" target="_blank" rel="noopener noreferrer">Notion Salesforce connector release</a></li>
+<li id="ref-D4"><span>D4</span><a href="https://help.gong.io/docs/create-an-app-for-gong" target="_blank" rel="noopener noreferrer">Create an OAuth app for Gong</a></li>
+<li id="ref-D5"><span>D5</span><a href="https://help.gong.io/apidocs/retrieve-users-that-have-specific-individual-access-to-calls-v2callsusers-access" target="_blank" rel="noopener noreferrer">Gong individual call access API</a></li>
+<li id="ref-D6"><span>D6</span><a href="https://developer.salesforce.com/docs/platform/lwc/guide/apex-security" target="_blank" rel="noopener noreferrer">Salesforce secure data access</a></li>
+<li id="ref-D7"><span>D7</span><a href="https://help.gong.io/docs/download-a-call-or-snippet" target="_blank" rel="noopener noreferrer">Gong transcript download guidance</a></li>
+</ol></div></section>
+<footer class="footer"><a href="draftdesk-prd.docx">Read the complete product requirements document ↓</a><span>Anish Gudipaati · Product case study · v2</span></footer>
+</main>
 </body>
 </html>

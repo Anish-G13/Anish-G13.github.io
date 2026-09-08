@@ -3,187 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CapStack — Product One-Pager</title>
+<meta name="description" content="Compare two ways to allocate the same contribution across retirement, brokerage, and savings accounts—with visible assumptions and no asset custody.">
+<title>CapStack · Anish Gudipaati</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=IBM+Plex+Mono:wght@400&amp;display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --color-text-primary: #111827;
-  --color-text-secondary: #4B5563;
-  --color-background-primary: #ffffff;
-  --color-background-secondary: #F3F4F6;
-  --color-border-tertiary: #E5E7EB;
-  --border-radius-sm: 4px;
-  --border-radius-md: 8px;
-  --border-radius-lg: 12px;
+:root { --paper:#EDEAE2; --ink:#1C1B19; --muted:#5B584F; --accent:#9A3324; --line:#C7C1B0; --soft:#DAD5C7; }
+* { box-sizing:border-box; }
+html { scroll-padding-top:24px; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; font-size:1rem; line-height:1.7; -webkit-font-smoothing:antialiased; }
+a { color:inherit; text-decoration-thickness:1px; text-underline-offset:4px; }
+a:hover { color:var(--accent); }
+a:focus-visible { outline:2px solid var(--accent); outline-offset:5px; }
+.document { width:min(100%, 960px); margin:auto; padding:48px 32px 32px; }
+.masthead { display:flex; justify-content:space-between; gap:16px; align-items:baseline; padding:12px 0; border-top:2px solid var(--ink); border-bottom:1px solid var(--line); font-size:.875rem; }
+.masthead span { color:var(--muted); }
+.title-block { padding:44px 0 36px; }
+.eyebrow { margin:0 0 16px; color:var(--accent); font-family:'IBM Plex Mono',monospace; font-size:.8125rem; }
+h1 { margin:0 0 18px; font-family:'Fraunces',Georgia,serif; font-size:clamp(2.8rem,7vw,4.4rem); font-weight:500; line-height:1.05; letter-spacing:-.035em; }
+.lede { font-size:1.2rem; line-height:1.55; max-width:650px; margin:0; }
+.subtitle { color:var(--muted); margin:12px 0 0; max-width:650px; }
+.byline { display:flex; justify-content:space-between; flex-wrap:wrap; column-gap:24px; row-gap:8px; margin-top:28px; font-size:.875rem; color:var(--muted); }
+.byline a { color:var(--ink); }
+.chapter { display:grid; grid-template-columns:160px minmax(0,1fr); gap:40px; border-top:1px solid var(--line); padding:34px 0 38px; }
+.chapter-label { margin:3px 0 0; font-family:'IBM Plex Mono',monospace; font-size:.875rem; font-weight:400; line-height:1.5; color:var(--accent); }
+.chapter-label span { display:block; margin-bottom:7px; font-size:.75rem; color:var(--muted); }
+.chapter-content { min-width:0; }
+.subsection + .subsection { margin-top:30px; }
+h3 { font-family:'Fraunces',Georgia,serif; font-weight:500; font-size:1.5rem; line-height:1.3; letter-spacing:-.015em; margin:0 0 12px; }
+p { margin:0 0 16px; }
+p:last-child { margin-bottom:0; }
+strong { font-weight:500; }
+.citation { font-size:.8125rem; color:var(--accent); white-space:nowrap; }
+.figures { margin:30px 0 0; }
+.figures figcaption { font-size:.875rem; font-weight:500; padding:0 0 10px; border-bottom:1px solid var(--ink); }
+.figures dl { margin:0; }
+.figure-row { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:24px; padding:10px 0; border-bottom:1px solid var(--soft); font-size:.875rem; }
+.figure-row dt { color:var(--muted); }
+.figure-row dd { margin:0; font-variant-numeric:tabular-nums; font-weight:500; }
+.figure-note { color:var(--muted); font-size:.8125rem; margin-top:14px; }
+.references { list-style:none; padding:0; margin:0; }
+.references li { display:grid; grid-template-columns:26px minmax(0,1fr); gap:12px; margin-bottom:9px; font-size:.875rem; line-height:1.5; }
+.references li > span { font-family:'IBM Plex Mono',monospace; font-size:.75rem; color:var(--muted); padding-top:2px; }
+.references a { overflow-wrap:anywhere; text-decoration-color:var(--line); }
+.research-date { color:var(--muted); font-size:.8125rem; margin-bottom:16px; }
+.footer { display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; border-top:1px solid var(--ink); padding-top:18px; font-size:.875rem; }
+.footer span { color:var(--muted); }
+@media(max-width:700px) {
+ .document { padding:24px 22px; }
+ .title-block { padding:32px 0; }
+ .chapter { grid-template-columns:1fr; gap:20px; padding:26px 0 30px; }
+ .chapter-label span { display:inline; margin-right:12px; }
+ .masthead { flex-wrap:wrap; gap:4px 16px; }
+ .subsection + .subsection { margin-top:26px; }
+ .lede { font-size:1.125rem; }
 }
-body {
-  font-family: var(--font-sans);
-  background: #F9FAFB;
-  color: var(--color-text-primary);
-  padding: 32px;
-  max-width: 1100px;
-  margin: 0 auto;
-  -webkit-font-smoothing: antialiased;
+@media print {
+ body { background:#fff; font-size:11pt; }
+ .document { width:auto; padding:0; }
+ .title-block { padding:20px 0; }
+ h1 { font-size:36pt; }
+ .chapter { grid-template-columns:110px minmax(0,1fr); gap:24px; padding:20px 0; }
+ h3,.chapter-label { break-after:avoid; }
+ p,.figure-row,.references li { orphans:3; widows:3; }
+ a { text-decoration:none; }
+ .byline a,.footer a { display:none; }
 }
-.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
-
-.cs-pill{display:inline-block;font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;background:#E1F5EE;color:#085041;border:0.5px solid #9FE1CB}
-.cs-stat-val{font-size:22px;font-weight:500;color:var(--color-text-primary);margin:0 0 2px}
-.cs-stat-lbl{font-size:11px;color:var(--color-text-secondary);margin:0}
-.cs-stat-card{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:12px 14px;flex:1;min-width:0}
-.cs-row{display:flex;gap:10px;margin:0 0 10px}
-.cs-section-label{font-size:11px;font-weight:500;color:#0F6E56;letter-spacing:.04em;text-transform:uppercase;margin:0 0 6px}
-.cs-card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:14px 16px}
-.cs-vs-row{display:flex;gap:0;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);overflow:hidden;margin:0 0 8px}
-.cs-vs-left{flex:1;padding:9px 12px;background:var(--color-background-secondary);font-size:12px;color:var(--color-text-secondary)}
-.cs-vs-right{flex:1;padding:9px 12px;background:#E1F5EE;font-size:12px;color:#085041;border-left:0.5px solid #9FE1CB}
-.cs-step{display:flex;align-items:flex-start;gap:10px;margin:0 0 7px}
-.cs-step-num{width:20px;height:20px;border-radius:50%;background:#E1F5EE;color:#085041;font-size:11px;font-weight:500;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
-.cs-divider{border:none;border-top:0.5px solid var(--color-border-tertiary);margin:12px 0}
 </style>
 </head>
 <body>
-
-<div style="padding:0">
-
-  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin:0 0 4px">
-    <div>
-      <div style="display:flex;align-items:center;gap:10px;margin:0 0 4px">
-        <span style="font-size:24px;font-weight:500;color:var(--color-text-primary)">CapStack</span>
-        <span class="cs-pill">Fintech · Consumer</span>
-        <span class="cs-pill" style="background:#E6F1FB;color:#0C447C;border-color:#85B7EB">iOS-first · Mobile</span>
-      </div>
-      <p style="font-size:13px;color:var(--color-text-secondary);margin:0;max-width:480px">Cross-account scenario planning for active retail investors. Model allocation decisions across your 401k, Roth IRA, brokerage, and HYSA — all in one place, with no assets managed.</p>
-    </div>
-    <div style="text-align:right;flex-shrink:0">
-      <div style="font-size:13px;font-weight:500;color:var(--color-text-primary)">$12 / mo</div>
-      <div style="font-size:11px;color:var(--color-text-secondary)">or $99/year</div>
-    </div>
-  </div>
-
-  <hr class="cs-divider">
-
-  <div class="cs-row">
-    <div class="cs-stat-card"><div class="cs-stat-val">52M</div><div class="cs-stat-lbl">Target active retail investors</div></div>
-    <div class="cs-stat-card"><div class="cs-stat-val">3.4</div><div class="cs-stat-lbl">Avg. accounts per investor</div></div>
-    <div class="cs-stat-card"><div class="cs-stat-val">67%</div><div class="cs-stat-lbl">Currently use spreadsheets</div></div>
-    <div class="cs-stat-card"><div class="cs-stat-val">76%</div><div class="cs-stat-lbl">WTP for scenario tool</div></div>
-    <div class="cs-stat-card"><div class="cs-stat-val">$1.4M</div><div class="cs-stat-lbl">ARR at 10K subscribers</div></div>
-  </div>
-
-  <hr class="cs-divider">
-
-  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:10px;margin:0 0 10px">
-
-    <div class="cs-card">
-      <div class="cs-section-label">The problem</div>
-      <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 8px;line-height:1.6">Active investors with 3+ accounts can't model allocation decisions across them simultaneously. They know what they own — but not what they should do next.</p>
-      <div style="font-size:12px;color:var(--color-text-primary);line-height:1.6">
-        <div style="display:flex;gap:6px;margin:0 0 4px"><span style="color:#A32D2D;flex-shrink:0">—</span><span>4 platforms, no unified view</span></div>
-        <div style="display:flex;gap:6px;margin:0 0 4px"><span style="color:#A32D2D;flex-shrink:0">—</span><span>Spreadsheets break &amp; go stale</span></div>
-        <div style="display:flex;gap:6px"><span style="color:#A32D2D;flex-shrink:0">—</span><span>Reddit answers are generic</span></div>
-      </div>
-    </div>
-
-    <div class="cs-card">
-      <div class="cs-section-label">The solution</div>
-      <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 8px;line-height:1.6">A mobile-first thinking tool that aggregates all accounts and lets investors model what-if scenarios with tax-aware, account-specific projections.</p>
-      <div style="font-size:12px;color:var(--color-text-primary);line-height:1.6">
-        <div style="display:flex;gap:6px;margin:0 0 4px"><span style="color:#0F6E56;flex-shrink:0">+</span><span>Cross-account scenario builder</span></div>
-        <div style="display:flex;gap:6px;margin:0 0 4px"><span style="color:#0F6E56;flex-shrink:0">+</span><span>Order-of-operations engine</span></div>
-        <div style="display:flex;gap:6px"><span style="color:#0F6E56;flex-shrink:0">+</span><span>Goal milestone planner</span></div>
-      </div>
-    </div>
-
-    <div class="cs-card">
-      <div class="cs-section-label">Strategic moat</div>
-      <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 8px;line-height:1.6">Betterment and Wealthfront can't build a genuine cross-platform planner without cannibalizing their asset management revenue. CapStack can go where they cannot.</p>
-      <div style="background:#E1F5EE;border-radius:var(--border-radius-md);padding:8px 10px;border:0.5px solid #9FE1CB">
-        <div style="font-size:11px;font-weight:500;color:#085041;margin:0 0 2px">Innovator's dilemma positioning</div>
-        <div style="font-size:11px;color:#0F6E56">No incumbent can fill this gap without destroying their own model.</div>
-      </div>
-    </div>
-
-  </div>
-
-  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin:0 0 10px">
-
-    <div class="cs-card">
-      <div class="cs-section-label">Competitive positioning</div>
-      <div class="cs-vs-row">
-        <div class="cs-vs-left" style="font-weight:500;color:var(--color-text-secondary)">Competitors</div>
-        <div class="cs-vs-right" style="font-weight:500">CapStack</div>
-      </div>
-      <div class="cs-vs-row">
-        <div class="cs-vs-left">Betterment: plans within its own accounts only</div>
-        <div class="cs-vs-right">Models across all accounts you already hold</div>
-      </div>
-      <div class="cs-vs-row">
-        <div class="cs-vs-left">Empower: shows balances, pushes advisors</div>
-        <div class="cs-vs-right">No asset mgmt, no upsell — pure thinking tool</div>
-      </div>
-      <div class="cs-vs-row" style="margin:0">
-        <div class="cs-vs-left">Spreadsheet: free, stale, breaks on new accounts</div>
-        <div class="cs-vs-right">Live, mobile, saves &amp; compares scenarios</div>
-      </div>
-    </div>
-
-    <div class="cs-card">
-      <div class="cs-section-label">GTM motion</div>
-      <div class="cs-step">
-        <div class="cs-step-num">1</div>
-        <div style="font-size:12px;color:var(--color-text-primary);line-height:1.5"><span style="font-weight:500">Organic discovery</span> — user posts what-if question on r/personalfinance (17M members)</div>
-      </div>
-      <div class="cs-step">
-        <div class="cs-step-num">2</div>
-        <div style="font-size:12px;color:var(--color-text-primary);line-height:1.5"><span style="font-weight:500">Community recommendation</span> — CapStack answer surfaces; user installs free tier</div>
-      </div>
-      <div class="cs-step">
-        <div class="cs-step-num">3</div>
-        <div style="font-size:12px;color:var(--color-text-primary);line-height:1.5"><span style="font-weight:500">Scenario sharing</span> — user posts CapStack output in thread as visual answer; loop repeats</div>
-      </div>
-      <div class="cs-step" style="margin:0">
-        <div class="cs-step-num">4</div>
-        <div style="font-size:12px;color:var(--color-text-primary);line-height:1.5"><span style="font-weight:500">Free → Pro conversion</span> — scenario limit hit; user upgrades at $12/mo</div>
-      </div>
-    </div>
-
-  </div>
-
-  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:10px;margin:0 0 10px">
-    <div class="cs-card">
-      <div class="cs-section-label">North star metric</div>
-      <div style="font-size:18px;font-weight:500;color:var(--color-text-primary);margin:0 0 2px">Scenarios / user / month</div>
-      <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.5">Target: 3+ by day 90. Users who hit 3 scenarios in 14 days convert to paid at 2× the rate.</div>
-    </div>
-    <div class="cs-card">
-      <div class="cs-section-label">Guardrails</div>
-      <div style="font-size:12px;color:var(--color-text-primary);line-height:1.6">
-        <div style="display:flex;gap:6px;margin:0 0 4px"><span style="color:#0F6E56;flex-shrink:0">—</span><span>Plaid error rate &lt; 8%</span></div>
-        <div style="display:flex;gap:6px;margin:0 0 4px"><span style="color:#0F6E56;flex-shrink:0">—</span><span>Misleading projection rate &lt; 2%</span></div>
-        <div style="display:flex;gap:6px"><span style="color:#0F6E56;flex-shrink:0">—</span><span>App Store rating ≥ 4.3</span></div>
-      </div>
-    </div>
-    <div class="cs-card">
-      <div class="cs-section-label">Launch targets</div>
-      <div style="font-size:12px;color:var(--color-text-primary);line-height:1.6">
-        <div style="display:flex;justify-content:space-between;margin:0 0 4px"><span>Beta users (day 60)</span><span style="font-weight:500">500</span></div>
-        <div style="display:flex;justify-content:space-between;margin:0 0 4px"><span>D30 retention</span><span style="font-weight:500">&gt; 40%</span></div>
-        <div style="display:flex;justify-content:space-between;margin:0 0 4px"><span>Free → Pro conversion</span><span style="font-weight:500">&gt; 25%</span></div>
-        <div style="display:flex;justify-content:space-between"><span>MRR at 6 months</span><span style="font-weight:500">$10K</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary)">
-    <div style="font-size:12px;color:var(--color-text-secondary)">CapStack · Product one-pager · v1.0 · 2025</div>
-    <div style="font-size:12px;color:var(--color-text-secondary)">Anish Gudipaati </div>
-  </div>
-
-</div>
+<main class="document">
+<div class="masthead"><a href="index.html#work">Anish Gudipaati / Product Memo</a><span>Product case study</span></div>
+<header class="title-block">
+<p class="eyebrow">Fintech · Consumer · Mobile-first planning</p>
+<h1>CapStack</h1>
+<p class="lede">Compare two ways to allocate the same contribution across retirement, brokerage, and savings accounts—with visible assumptions and no asset custody.</p><p class="subtitle">$12 / mo or $99/year · proposed</p>
+<div class="byline"><span>Anish Gudipaati</span><a href="capstack-prd.docx">Read the full PRD ↓</a></div>
+</header>
+<section class="chapter" aria-labelledby="section-1"><h2 class="chapter-label" id="section-1"><span>01</span>Problem &amp; opportunity</h2><div class="chapter-content"><section class="subsection"><h3>User and decision</h3><p>An active investor aged roughly 22–35 has several account types and a bonus, payroll change, or savings goal to plan for. The useful question is how two alternatives change the same goal—not merely what the combined balance is.</p></section>
+<section class="subsection"><h3>Competitive position</h3><p>Empower already offers linked accounts and retirement scenarios. Boldin offers linked accounts and side-by-side planning at $144/year for PlannerPlus. <a class="citation" href="#ref-C1">[C1–C3]</a></p>
+<p>CapStack must win a narrower accumulation-stage task through less setup and clearer tradeoffs.</p></section></div></section><section class="chapter" aria-labelledby="section-2"><h2 class="chapter-label" id="section-2"><span>02</span>Product approach</h2><div class="chapter-content"><section class="subsection"><h3>Core product loop</h3><p>Confirm account inputs → define the contribution and goal → review assumptions → compare alternatives → save the decision.</p>
+<p>Side-by-side comparison belongs in V1. Manual entry must offer the same calculation quality as connected accounts.</p></section>
+<section class="subsection"><h3>Scope and release gates</h3><p>P0: manual and eligible linked accounts, validated calculations, contribution checks, comparison, and reproducible saved scenarios. Goals and richer history follow.</p>
+<p>Defer ranked recommendations, opaque tax scores, and detailed tax optimization pending model and legal review. Not holding assets or displaying a disclaimer does not settle regulatory status. <a class="citation" href="#ref-C7">[C7]</a></p></section></div></section><section class="chapter" aria-labelledby="section-3"><h2 class="chapter-label" id="section-3"><span>03</span>Requirements</h2><div class="chapter-content"><section class="subsection"><h3>Model and acceptance criteria</h3><p>Use a versioned monthly model with explicit contribution timing, returns, fees, and inflation. Compare alternatives under common assumptions. Separate principal from growth and accessible funds from retirement balances.</p>
+<p><strong>Reference test:</strong> $10,000 at zero return plus twelve $500 deposits = $16,000.<br><strong>Invariant:</strong> the same inputs and model version produce the same output. Saved scenarios retain their original assumptions.</p></section>
+<section class="subsection"><h3>Data and rule handling</h3><p>Show account-level timestamps and missing inputs. Never treat unknown contribution history as zero or double-count manual and linked versions of an account. Plaid integration availability is verified by provider. <a class="citation" href="#ref-C4">[C4]</a></p>
+<p>Use reviewed tax-year rules. For 2026, base limits include $24,500 employee 401(k) deferrals and $7,500 IRA contributions; eligibility and catch-up treatment require separate handling. <a class="citation" href="#ref-C5">[C5, C6]</a></p></section></div></section><section class="chapter" aria-labelledby="section-4"><h2 class="chapter-label" id="section-4"><span>04</span>Validation</h2><div class="chapter-content"><section class="subsection"><h3>Validation and metrics</h3><p>First, test 12–15 users on an actual decision and compare against their current workflow. Then propose a 50-user, six-week beta.</p>
+<p><strong>Gates:</strong> ≥80% comprehension, ≥65% activation, zero known critical calculation defects. Retain &gt;40% D30 retention and 3+ monthly scenarios as targets, with clear cohort definitions.</p>
+<p>Measure whether a comparison informs a decision; extra runs may reflect confusion.</p></section></div></section><section class="chapter" aria-labelledby="section-5"><h2 class="chapter-label" id="section-5"><span>05</span>Economics</h2><div class="chapter-content"><section class="subsection"><h3>Pricing and economics</h3><p>At 10,000 paid users, annualized revenue ranges from $990K if all pay $99 annually to $1.44M if all pay $12 monthly. A 50/50 mix yields $1.215M.</p>
+<p>The original $10K MRR target needs about 834 monthly subscribers. A 500-user beta at 25% conversion yields $1,500 MRR. Account aggregation, support, and acquisition must fit the margin.</p></section><figure class="figures"><figcaption>Research &amp; planning figures</figcaption><dl><div class="figure-row"><dt>original market estimate</dt><dd>52M</dd></div><div class="figure-row"><dt>accounts in original research</dt><dd>3.4</dd></div><div class="figure-row"><dt>spreadsheet use reported</dt><dd>67%</dd></div><div class="figure-row"><dt>WTP reported in discovery</dt><dd>76%</dd></div><div class="figure-row"><dt>ARR at 10K monthly subscribers</dt><dd>$1.44M</dd></div></dl><p class="figure-note">Discovery statistics retain their original research basis. Revenue is an illustrative scenario; stated willingness to pay is separate from paid conversion.</p></figure></div></section><section class="chapter" aria-labelledby="section-6"><h2 class="chapter-label" id="section-6"><span>06</span>Next decisions</h2><div class="chapter-content"><section class="subsection"><h3>What would change the decision</h3><p>If the task is too infrequent for a subscription, test different packaging. If linking dominates support, narrow provider coverage. If users cannot explain the assumptions, simplify the model before adding features.</p>
+<p>The core bet is an understandable, repeatable cross-account decision—not the claim that other planning tools cannot exist.</p></section></div></section>
+<section class="chapter" aria-labelledby="sources"><h2 class="chapter-label" id="sources">References</h2><div class="chapter-content"><p class="research-date">Research references</p><ol class="references"><li id="ref-C1"><span>C1</span><a href="https://www.empower.com/tools/retirement-planner" target="_blank" rel="noopener noreferrer">Empower Retirement Planner</a></li>
+<li id="ref-C2"><span>C2</span><a href="https://www.empower.com/tools/link-accounts" target="_blank" rel="noopener noreferrer">Empower account linking</a></li>
+<li id="ref-C3"><span>C3</span><a href="https://www.boldin.com/retirement/pricing/" target="_blank" rel="noopener noreferrer">Boldin pricing and features</a></li>
+<li id="ref-C4"><span>C4</span><a href="https://plaid.com/docs/api/products/investments/" target="_blank" rel="noopener noreferrer">Plaid Investments API</a></li>
+<li id="ref-C5"><span>C5</span><a href="https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500" target="_blank" rel="noopener noreferrer">IRS retirement limits for 2026</a></li>
+<li id="ref-C6"><span>C6</span><a href="https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-401k-and-profit-sharing-plan-contribution-limits" target="_blank" rel="noopener noreferrer">IRS elective deferral and contribution limits</a></li>
+<li id="ref-C7"><span>C7</span><a href="https://www.sec.gov/interps/legal/slbim11.htm" target="_blank" rel="noopener noreferrer">SEC Staff Legal Bulletin 11</a></li>
+</ol></div></section>
+<footer class="footer"><a href="capstack-prd.docx">Read the complete product requirements document ↓</a><span>Anish Gudipaati · Product case study · v2</span></footer>
+</main>
 </body>
 </html>
