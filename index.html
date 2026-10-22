@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anish Gudipaati · Product Memo</title>
+<meta name="description" content="Anish Gudipaati’s portfolio. Choose Investment Research for equity research and valuation, or Product &amp; Strategy for product case studies and PRDs.">
+<title>Anish Gudipaati · Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -297,8 +298,6 @@
     transition: background 0.15s ease, color 0.15s ease;
   }
 
-  .action:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
-
   .action:hover {
     background: var(--ink);
     color: var(--paper);
@@ -380,207 +379,45 @@
     h1.title { max-width: none; }
     .footer { flex-direction: column; align-items: flex-start; }
   }
+
+  .focus-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:30px; margin:32px 0 48px; }
+  .focus-choice { display:flex; flex-direction:column; align-items:flex-start; color:var(--ink); text-decoration:none; border-top:1.5px solid var(--ink); border-bottom:1px solid var(--line); padding:26px 0 30px; }
+  .focus-choice:focus-visible { outline:2px solid var(--accent); outline-offset:6px; }
+  .focus-number { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.09em; color:var(--accent); margin-bottom:18px; }
+  .focus-choice h2 { font-family:'Fraunces',Georgia,serif; font-size:clamp(1.8rem,4vw,2rem); font-weight:500; line-height:1.15; margin-bottom:16px; }
+  .focus-choice p { color:var(--ink-soft); font-size:14.5px; line-height:1.65; margin-bottom:28px; }
+  .focus-link { font-family:'IBM Plex Mono',monospace; font-size:12px; min-height:44px; display:inline-flex; align-items:center; gap:8px; margin-top:auto; border-bottom:1px solid var(--ink); }
+  .focus-choice:hover h2, .focus-choice:hover .focus-link { color:var(--accent); }
+  .hub-title { font-family:'Fraunces',Georgia,serif; font-size:clamp(2.6rem,6vw,3.8rem); font-weight:500; line-height:1.1; letter-spacing:-.025em; margin:32px 0 18px; }
+  .hub-title em { color:var(--accent); font-weight:300; }
+  .hub-lede { color:var(--ink-soft); font-size:15.5px; max-width:48ch; }
+  @media(max-width:620px) { .focus-grid { grid-template-columns:1fr; margin-top:28px; } .focus-choice { padding:24px 0; } .focus-choice + .focus-choice { border-top:0; } .memo-bar { gap:16px; flex-wrap:wrap; } }
+  @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
 </style>
 </head>
 <body>
-
 <div class="doc">
-
-  <!-- MEMO HEADER -->
   <header class="memo-head">
-    <div class="memo-bar">
-      <span>Product Memo</span>
-      <span>No. 003 / 2026</span>
-    </div>
-    <dl class="memo-fields">
-      <dt>Re</dt>
-      <dd>Three product concepts: healthtech, fintech, AI productivity</dd>
-      <dt>From</dt>
-      <dd>Product &amp; Strategy</dd>
-    </dl>
-    <h1 class="title">Product thinking,<br><em>documented.</em></h1>
-    <p class="lede">Three end-to-end case studies, each with discovery, a PRD, competitive positioning, workflow requirements, and a validation plan.</p>
-
-    <div class="byline">
-      <div class="byline-item">
-        <span class="byline-label">Author</span>
-        <span class="byline-value">Anish Gudipaati</span>
-      </div>
-      <div class="byline-item">
-        <span class="byline-label">School</span>
-        <span class="byline-value">Vanderbilt University · Economics + CS</span>
-      </div>
-      <div class="byline-item">
-        <span class="byline-label">Experience</span>
-        <span class="byline-value">VC · Product Consulting · Agtech Startup</span>
-      </div>
-    </div>
+    <div class="memo-bar"><span>Anish Gudipaati</span><span>Portfolio / 2026</span></div>
+    <h1 class="hub-title">Two disciplines.<br><em>Choose your focus.</em></h1>
+    <p class="hub-lede">Explore investment research or product and strategy work.</p>
   </header>
-
-  <main id="work">
-    <div class="exhibits-intro">
-      <h2 class="exhibits-label" style="font-weight:400">Projects</h2>
+  <main id="work" aria-label="Choose a portfolio focus">
+    <div class="focus-grid">
+      <a class="focus-choice" href="investment-research.html" aria-labelledby="research-choice-title">
+        <span class="focus-number">01 / Investment Research</span>
+        <h2 id="research-choice-title">Asset Management<br>&amp; Equity Research</h2>
+        <p>Company economics, financial modeling, valuation, and investment theses. Explore the Uber equity research project and its original deliverables.</p>
+        <span class="focus-link">Explore Research <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="focus-choice" href="product-strategy.html" aria-labelledby="product-choice-title">
+        <span class="focus-number">02 / Product &amp; Strategy</span>
+        <h2 id="product-choice-title">Product Thinking<br>&amp; Strategy</h2>
+        <p>Customer discovery, competitive positioning, and product requirements. Explore SiteFlow, CapStack, and DraftDesk.</p>
+        <span class="focus-link">Explore Product Work <span aria-hidden="true">→</span></span>
+      </a>
     </div>
-
-    <!-- UBER: Fundamental Equity Research -->
-    <article class="exhibit" id="uber-equity-research" aria-labelledby="uber-project-title">
-      <div class="exhibit-tag">
-        <span><span class="label">Equity Research</span> · UBER</span>
-        <span class="count">October 2026</span>
-      </div>
-      <h3 class="exhibit-title" id="uber-project-title">Uber Equity Research</h3>
-      <p class="exhibit-tagline">Uber Technologies (NYSE: UBER) · Fundamental Equity Research</p>
-      <p class="exhibit-desc">An independent Asset Management / Equity Research case study of Uber’s Mobility and Delivery economics, autonomous-vehicle exposure, and cash-flow valuation. The research combines a DCF, trading comparables, and bear/base/bull scenarios to support a Watchlist / Neutral stance.</p>
-
-      <div class="ledger">
-        <div class="ledger-row ledger-row--star">
-          <span class="ledger-label">Recommendation</span>
-          <span class="ledger-value">Watchlist / Neutral · October 2026 research snapshot</span>
-        </div>
-        <div class="ledger-row">
-          <span class="ledger-label">Base-case fair value</span>
-          <span class="ledger-value">$77.02 / share</span>
-        </div>
-        <div class="ledger-row">
-          <span class="ledger-label">Reference close · 21 Oct 2026</span>
-          <span class="ledger-value">$67.62 / share</span>
-        </div>
-        <div class="ledger-row">
-          <span class="ledger-label">Implied upside · base case</span>
-          <span class="ledger-value">13.9%</span>
-        </div>
-      </div>
-
-      <div class="deliverables">
-        <span class="deliverables-label">Deliverables</span>
-        <span class="deliverables-list">Investment Memo · Financial Model · Stock Pitch</span>
-      </div>
-      <div class="actions">
-        <a href="uber-equity-research.html" class="action action--primary">View Research <span class="arrow" aria-hidden="true">→</span></a>
-      </div>
-    </article>
-
-    <!-- EXHIBIT A: SiteFlow -->
-    <article class="exhibit">
-      <div class="exhibit-tag">
-        <span><span class="label">Exhibit A</span> · Healthtech</span>
-        <span class="count">01 / 03</span>
-      </div>
-      <h3 class="exhibit-title">SiteFlow</h3>
-      <p class="exhibit-tagline">Mobile-first workflow automation for Clinical Research Coordinators</p>
-      <p class="exhibit-desc">SiteFlow is a proposed mobile workflow for coordinators at small independent clinical research sites. It focuses on visit documentation and investigator review. Existing tools such as Veeva SiteVault already serve sites; the case study tests whether a narrower workflow can reduce total administrative time enough to justify a paid product.</p>
-
-      <div class="ledger">
-        <div class="ledger-row">
-          <span class="ledger-label">Market input</span>
-          <span class="ledger-value">9,700 sites · original planning estimate</span>
-        </div>
-        <div class="ledger-row">
-          <span class="ledger-label">Proposed pricing</span>
-          <span class="ledger-value">$199 / mo per site</span>
-        </div>
-        <div class="ledger-row">
-          <span class="ledger-label">ARR scenario @ 5% adoption</span>
-          <span class="ledger-value">$1.16M</span>
-        </div>
-        <div class="ledger-row ledger-row--star">
-          <span class="ledger-label">Pilot goal</span>
-          <span class="ledger-value">≥30% less administrative time per visit, without worse completeness</span>
-        </div>
-      </div>
-
-      <div class="deliverables">
-        <span class="deliverables-label">Deliverables</span>
-        <span class="deliverables-list">Customer Discovery · PRD v2 · Competitive Analysis · Case Study · Validation Plan · Workflow Requirements</span>
-      </div>
-
-      <div class="actions">
-        <a href="siteflow-onepager.html" class="action action--primary" target="_blank">One-Pager <span class="arrow">→</span></a>
-        <a href="siteflow-prd.docx" class="action" target="_blank">Full PRD <span class="arrow">→</span></a>
-      </div>
-    </article>
-
-    <!-- EXHIBIT B: CapStack -->
-    <article class="exhibit">
-      <div class="exhibit-tag">
-        <span><span class="label">Exhibit B</span> · Fintech</span>
-        <span class="count">02 / 03</span>
-      </div>
-      <h3 class="exhibit-title">CapStack</h3>
-      <p class="exhibit-tagline">Mobile-first cross-account scenario planning for active retail investors</p>
-      <p class="exhibit-desc">CapStack is a proposed cross-account planning tool for active investors aged roughly 22–35. It compares two ways to allocate the same contribution across existing accounts, with visible assumptions. Empower and Boldin already offer planning and linked accounts; the opportunity is a faster, clearer contribution decision.</p>
-
-      <div class="ledger">
-        <div class="ledger-row">
-          <span class="ledger-label">Market input</span>
-          <span class="ledger-value">52M investors · original research estimate</span>
-        </div>
-        <div class="ledger-row">
-          <span class="ledger-label">Proposed pricing</span>
-          <span class="ledger-value">$12 / mo Pro tier</span>
-        </div>
-        <div class="ledger-row">
-          <span class="ledger-label">ARR scenario @ 10K monthly subscribers</span>
-          <span class="ledger-value">$1.44M</span>
-        </div>
-        <div class="ledger-row ledger-row--star">
-          <span class="ledger-label">Pilot goal</span>
-          <span class="ledger-value">≥80% comprehension and ≥65% comparison activation</span>
-        </div>
-      </div>
-
-      <div class="deliverables">
-        <span class="deliverables-label">Deliverables</span>
-        <span class="deliverables-list">Customer Discovery · PRD v2 · Competitive Analysis · Case Study · Validation Plan · Workflow Requirements</span>
-      </div>
-
-      <div class="actions">
-        <a href="capstack-onepager.html" class="action action--primary" target="_blank">One-Pager <span class="arrow">→</span></a>
-        <a href="capstack-prd.docx" class="action" target="_blank">Full PRD <span class="arrow">→</span></a>
-      </div>
-    </article>
-
-    <!-- EXHIBIT C: DraftDesk -->
-    <article class="exhibit">
-      <div class="exhibit-tag">
-        <span><span class="label">Exhibit C</span> · AI Productivity</span>
-        <span class="count">03 / 03</span>
-      </div>
-      <h3 class="exhibit-title">DraftDesk</h3>
-      <p class="exhibit-tagline">Source-linked QBRs and escalation summaries for customer success teams</p>
-      <p class="exhibit-desc">DraftDesk is a proposed drafting workflow for customer success managers producing QBRs and escalation summaries. It combines permitted account context with source-linked facts and human review. Microsoft and Notion already connect business context; the case study focuses on reducing preparation and review time for these specific documents.</p>
-
-      <div class="ledger">
-        <div class="ledger-row">
-          <span class="ledger-label">Market input</span>
-          <span class="ledger-value">70M+ US knowledge workers · broad research estimate</span>
-        </div>
-        <div class="ledger-row">
-          <span class="ledger-label">Proposed pricing</span>
-          <span class="ledger-value">$18 / seat Pro · $14 / seat Team</span>
-        </div>
-        <div class="ledger-row">
-          <span class="ledger-label">ARR scenario @ 7,500 Pro seats</span>
-          <span class="ledger-value">$1.62M</span>
-        </div>
-        <div class="ledger-row ledger-row--star">
-          <span class="ledger-label">Pilot goal</span>
-          <span class="ledger-value">≥30% less preparation and review time at equal or better quality</span>
-        </div>
-      </div>
-
-      <div class="deliverables">
-        <span class="deliverables-label">Deliverables</span>
-        <span class="deliverables-list">Customer Discovery · PRD v2 · Competitive Analysis · Case Study · Validation Plan · Workflow Requirements</span>
-      </div>
-
-      <div class="actions">
-        <a href="draftdesk-onepager.html" class="action action--primary" target="_blank">One-Pager <span class="arrow">→</span></a>
-        <a href="draftdesk-prd.docx" class="action" target="_blank">Full PRD <span class="arrow">→</span></a>
-      </div>
-    </article>
   </main>
-
   <!-- FOOTER -->
   <footer class="footer">
     <div>
@@ -596,7 +433,7 @@
     </div>
   </footer>
 
-</div>
 
+</div>
 </body>
 </html>
