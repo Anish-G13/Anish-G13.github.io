@@ -297,6 +297,8 @@
     transition: background 0.15s ease, color 0.15s ease;
   }
 
+  .action:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
   .action:hover {
     background: var(--ink);
     color: var(--paper);
@@ -417,8 +419,46 @@
 
   <main id="work">
     <div class="exhibits-intro">
-      <span class="exhibits-label">Exhibits</span>
+      <h2 class="exhibits-label" style="font-weight:400">Projects</h2>
     </div>
+
+    <!-- UBER: Fundamental Equity Research -->
+    <article class="exhibit" id="uber-equity-research" aria-labelledby="uber-project-title">
+      <div class="exhibit-tag">
+        <span><span class="label">Equity Research</span> · UBER</span>
+        <span class="count">October 2026</span>
+      </div>
+      <h3 class="exhibit-title" id="uber-project-title">Uber Equity Research</h3>
+      <p class="exhibit-tagline">Uber Technologies (NYSE: UBER) · Fundamental Equity Research</p>
+      <p class="exhibit-desc">An independent Asset Management / Equity Research case study of Uber’s Mobility and Delivery economics, autonomous-vehicle exposure, and cash-flow valuation. The research combines a DCF, trading comparables, and bear/base/bull scenarios to support a Watchlist / Neutral stance.</p>
+
+      <div class="ledger">
+        <div class="ledger-row ledger-row--star">
+          <span class="ledger-label">Recommendation</span>
+          <span class="ledger-value">Watchlist / Neutral · October 2026 research snapshot</span>
+        </div>
+        <div class="ledger-row">
+          <span class="ledger-label">Base-case fair value</span>
+          <span class="ledger-value">$77.02 / share</span>
+        </div>
+        <div class="ledger-row">
+          <span class="ledger-label">Reference close · 21 Oct 2026</span>
+          <span class="ledger-value">$67.62 / share</span>
+        </div>
+        <div class="ledger-row">
+          <span class="ledger-label">Implied upside · base case</span>
+          <span class="ledger-value">13.9%</span>
+        </div>
+      </div>
+
+      <div class="deliverables">
+        <span class="deliverables-label">Deliverables</span>
+        <span class="deliverables-list">Investment Memo · Financial Model · Stock Pitch</span>
+      </div>
+      <div class="actions">
+        <a href="uber-equity-research.html" class="action action--primary">View Research <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </article>
 
     <!-- EXHIBIT A: SiteFlow -->
     <article class="exhibit">

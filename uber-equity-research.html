@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Anish Gudipaati’s October 2026 Uber fundamental equity research: Watchlist / Neutral, DCF valuation, trading comparables, scenarios, and the original investment memo, financial model, and stock pitch.">
+<meta property="og:title" content="Uber Equity Research · Anish Gudipaati">
+<meta property="og:description" content="Independent fundamental research on Uber Technologies (NYSE: UBER), with a DCF, peer comparisons, and three original research deliverables. October 2026 snapshot.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://anish-g13.github.io/uber-equity-research.html">
+<link rel="canonical" href="https://anish-g13.github.io/uber-equity-research.html">
+<title>Uber Technologies (NYSE: UBER) — Fundamental Equity Research · Anish Gudipaati</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+
+:root { --paper:#EDEAE2; --ink:#1C1B19; --muted:#5B584F; --accent:#9A3324; --line:#C7C1B0; --soft:#DAD5C7; }
+* { box-sizing:border-box; }
+html { scroll-padding-top:24px; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; font-size:1rem; line-height:1.7; -webkit-font-smoothing:antialiased; }
+a { color:inherit; text-decoration-thickness:1px; text-underline-offset:4px; }
+a:hover { color:var(--accent); }
+a:focus-visible { outline:2px solid var(--accent); outline-offset:5px; }
+.document { width:min(100%, 960px); margin:auto; padding:48px 32px 32px; }
+.masthead { display:flex; justify-content:space-between; gap:16px; align-items:baseline; padding:12px 0; border-top:2px solid var(--ink); border-bottom:1px solid var(--line); font-size:.875rem; }
+.masthead span { color:var(--muted); }
+.title-block { padding:44px 0 36px; }
+.eyebrow { margin:0 0 16px; color:var(--accent); font-family:'IBM Plex Mono',monospace; font-size:.8125rem; }
+h1 { margin:0 0 18px; font-family:'Fraunces',Georgia,serif; font-size:clamp(2.8rem,7vw,4.4rem); font-weight:500; line-height:1.05; letter-spacing:-.035em; }
+.lede { font-size:1.2rem; line-height:1.55; max-width:650px; margin:0; }
+.subtitle { color:var(--muted); margin:12px 0 0; max-width:650px; }
+.byline { display:flex; justify-content:space-between; flex-wrap:wrap; column-gap:24px; row-gap:8px; margin-top:28px; font-size:.875rem; color:var(--muted); }
+.byline a { color:var(--ink); }
+.chapter { display:grid; grid-template-columns:160px minmax(0,1fr); gap:40px; border-top:1px solid var(--line); padding:34px 0 38px; }
+.chapter-label { margin:3px 0 0; font-family:'IBM Plex Mono',monospace; font-size:.875rem; font-weight:400; line-height:1.5; color:var(--accent); }
+.chapter-label span { display:block; margin-bottom:7px; font-size:.75rem; color:var(--muted); }
+.chapter-content { min-width:0; }
+.subsection + .subsection { margin-top:30px; }
+h3 { font-family:'Fraunces',Georgia,serif; font-weight:500; font-size:1.5rem; line-height:1.3; letter-spacing:-.015em; margin:0 0 12px; }
+p { margin:0 0 16px; }
+p:last-child { margin-bottom:0; }
+strong { font-weight:500; }
+.citation { font-size:.8125rem; color:var(--accent); white-space:nowrap; }
+.figures { margin:30px 0 0; }
+.figures figcaption { font-size:.875rem; font-weight:500; padding:0 0 10px; border-bottom:1px solid var(--ink); }
+.figures dl { margin:0; }
+.figure-row { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:24px; padding:10px 0; border-bottom:1px solid var(--soft); font-size:.875rem; }
+.figure-row dt { color:var(--muted); }
+.figure-row dd { margin:0; font-variant-numeric:tabular-nums; font-weight:500; }
+.figure-note { color:var(--muted); font-size:.8125rem; margin-top:14px; }
+.references { list-style:none; padding:0; margin:0; }
+.references li { display:grid; grid-template-columns:26px minmax(0,1fr); gap:12px; margin-bottom:9px; font-size:.875rem; line-height:1.5; }
+.references li > span { font-family:'IBM Plex Mono',monospace; font-size:.75rem; color:var(--muted); padding-top:2px; }
+.references a { overflow-wrap:anywhere; text-decoration-color:var(--line); }
+.research-date { color:var(--muted); font-size:.8125rem; margin-bottom:16px; }
+.footer { display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; border-top:1px solid var(--ink); padding-top:18px; font-size:.875rem; }
+.footer span { color:var(--muted); }
+@media(max-width:700px) {
+ .document { padding:24px 22px; }
+ .title-block { padding:32px 0; }
+ .chapter { grid-template-columns:1fr; gap:20px; padding:26px 0 30px; }
+ .chapter-label span { display:inline; margin-right:12px; }
+ .masthead { flex-wrap:wrap; gap:4px 16px; }
+ .subsection + .subsection { margin-top:26px; }
+ .lede { font-size:1.125rem; }
+}
+@media print {
+ body { background:#fff; font-size:11pt; }
+ .document { width:auto; padding:0; }
+ .title-block { padding:20px 0; }
+ h1 { font-size:36pt; }
+ .chapter { grid-template-columns:110px minmax(0,1fr); gap:24px; padding:20px 0; }
+ h3,.chapter-label { break-after:avoid; }
+ p,.figure-row,.references li { orphans:3; widows:3; }
+ a { text-decoration:none; }
+ .byline a,.footer a { display:none; }
+}
+
+/* Research additions use the existing paper, ink, serif, and ledger styling. */
+.skip-link { position:absolute; left:24px; top:8px; transform:translateY(-160%); padding:8px 14px; background:var(--ink); color:var(--paper); z-index:10; }
+.skip-link:focus { transform:translateY(0); }
+.eyebrow, .byline, .masthead { overflow-wrap:anywhere; }
+.title-block h1 { max-width:13ch; }
+.ticker { font-family:'IBM Plex Mono',monospace; font-size:.85rem; color:var(--muted); font-weight:400; white-space:nowrap; }
+.snapshot { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); margin:28px 0 22px; border-top:1px solid var(--ink); border-bottom:1px solid var(--line); }
+.snapshot div { padding:16px 18px 16px 0; min-width:0; }
+.snapshot div + div { border-left:1px solid var(--line); padding-left:18px; }
+.snapshot dt { font-family:'IBM Plex Mono',monospace; font-size:.7rem; line-height:1.5; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; }
+.snapshot dd { margin:6px 0 0; font-family:'Fraunces',Georgia,serif; font-size:1.75rem; font-variant-numeric:tabular-nums; }
+.research-actions { display:flex; flex-wrap:wrap; gap:10px; margin:22px 0 14px; }
+.research-action { display:inline-flex; align-items:center; justify-content:center; padding:11px 15px; border:1px solid var(--ink); font-family:'IBM Plex Mono',monospace; font-size:.75rem; line-height:1.5; text-decoration:none; }
+.research-action:hover { color:var(--paper); background:var(--ink); }
+.research-action--primary { background:var(--ink); color:var(--paper); }
+.research-action--primary:hover { background:var(--accent); border-color:var(--accent); }
+.note { color:var(--muted); font-size:.875rem; }
+.stance { border-left:3px solid var(--accent); padding:0 0 0 18px; margin:24px 0 0; }
+.stance strong { color:var(--accent); }
+.table-scroll { overflow-x:auto; margin:20px 0 16px; }
+table { width:100%; border-collapse:collapse; font-size:.875rem; font-variant-numeric:tabular-nums; }
+caption { text-align:left; font-weight:500; padding-bottom:12px; }
+th, td { text-align:right; vertical-align:top; padding:11px 10px; border-bottom:1px solid var(--soft); }
+th:first-child, td:first-child { text-align:left; padding-left:0; }
+thead th { font-family:'IBM Plex Mono',monospace; font-size:.75rem; color:var(--muted); border-top:1px solid var(--ink); }
+.base-case { background:#E9D9D3; }
+.key-row { font-weight:500; }
+.key-row th, .key-row td { border-bottom:1px solid var(--ink); }
+.research-list { margin:0; padding-left:20px; }
+.research-list li { padding-left:2px; margin-bottom:12px; }
+.research-footer { display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; border-top:1px solid var(--ink); padding-top:18px; font-size:.875rem; }
+@media(max-width:540px) {
+ .document { padding:24px 20px; }
+ .snapshot { grid-template-columns:1fr; }
+ .snapshot div { padding:12px 0; }
+ .snapshot div + div { border-left:0; border-top:1px solid var(--soft); padding-left:0; }
+ .snapshot dd { margin-top:2px; }
+ .research-actions { display:grid; grid-template-columns:1fr; }
+ .research-action { min-height:44px; }
+ th, td { padding:10px 6px; }
+ .title-block h1 { max-width:none; }
+}
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+@media print { .skip-link,.research-actions,.research-footer { display:none; } .snapshot { break-inside:avoid; } }
+
+</style>
+</head>
+<body>
+<a href="#research" class="skip-link">Skip to research</a>
+<main class="document" id="research">
+  <nav class="masthead" aria-label="Project navigation">
+    <a href="index.html#work">Anish Gudipaati / Portfolio</a>
+    <span>October 2026 · Equity Research</span>
+  </nav>
+  <header class="title-block">
+    <p class="eyebrow">Asset Management / Equity Research · NYSE: UBER</p>
+    <h1>Uber Technologies</h1>
+    <p class="lede">Fundamental Equity Research</p>
+    <p class="subtitle">Independent research on the economics of Mobility and Delivery, the role of autonomous vehicles, and the value of Uber’s future cash flows.</p>
+    <div class="byline"><span>Anish Gudipaati · Published 22 October 2026</span><span>Reference close: 21 October 2026</span></div>
+    <dl class="snapshot" aria-label="Base-case valuation snapshot">
+      <div><dt>Base-case fair value / share</dt><dd>$77.02</dd></div>
+      <div><dt>Reference stock price</dt><dd>$67.62</dd></div>
+      <div><dt>Implied upside · base case</dt><dd>13.9%</dd></div>
+    </dl>
+    <p class="stance"><strong>Watchlist / Neutral.</strong> The modeled upside does not meet the research’s 25% margin-of-safety requirement. The fair value is an assumption-sensitive DCF estimate, not a 12-month price target.</p>
+    <div class="research-actions" aria-label="Original research deliverables">
+      <a class="research-action research-action--primary" href="Uber_Equity_Research_Investment_Memo.pdf" type="application/pdf" target="_blank" rel="noopener noreferrer">View Investment Memo <span aria-hidden="true">&nbsp;↗</span></a>
+      <a class="research-action" href="Uber_Equity_Research_Valuation_Model.xlsx" download="Uber_Equity_Research_Valuation_Model.xlsx" type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">Download Financial Model</a>
+      <a class="research-action" href="Uber_Equity_Research_Stock_Pitch.pptx" download="Uber_Equity_Research_Stock_Pitch.pptx" type="application/vnd.openxmlformats-officedocument.presentationml.presentation">Download Stock Pitch</a>
+    </div>
+    <p class="note">PDF memo opens in a new tab. The original Excel model and PowerPoint pitch download directly.</p>
+  </header>
+
+  <section class="chapter" aria-labelledby="overview-heading">
+    <h2 class="chapter-label" id="overview-heading"><span>01</span>Project overview</h2>
+    <div class="chapter-content">
+      <p>The project combines financial-statement research, an operating forecast through FY2030, an unlevered discounted cash-flow valuation, and a public-market peer comparison. Bear, base, and bull cases test the effect of growth, profitability, discount rates, and illustrative acquisition outcomes.</p>
+      <p>The analysis separates reported results from analyst assumptions. It also distinguishes company-reported free cash flow from the unlevered cash flow used in the DCF, and treats the proposed Delivery Hero acquisition as a pending event rather than a completed transaction.</p>
+    </div>
+  </section>
+
+  <section class="chapter" aria-labelledby="thesis-heading">
+    <h2 class="chapter-label" id="thesis-heading"><span>02</span>Investment thesis</h2>
+    <div class="chapter-content">
+      <section class="subsection">
+        <h3>Mobility and Delivery economics</h3>
+        <p>Greater trip volume, delivery density, and consumer engagement could support operating leverage and cash generation. The model links gross-bookings growth, reported revenue presentation, and GAAP operating margins rather than treating revenue growth alone as a complete measure of demand.</p>
+        <p>UK Mobility business-model changes affect recognized revenue, so revenue divided by bookings is not treated as a pure economic take rate. The research also flags changes in segment-profit definitions that limit direct comparisons across periods.</p>
+      </section>
+      <section class="subsection">
+        <h3>Autonomous vehicles: opportunity and risk</h3>
+        <p>Uber’s demand network and partnerships could help aggregate autonomous supply without owning every vehicle. The opposing case is that vertically integrated robotaxi fleets bypass the marketplace, or that autonomy requires substantially more capital than the standalone forecast assumes.</p>
+      </section>
+      <section class="subsection">
+        <h3>Growth catalysts and thesis checkpoints</h3>
+        <p>Sustained bookings growth, durable margin gains, and capital-efficient AV monetization would strengthen the case. The October research identifies Q3 earnings on 4 November 2026 and the announced Delivery Hero offer deadline on 5 November as checkpoints for operating performance, financing, and deal risk.</p>
+      </section>
+    </div>
+  </section>
+
+  <section class="chapter" aria-labelledby="valuation-heading">
+    <h2 class="chapter-label" id="valuation-heading"><span>03</span>DCF &amp; scenarios</h2>
+    <div class="chapter-content">
+      <p>The DCF projects after-tax operating profit, adds depreciation and amortization, and deducts capital expenditure and incremental working capital. It bridges enterprise value to equity through debt, unrestricted cash, financial investments, and a 2.5% share-dilution cushion.</p>
+      <p>The base case uses <strong>10.0% WACC and 2.75% terminal growth</strong>. Approximately <strong>78.5% of standalone enterprise value comes from terminal value</strong>, making the result particularly sensitive to long-run assumptions.</p>
+      <div class="table-scroll" role="region" aria-labelledby="scenario-caption" tabindex="0">
+        <table>
+          <caption id="scenario-caption">Analyst scenarios, relative to the $67.62 reference price</caption>
+          <thead><tr><th scope="col">Scenario</th><th scope="col">Bear</th><th scope="col" class="base-case">Base</th><th scope="col">Bull</th></tr></thead>
+          <tbody>
+            <tr class="key-row"><th scope="row">Fair value / share</th><td>$42.20</td><td class="base-case">$77.02</td><td>$130.15</td></tr>
+            <tr><th scope="row">Upside / downside</th><td>−37.6%</td><td class="base-case">+13.9%</td><td>+92.5%</td></tr>
+            <tr><th scope="row">WACC</th><td>11.0%</td><td class="base-case">10.0%</td><td>9.0%</td></tr>
+            <tr><th scope="row">Terminal growth</th><td>2.50%</td><td class="base-case">2.75%</td><td>3.00%</td></tr>
+            <tr><th scope="row">FY2030 EBIT margin</th><td>14.0%</td><td class="base-case">17.25%</td><td>20.5%</td></tr>
+            <tr><th scope="row">Illustrative M&amp;A net-value overlay</th><td>−$5B</td><td class="base-case">$0</td><td>+$5B</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Forecasts are analyst estimates. The ±$5B acquisition overlays are hypothetical sensitivities, not modeled synergies. The operating forecast does not consolidate Delivery Hero. The model counts 25% of FY2026 cash flow after the reference date and uses a simplified partial-year discounting convention.</p>
+    </div>
+  </section>
+
+  <section class="chapter" aria-labelledby="comps-heading">
+    <h2 class="chapter-label" id="comps-heading"><span>04</span>Trading comparables</h2>
+    <div class="chapter-content">
+      <p>Lyft and DoorDash provide a valuation cross-check for ride-hailing and delivery. The comparison uses matched 21 October 2026 prices, June 2026 balance sheets, and FY2025 reported results.</p>
+      <div class="table-scroll" role="region" aria-labelledby="comps-caption" tabindex="0">
+        <table>
+          <caption id="comps-caption">Historical trading multiples, not forward estimates</caption>
+          <thead><tr><th scope="col">Company</th><th scope="col">EV / FY2025 adjusted EBITDA</th><th scope="col">EV / FY2025 revenue</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Uber</th><td>15.2×</td><td>2.55×</td></tr>
+            <tr><th scope="row">Lyft</th><td>10.5×</td><td>0.88×</td></tr>
+            <tr><th scope="row">DoorDash</th><td>27.5×</td><td>5.57×</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Growth, business mix, leverage, and adjusted EBITDA definitions differ. These multiples show valuation dispersion and do not independently establish that Uber is undervalued.</p>
+    </div>
+  </section>
+
+  <section class="chapter" aria-labelledby="risks-heading">
+    <h2 class="chapter-label" id="risks-heading"><span>05</span>Risks &amp; decision</h2>
+    <div class="chapter-content">
+      <ul class="research-list">
+        <li><strong>Economics:</strong> Insurance costs, incentives, regulation, and weaker unit returns could prevent margin expansion even if trips grow.</li>
+        <li><strong>Capital allocation:</strong> Acquisition financing and autonomous-fleet investment could increase leverage and reduce cash returns. The research does not assume a completed acquisition or verified merger synergies.</li>
+        <li><strong>Valuation:</strong> Discount rates, terminal growth, investment carrying values, and dilution can materially change modeled value.</li>
+      </ul>
+      <p>The Watchlist / Neutral stance reflects limited margin of safety under the base assumptions. A better entry price, evidence of durable profit growth, and clearer acquisition and AV economics would warrant renewed underwriting.</p>
+    </div>
+  </section>
+
+  <section class="chapter" aria-labelledby="materials-heading">
+    <h2 class="chapter-label" id="materials-heading"><span>06</span>Research materials</h2>
+    <div class="chapter-content">
+      <p>The original three-page memo, eleven-tab financial model, and nine-slide pitch include the source audit, assumptions, valuation bridges, sensitivities, and investment debate summarized here.</p>
+      <div class="research-actions">
+        <a class="research-action research-action--primary" href="Uber_Equity_Research_Investment_Memo.pdf" type="application/pdf" target="_blank" rel="noopener noreferrer">View Investment Memo</a>
+        <a class="research-action" href="Uber_Equity_Research_Valuation_Model.xlsx" download="Uber_Equity_Research_Valuation_Model.xlsx" type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">Download Financial Model</a>
+        <a class="research-action" href="Uber_Equity_Research_Stock_Pitch.pptx" download="Uber_Equity_Research_Stock_Pitch.pptx" type="application/vnd.openxmlformats-officedocument.presentationml.presentation">Download Stock Pitch</a>
+      </div>
+      <p class="note">Educational investment case study. All views, prices, and transaction references reflect the October 2026 research snapshot. The project is not a standing investment recommendation.</p>
+    </div>
+  </section>
+
+  <footer class="research-footer"><a href="index.html#uber-equity-research">Back to portfolio projects</a><span>Anish Gudipaati · October 2026</span></footer>
+</main>
+</body>
+</html>
