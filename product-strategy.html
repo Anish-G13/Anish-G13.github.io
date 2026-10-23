@@ -381,6 +381,12 @@
 
   .section-back { display:inline-block; margin-bottom:18px; font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-soft); text-underline-offset:4px; }
   a:focus-visible { outline:2px solid var(--accent); outline-offset:5px; }
+
+  .portfolio-nav { display:flex; flex-wrap:wrap; gap:10px 22px; margin:18px 0 0; font-family:'IBM Plex Mono',monospace; font-size:11.5px; line-height:1.6; }
+  .portfolio-nav a { color:var(--ink-soft); text-decoration:none; padding:3px 0; border-bottom:1px solid transparent; }
+  .portfolio-nav a:hover { color:var(--accent); }
+  .portfolio-nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); }
+  .memo-head h1.title { max-width:none; }
 </style>
 </head>
 <body>
@@ -390,15 +396,13 @@
   <!-- MEMO HEADER -->
   <header class="memo-head">
     <a class="section-back" href="index.html">← Choose a focus</a>
-    <div class="memo-bar">
-      <span>Product Memo</span>
-      <span>No. 003 / 2026</span>
-    </div>
+    <div class="memo-bar"><span>Product &amp; Strategy</span><span>October 2026</span></div>
+    <nav class="portfolio-nav" aria-label="Portfolio sections"><a href="investment-research.html">Investment Research</a><a href="private-equity.html">Private Equity</a><a href="product-strategy.html" aria-current="page">Product &amp; Strategy</a></nav>
     <dl class="memo-fields">
       <dt>Re</dt>
       <dd>Three product concepts: healthtech, fintech, AI productivity</dd>
       <dt>From</dt>
-      <dd>Product &amp; Strategy</dd>
+      <dd>Anish Gudipaati</dd>
     </dl>
     <h1 class="title">Product thinking,<br><em>documented.</em></h1>
     <p class="lede">Three end-to-end case studies, each with discovery, a PRD, competitive positioning, workflow requirements, and a validation plan.</p>
@@ -413,8 +417,8 @@
         <span class="byline-value">Vanderbilt University · Economics + CS</span>
       </div>
       <div class="byline-item">
-        <span class="byline-label">Experience</span>
-        <span class="byline-value">VC · Product Consulting · Agtech Startup</span>
+        <span class="byline-label">Focus</span>
+        <span class="byline-value">Customer discovery · Positioning · Product requirements</span>
       </div>
     </div>
   </header>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Anish Gudipaati’s portfolio. Explore private equity and buyout analysis, equity research and valuation, and Product &amp; Strategy case studies.">
+<meta name="description" content="Anish Gudipaati’s portfolio. Anish Gudipaati’s portfolio in investment research, private equity and buyout analysis, and product strategy.">
 <title>Anish Gudipaati · Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,7 +37,7 @@
   }
 
   .doc {
-    max-width: 740px;
+    max-width: 1080px;
     margin: 0 auto;
     padding: 0 28px;
   }
@@ -382,18 +382,18 @@
 
   a:focus-visible { outline:2px solid var(--accent); outline-offset:5px; }
   .exhibit-tag { flex-wrap:wrap; gap:8px 20px; }
-  .focus-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:30px; margin:32px 0 48px; }
+  .focus-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); column-gap:30px; margin:32px 0 48px; }
   .focus-choice { display:flex; flex-direction:column; align-items:flex-start; color:var(--ink); text-decoration:none; border-top:1.5px solid var(--ink); border-bottom:1px solid var(--line); padding:26px 0 30px; }
   .focus-choice:focus-visible { outline:2px solid var(--accent); outline-offset:6px; }
   .focus-number { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.09em; color:var(--accent); margin-bottom:18px; }
-  .focus-choice h2 { font-family:'Fraunces',Georgia,serif; font-size:clamp(1.8rem,4vw,2rem); font-weight:500; line-height:1.15; margin-bottom:16px; }
+  .focus-choice h2 { font-family:'Fraunces',Georgia,serif; font-size:clamp(1.55rem,2.5vw,2rem); font-weight:500; line-height:1.15; margin-bottom:16px; }
   .focus-choice p { color:var(--ink-soft); font-size:14.5px; line-height:1.65; margin-bottom:28px; }
   .focus-link { font-family:'IBM Plex Mono',monospace; font-size:12px; min-height:44px; display:inline-flex; align-items:center; gap:8px; margin-top:auto; border-bottom:1px solid var(--ink); }
   .focus-choice:hover h2, .focus-choice:hover .focus-link { color:var(--accent); }
   .hub-title { font-family:'Fraunces',Georgia,serif; font-size:clamp(2.6rem,6vw,3.8rem); font-weight:500; line-height:1.1; letter-spacing:-.025em; margin:32px 0 18px; }
   .hub-title em { color:var(--accent); font-weight:300; }
-  .hub-lede { color:var(--ink-soft); font-size:15.5px; max-width:48ch; }
-  @media(max-width:620px) { .focus-grid { grid-template-columns:1fr; margin-top:28px; } .focus-choice { padding:24px 0; } .focus-choice + .focus-choice { border-top:0; } .memo-bar { gap:16px; flex-wrap:wrap; } }
+  .hub-lede { color:var(--ink-soft); font-size:15.5px; max-width:64ch; }
+  @media(max-width:900px) { .focus-grid { grid-template-columns:1fr; margin-top:28px; } .focus-choice { padding:24px 0; } .focus-choice + .focus-choice { border-top:0; } .memo-bar { gap:16px; flex-wrap:wrap; } }
   @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
 </style>
 </head>
@@ -401,42 +401,30 @@
 <div class="doc">
   <header class="memo-head">
     <div class="memo-bar"><span>Anish Gudipaati</span><span>Portfolio / 2026</span></div>
-    <h1 class="hub-title">Two disciplines.<br><em>Choose your focus.</em></h1>
-    <p class="hub-lede">Explore investment research or product and strategy work.</p>
+    <h1 class="hub-title">Three disciplines.<br><em>Choose your focus.</em></h1>
+    <p class="hub-lede">Explore investment research, private equity, and product strategy.</p>
   </header>
   <main id="work" aria-label="Choose a portfolio focus">
     <div class="focus-grid">
       <a class="focus-choice" href="investment-research.html" aria-labelledby="research-choice-title">
         <span class="focus-number">01 / Investment Research</span>
         <h2 id="research-choice-title">Asset Management<br>&amp; Equity Research</h2>
-        <p>Company economics, financial modeling, valuation, and investment theses. Explore the Uber equity research project and its original deliverables.</p>
+        <p>Fundamental company analysis, public-market valuation, and quantitative investing. Explore Uber equity research and Momentum Alpha Engine.</p>
         <span class="focus-link">Explore Research <span aria-hidden="true">→</span></span>
       </a>
+      <a class="focus-choice" href="private-equity.html" aria-labelledby="pe-choice-title">
+        <span class="focus-number">02 / Private Equity</span>
+        <h2 id="pe-choice-title">Private Equity<br>&amp; Buyout Analysis</h2>
+        <p>Acquisition economics, LBO modeling, financing, and sponsor returns. Explore the H&amp;R Block investment case and original research deliverables.</p>
+        <span class="focus-link">Explore Private Equity <span aria-hidden="true">→</span></span>
+      </a>
       <a class="focus-choice" href="product-strategy.html" aria-labelledby="product-choice-title">
-        <span class="focus-number">02 / Product &amp; Strategy</span>
+        <span class="focus-number">03 / Product &amp; Strategy</span>
         <h2 id="product-choice-title">Product Thinking<br>&amp; Strategy</h2>
         <p>Customer discovery, competitive positioning, and product requirements. Explore SiteFlow, CapStack, and DraftDesk.</p>
         <span class="focus-link">Explore Product Work <span aria-hidden="true">→</span></span>
       </a>
     </div>
-
-    <section id="private-equity" aria-labelledby="private-equity-heading">
-      <div class="exhibits-intro"><h2 class="exhibits-label" id="private-equity-heading" style="font-weight:500;font-size:12px">Private Equity &amp; Buyout Analysis</h2></div>
-      <article class="exhibit" aria-labelledby="hrb-project-title">
-        <div class="exhibit-tag"><span><span class="label">Private Equity / LBO Modeling</span></span><span class="count">October 2026</span></div>
-        <h3 class="exhibit-title" id="hrb-project-title">H&amp;R Block <span style="font-size:.65em">(NYSE: HRB)</span></h3>
-        <p class="exhibit-tagline">Leveraged Buyout Investment Case</p>
-        <p class="exhibit-desc">Independent research on a hypothetical public-to-private acquisition. Operating forecasts, acquisition financing, debt repayment, and exit scenarios support a pass at the modeled acquisition price.</p>
-        <div class="ledger">
-          <div class="ledger-row ledger-row--star"><span class="ledger-label">Investment decision</span><span class="ledger-value">Pass · Base-case gross IRR of 16.7% falls below the 20% hurdle.</span></div>
-          <div class="ledger-row"><span class="ledger-label">Downside</span><span class="ledger-value">1.8% gross IRR / 1.09x MOIC</span></div>
-          <div class="ledger-row"><span class="ledger-label">Base</span><span class="ledger-value">16.7% gross IRR / 2.16x MOIC</span></div>
-          <div class="ledger-row"><span class="ledger-label">Upside</span><span class="ledger-value">26.6% gross IRR / 3.25x MOIC</span></div>
-        </div>
-        <div class="deliverables"><span class="deliverables-label">Deliverables</span><span class="deliverables-list">LBO Financial Model · Investment Committee Memo · Investment Committee Presentation</span></div>
-        <div class="actions"><a href="hr-block-lbo.html" class="action action--primary">View LBO Analysis <span class="arrow" aria-hidden="true">→</span></a></div>
-      </article>
-    </section>
   </main>
   <!-- FOOTER -->
   <footer class="footer">
