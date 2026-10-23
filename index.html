@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Anish Gudipaati’s portfolio. Choose Investment Research for equity research and valuation, or Product &amp; Strategy for product case studies and PRDs.">
+<meta name="description" content="Anish Gudipaati’s portfolio. Explore private equity and buyout analysis, equity research and valuation, and Product &amp; Strategy case studies.">
 <title>Anish Gudipaati · Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -380,6 +380,8 @@
     .footer { flex-direction: column; align-items: flex-start; }
   }
 
+  a:focus-visible { outline:2px solid var(--accent); outline-offset:5px; }
+  .exhibit-tag { flex-wrap:wrap; gap:8px 20px; }
   .focus-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:30px; margin:32px 0 48px; }
   .focus-choice { display:flex; flex-direction:column; align-items:flex-start; color:var(--ink); text-decoration:none; border-top:1.5px solid var(--ink); border-bottom:1px solid var(--line); padding:26px 0 30px; }
   .focus-choice:focus-visible { outline:2px solid var(--accent); outline-offset:6px; }
@@ -417,6 +419,24 @@
         <span class="focus-link">Explore Product Work <span aria-hidden="true">→</span></span>
       </a>
     </div>
+
+    <section id="private-equity" aria-labelledby="private-equity-heading">
+      <div class="exhibits-intro"><h2 class="exhibits-label" id="private-equity-heading" style="font-weight:500;font-size:12px">Private Equity &amp; Buyout Analysis</h2></div>
+      <article class="exhibit" aria-labelledby="hrb-project-title">
+        <div class="exhibit-tag"><span><span class="label">Private Equity / LBO Modeling</span></span><span class="count">October 2026</span></div>
+        <h3 class="exhibit-title" id="hrb-project-title">H&amp;R Block <span style="font-size:.65em">(NYSE: HRB)</span></h3>
+        <p class="exhibit-tagline">Leveraged Buyout Investment Case</p>
+        <p class="exhibit-desc">Independent research on a hypothetical public-to-private acquisition. Operating forecasts, acquisition financing, debt repayment, and exit scenarios support a pass at the modeled acquisition price.</p>
+        <div class="ledger">
+          <div class="ledger-row ledger-row--star"><span class="ledger-label">Investment decision</span><span class="ledger-value">Pass · Base-case gross IRR of 16.7% falls below the 20% hurdle.</span></div>
+          <div class="ledger-row"><span class="ledger-label">Downside</span><span class="ledger-value">1.8% gross IRR / 1.09x MOIC</span></div>
+          <div class="ledger-row"><span class="ledger-label">Base</span><span class="ledger-value">16.7% gross IRR / 2.16x MOIC</span></div>
+          <div class="ledger-row"><span class="ledger-label">Upside</span><span class="ledger-value">26.6% gross IRR / 3.25x MOIC</span></div>
+        </div>
+        <div class="deliverables"><span class="deliverables-label">Deliverables</span><span class="deliverables-list">LBO Financial Model · Investment Committee Memo · Investment Committee Presentation</span></div>
+        <div class="actions"><a href="hr-block-lbo.html" class="action action--primary">View LBO Analysis <span class="arrow" aria-hidden="true">→</span></a></div>
+      </article>
+    </section>
   </main>
   <!-- FOOTER -->
   <footer class="footer">

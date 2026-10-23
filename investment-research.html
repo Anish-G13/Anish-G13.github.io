@@ -379,6 +379,7 @@
     .footer { flex-direction: column; align-items: flex-start; }
   }
 
+  .exhibit-tag { flex-wrap:wrap; gap:8px 20px; }
   .section-back { display:inline-block; margin-bottom:18px; font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-soft); text-underline-offset:4px; }
   a:focus-visible { outline:2px solid var(--accent); outline-offset:5px; }
 </style>
@@ -388,9 +389,9 @@
   <header class="memo-head">
     <a class="section-back" href="index.html">← Choose a focus</a>
     <div class="memo-bar"><span>Investment Research</span><span>October 2026</span></div>
-    <dl class="memo-fields"><dt>Re</dt><dd>Fundamental equity research</dd><dt>From</dt><dd>Anish Gudipaati</dd></dl>
+    <dl class="memo-fields"><dt>Re</dt><dd>Equity research and private equity analysis</dd><dt>From</dt><dd>Anish Gudipaati</dd></dl>
     <h1 class="title">Investment research,<br><em>documented.</em></h1>
-    <p class="lede">Independent company research and valuation, with the original investment memo, financial model, and stock pitch.</p>
+    <p class="lede">Independent company research, valuation, and buyout analysis, with original investment memos, financial models, and presentations.</p>
     <div class="byline">
       <div class="byline-item"><span class="byline-label">Author</span><span class="byline-value">Anish Gudipaati</span></div>
       <div class="byline-item"><span class="byline-label">School</span><span class="byline-value">Vanderbilt University · Economics + CS</span></div>
@@ -437,6 +438,32 @@
       </div>
     </article>
 
+
+    <section id="private-equity" aria-labelledby="private-equity-heading">
+      <div class="exhibits-intro"><h2 class="exhibits-label" id="private-equity-heading" style="font-weight:500;font-size:12px">Private Equity &amp; Buyout Analysis</h2></div>
+      <article class="exhibit" aria-labelledby="hrb-project-title">
+        <div class="exhibit-tag"><span><span class="label">Private Equity / LBO Modeling</span></span><span class="count">October 2026</span></div>
+        <h3 class="exhibit-title" id="hrb-project-title">H&amp;R Block <span style="font-size:.65em">(NYSE: HRB)</span></h3>
+        <p class="exhibit-tagline">Leveraged Buyout Investment Case</p>
+        <p class="exhibit-desc">Independent research on a hypothetical public-to-private acquisition. Operating forecasts, acquisition financing, debt repayment, and exit scenarios support a pass at the modeled acquisition price.</p>
+        <div class="ledger">
+          <div class="ledger-row ledger-row--star"><span class="ledger-label">Investment decision</span><span class="ledger-value">Pass · Base-case gross IRR of 16.7% falls below the 20% hurdle.</span></div>
+          <div class="ledger-row"><span class="ledger-label">Downside</span><span class="ledger-value">1.8% gross IRR / 1.09x MOIC</span></div>
+          <div class="ledger-row"><span class="ledger-label">Base</span><span class="ledger-value">16.7% gross IRR / 2.16x MOIC</span></div>
+          <div class="ledger-row"><span class="ledger-label">Upside</span><span class="ledger-value">26.6% gross IRR / 3.25x MOIC</span></div>
+        </div>
+        <div class="deliverables"><span class="deliverables-label">Deliverables</span><span class="deliverables-list">LBO Financial Model · Investment Committee Memo · Investment Committee Presentation</span></div>
+        <div class="actions"><a href="hr-block-lbo.html" class="action action--primary">View LBO Analysis <span class="arrow" aria-hidden="true">→</span></a></div>
+      </article>
+    </section>
+
+    <article class="exhibit" id="momentum-alpha-engine" aria-labelledby="momentum-project-title">
+      <div class="exhibit-tag"><span><span class="label">Quantitative Investment Research</span></span><span class="count">Selected Project</span></div>
+      <h3 class="exhibit-title" id="momentum-project-title">Momentum Alpha Engine</h3>
+      <p class="exhibit-tagline">Python · Momentum backtesting and investment risk controls</p>
+      <p class="exhibit-desc">A 12-1 momentum backtester across 500+ equities, incorporating five risk filters including sector caps, liquidity floors, and regime detection. Historical simulations are research tools and do not establish future investment performance.</p>
+      <div class="actions"><a href="https://momentumbacktest-681444478149.us-east1.run.app/" class="action" target="_blank" rel="noopener noreferrer">View Momentum Alpha Engine <span class="arrow" aria-hidden="true">↗</span></a></div>
+    </article>
   </main>
   <!-- FOOTER -->
   <footer class="footer">
