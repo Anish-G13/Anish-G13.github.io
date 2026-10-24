@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Anish Gudipaati’s Vantage AI product management case study: a publicly deployed competitive intelligence product, from AI comparisons to cited evidence, human review, and roadmap prioritization.">
+  <meta property="og:title" content="Vantage AI — Product Management Case Study · Anish Gudipaati">
+  <meta property="og:description" content="From competitive intelligence to actionable product decisions. Product ownership, a shipped AI workspace, three product trade-offs, and documented release validation.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://anish-g13.github.io/vantage-ai.html">
+  <meta property="og:image" content="https://anish-g13.github.io/assets/vantage-ai/hero.webp">
+  <meta property="og:image:alt" content="The genuine Vantage AI application displaying its clearly labeled fictional demonstration.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://anish-g13.github.io/vantage-ai.html">
+  <title>Vantage AI — Product Management Case Study · Anish Gudipaati</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --paper:#EDEAE2; --ink:#1C1B19; --muted:#5B584F; --accent:#9A3324; --accent-pale:#E9D9D3; --line:#C7C1B0; --soft:#DAD5C7; --white:#F8F6F0; --navy:#123E68; }
+    *,*::before,*::after { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:100px; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:400 16px/1.7 'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased; }
+    a { color:inherit; text-underline-offset:4px; text-decoration-thickness:1px; }
+    a:hover { color:var(--accent); }
+    a:focus-visible,summary:focus-visible { outline:2px solid var(--accent); outline-offset:5px; }
+    img { display:block; max-width:100%; height:auto; }
+    h1,h2,h3,h4,p,figure,dl,dd { margin:0; }
+    h1,h2,h3,h4 { font-family:'Fraunces',Georgia,serif; font-weight:500; line-height:1.15; }
+    p + p { margin-top:16px; }
+    strong { font-weight:600; }
+    .document { width:min(100% - 64px,1200px); margin:auto; }
+    .mono,.eyebrow,.chapter-label,.toc,.button,.figure-bar,.step-number,.metric-label { font-family:'IBM Plex Mono',monospace; }
+    .skip-link { position:absolute; top:8px; left:24px; z-index:10; transform:translateY(-160%); background:var(--ink); color:var(--paper); padding:9px 16px; }
+    .skip-link:focus { transform:translateY(0); }
+    .masthead { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px 24px; padding:13px 0; margin-top:32px; border-top:2px solid var(--ink); border-bottom:1px solid var(--line); font-size:12px; letter-spacing:.04em; }
+    .masthead nav { display:flex; align-items:center; flex-wrap:wrap; gap:8px 22px; }
+    .masthead a { display:inline-flex; align-items:center; min-height:32px; text-decoration:none; }
+    .masthead .muted { color:var(--muted); }
+    .hero { display:grid; grid-template-columns:minmax(0,.95fr) minmax(0,1.25fr); align-items:center; gap:42px; padding:50px 0 44px; }
+    .eyebrow { color:var(--accent); font-size:11px; line-height:1.8; letter-spacing:.08em; text-transform:uppercase; }
+    h1 { font-size:clamp(3.5rem,6.7vw,6rem); letter-spacing:-.055em; margin:15px 0 14px; }
+    .hero-subtitle { font-family:'Fraunces',Georgia,serif; font-size:clamp(1.45rem,2.1vw,1.9rem); line-height:1.25; max-width:22ch; }
+    .hero-copy { color:var(--muted); font-size:16px; margin-top:19px; max-width:44ch; }
+    .hero-role { margin-top:22px; font-size:13px; }
+    .hero-role span { display:block; color:var(--muted); margin-top:3px; }
+    .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
+    .button { display:inline-flex; justify-content:center; align-items:center; gap:10px; min-height:46px; padding:11px 16px; border:1px solid var(--ink); text-decoration:none; font-size:11.5px; line-height:1.5; }
+    .button--primary { background:var(--ink); color:var(--paper); }
+    .button:hover { background:var(--accent); color:var(--paper); border-color:var(--accent); }
+    .release-proof { display:flex; gap:12px 25px; flex-wrap:wrap; border-top:1px solid var(--line); margin-top:25px; padding-top:14px; font-size:12px; color:var(--muted); }
+    .release-proof strong { color:var(--ink); font-size:18px; font-weight:500; }
+    .product-figure { border:1px solid var(--line); background:var(--white); }
+    .figure-bar { display:flex; justify-content:space-between; gap:14px; padding:11px 15px; border-bottom:1px solid var(--line); color:var(--muted); font-size:10px; letter-spacing:.06em; text-transform:uppercase; }
+    .figure-bar span:last-child { color:var(--accent); }
+    .product-figure > a { display:block; }
+    .product-figure img { width:100%; }
+    .product-figure a:focus-visible { outline-offset:-3px; }
+    .product-figure figcaption { padding:12px 16px; border-top:1px solid var(--line); font-size:12px; line-height:1.6; color:var(--muted); }
+    .hero-figure { box-shadow:10px 10px 0 #DCD6C9; margin-right:10px; }
+    .hero-figure img { height:auto; }
+    .project-facts { display:grid; grid-template-columns:1.15fr 1fr 1.35fr; border-top:1px solid var(--ink); border-bottom:1px solid var(--line); margin-bottom:32px; }
+    .project-facts > div { padding:16px 20px 16px 0; min-width:0; }
+    .project-facts > div + div { border-left:1px solid var(--line); padding-left:20px; }
+    .project-facts dt { color:var(--muted); font:10px/1.7 'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:.08em; }
+    .project-facts dd { font-size:13px; margin-top:5px; }
+    .toc { position:sticky; top:0; z-index:3; background:var(--paper); border-top:1px solid var(--ink); border-bottom:1px solid var(--line); display:flex; justify-content:space-between; flex-wrap:wrap; gap:0 20px; padding:5px 0; margin-bottom:12px; font-size:11px; }
+    .toc a { min-height:42px; display:inline-flex; gap:7px; align-items:center; text-decoration:none; color:var(--muted); }
+    .toc a span { color:var(--accent); font-size:10px; }
+    .toc a:hover,.toc a[aria-current="location"] { color:var(--accent); }
+    .chapter { display:grid; grid-template-columns:150px minmax(0,1fr); gap:34px; padding:56px 0; border-bottom:1px solid var(--line); }
+    .chapter-label { padding-top:5px; font-size:12px; color:var(--accent); line-height:1.6; font-weight:400; }
+    .chapter-label span { display:block; font-size:11px; color:var(--muted); margin-bottom:10px; }
+    .chapter-body { min-width:0; }
+    .chapter h3 { font-size:clamp(1.8rem,3vw,2.5rem); letter-spacing:-.025em; margin-bottom:22px; max-width:27ch; }
+    .chapter h4 { font-size:1.35rem; margin-bottom:10px; }
+    .lede { font-size:20px; line-height:1.6; max-width:65ch; }
+    .muted,.note { color:var(--muted); }
+    .note { font-size:13px; line-height:1.65; }
+    .spaced { margin-top:24px; }
+    .thesis { border-left:3px solid var(--accent); padding-left:22px; margin:28px 0; font-family:'Fraunces',Georgia,serif; font-size:24px; line-height:1.45; max-width:42ch; }
+    .problem-steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin:28px 0; }
+    .problem-step { border-top:1px solid var(--ink); padding-top:15px; }
+    .step-number { font-size:11px; color:var(--accent); display:block; margin-bottom:12px; }
+    .problem-step h4 { font-family:'IBM Plex Sans',sans-serif; font-size:15px; font-weight:500; }
+    .problem-step p { color:var(--muted); font-size:14px; }
+    .audience { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); margin:26px 0; border-top:1px solid var(--ink); }
+    .audience div { padding:18px 24px 18px 0; border-bottom:1px solid var(--line); }
+    .audience dt { font-weight:500; margin-bottom:5px; }
+    .audience dd { color:var(--muted); font-size:14px; }
+    .strategy-split { display:grid; grid-template-columns:1fr 1fr; gap:36px; margin-top:32px; }
+    .plain-list { padding-left:20px; margin:12px 0 0; }
+    .plain-list li { padding-left:3px; margin-bottom:10px; font-size:14px; }
+    .plain-list li::marker { color:var(--accent); }
+    .workflow { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); list-style:none; padding:0; margin:28px 0 18px; gap:18px; }
+    .workflow li { border-top:2px solid var(--ink); padding-top:12px; position:relative; }
+    .workflow li:not(:last-child)::after { content:'→'; position:absolute; right:-14px; top:10px; color:var(--accent); }
+    .workflow span { display:block; color:var(--accent); font:10px/1.6 'IBM Plex Mono',monospace; margin-bottom:8px; }
+    .workflow strong { display:block; font-size:14px; font-weight:500; }
+    .workflow p { color:var(--muted); font-size:12px; line-height:1.6; margin-top:6px; }
+    .feature-story { margin-top:42px; }
+    .feature-intro { display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-bottom:20px; align-items:start; }
+    .feature-intro p { font-size:14px; color:var(--muted); }
+    .feature-intro .feature-number { font:11px 'IBM Plex Mono',monospace; color:var(--accent); display:block; margin-bottom:10px; }
+    .rating-key { display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; font:11px 'IBM Plex Mono',monospace; }
+    .rating-key span { border:1px solid var(--line); padding:6px 10px; }
+    .rating-key .unknown { border-style:dashed; }
+    .formula { border-left:3px solid var(--navy); padding:12px 18px; background:#E0E5E4; font-family:'IBM Plex Mono',monospace; font-size:13px; line-height:1.8; margin:18px 0; overflow-wrap:anywhere; }
+    .evolution { display:grid; grid-template-columns:1fr 1fr; gap:26px; margin:26px 0; }
+    .version { border-top:2px solid var(--ink); padding-top:16px; }
+    .version--current { border-color:var(--accent); }
+    .version-label { color:var(--muted); font:11px/1.6 'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:.06em; margin-bottom:10px; }
+    .version--current .version-label { color:var(--accent); }
+    .version ul { padding-left:18px; margin:16px 0 0; }
+    .version li { font-size:14px; color:var(--muted); margin:7px 0; }
+    .decision { border-top:1px solid var(--ink); }
+    .decision:last-of-type { border-bottom:1px solid var(--line); }
+    .decision summary { display:flex; gap:20px; align-items:center; justify-content:space-between; cursor:pointer; padding:20px 0; list-style:none; }
+    .decision summary::-webkit-details-marker { display:none; }
+    .decision summary::after { content:'+'; font-family:'IBM Plex Mono',monospace; font-size:22px; flex:none; color:var(--accent); }
+    .decision[open] summary::after { content:'−'; }
+    .decision-title { font-family:'Fraunces',Georgia,serif; font-size:22px; line-height:1.3; }
+    .decision-title small { display:block; font:10px/1.7 'IBM Plex Mono',monospace; letter-spacing:.06em; color:var(--accent); text-transform:uppercase; margin-bottom:5px; }
+    .decision dl { padding:0 0 24px; }
+    .decision dl > div { display:grid; grid-template-columns:112px minmax(0,1fr); gap:20px; padding:10px 0; border-top:1px solid var(--soft); }
+    .decision dt { color:var(--muted); font:11px/1.7 'IBM Plex Mono',monospace; }
+    .decision dd { font-size:14px; }
+    .outcomes { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-top:1px solid var(--ink); border-bottom:1px solid var(--line); margin:26px 0 18px; }
+    .outcome { padding:20px 18px 22px 0; }
+    .outcome + .outcome { border-left:1px solid var(--line); padding-left:18px; }
+    .metric-label { font-size:10px; color:var(--accent); text-transform:uppercase; letter-spacing:.04em; }
+    .outcome .metric-value { font-family:'Fraunces',Georgia,serif; font-size:clamp(2.4rem,4vw,3.5rem); line-height:1.2; margin:10px 0; color:var(--ink); }
+    .outcome h4 { font-family:'IBM Plex Sans',sans-serif; font-size:14px; font-weight:500; line-height:1.5; margin-bottom:8px; }
+    .outcome p { font-size:12px; color:var(--muted); line-height:1.65; }
+    .validation { padding:20px 0; margin-top:12px; display:grid; grid-template-columns:1fr 1fr; gap:30px; }
+    .validation h4 { font-family:'IBM Plex Sans',sans-serif; font-size:15px; font-weight:500; }
+    .validation p { font-size:14px; color:var(--muted); }
+    .roadmap { list-style:none; margin:26px 0 0; padding:0; counter-reset:future; }
+    .roadmap li { display:grid; grid-template-columns:35px 1fr 1.25fr; gap:18px; padding:17px 0; border-top:1px solid var(--line); align-items:baseline; }
+    .roadmap li::before { counter-increment:future; content:'0' counter(future); font:11px 'IBM Plex Mono',monospace; color:var(--accent); }
+    .roadmap strong { font-size:14px; font-weight:500; }
+    .roadmap span { font-size:13px; color:var(--muted); }
+    .closing { padding:40px 0; display:flex; justify-content:space-between; align-items:center; gap:30px; }
+    .closing h2 { font-size:32px; margin-bottom:10px; }
+    .closing .actions { margin:0; flex-shrink:0; }
+    footer { border-top:1.5px solid var(--ink); padding:22px 0 38px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px 24px; font-size:12px; color:var(--muted); }
+    footer nav { display:flex; flex-wrap:wrap; gap:16px; }
+    @media(min-width:1400px) { .hero { gap:56px; } }
+    @media(max-width:1020px) { .document { width:min(100% - 48px,1200px); } .hero { gap:28px; grid-template-columns:1fr 1.1fr; } .hero-subtitle { font-size:24px; } .hero-copy { font-size:15px; } .hero h1 { font-size:65px; } .button { padding:11px 13px; font-size:10.5px; } .chapter { grid-template-columns:120px minmax(0,1fr); gap:26px; } .toc { justify-content:flex-start; gap:0 22px; } }
+    @media(max-width:780px) { html { scroll-padding-top:24px; } .hero { grid-template-columns:1fr; gap:30px; padding-top:34px; } .hero h1 { font-size:clamp(3.5rem,12vw,5rem); } .hero-copy,.hero-subtitle { max-width:100%; } .hero-figure { max-width:680px; }  .hero-role span { display:inline; margin-left:7px; } .release-proof { margin-top:22px; } .chapter { grid-template-columns:1fr; gap:20px; padding:38px 0; } .chapter-label span { display:inline; margin-right:12px; } .chapter-label { padding:0; } .chapter h3 { font-size:32px; } .toc { position:static; gap:0 20px; } .project-facts { grid-template-columns:1fr 1fr; } .project-facts > div:last-child { grid-column:1/-1; border-left:0; border-top:1px solid var(--line); padding-left:0; } .closing { flex-direction:column; align-items:flex-start; } }
+    @media(max-width:520px) { .document { width:calc(100% - 40px); } .masthead { margin-top:22px; } .masthead nav { gap:16px; } .masthead .muted { font-size:11px; } .hero-subtitle { font-size:25px; } .hero-role span { display:block; margin-left:0; } .actions { display:grid; grid-template-columns:1fr; width:100%; } .button { min-height:48px; font-size:12px; } .hero-figure { margin-right:7px; box-shadow:7px 7px 0 #DCD6C9; } .figure-bar { font-size:9px; gap:10px; padding:10px 12px; } .figure-bar span:last-child { text-align:right; } .project-facts { grid-template-columns:1fr; } .project-facts > div,.project-facts > div + div { padding:13px 0; border-left:0; } .project-facts > div + div { border-top:1px solid var(--line); } .project-facts > div:last-child { grid-column:auto; } .toc { gap:0 17px; } .toc a { font-size:10px; } .lede { font-size:18px; } .problem-steps,.strategy-split,.feature-intro,.evolution,.validation { grid-template-columns:1fr; gap:22px; } .problem-steps { gap:19px; } .audience { grid-template-columns:1fr; } .audience div { padding-right:0; } .workflow { grid-template-columns:1fr; gap:0; } .workflow li { border-top:1px solid var(--line); padding:13px 0 13px 45px; } .workflow span { position:absolute; left:0; top:15px; } .workflow strong { display:inline; } .workflow p { margin:3px 0 0; font-size:13px; } .workflow li:not(:last-child)::after { display:none; } .thesis { font-size:22px; padding-left:17px; } .decision-title { font-size:20px; } .decision dl > div { grid-template-columns:1fr; gap:3px; } .outcomes { grid-template-columns:1fr; } .outcome,.outcome + .outcome { border-left:0; padding:20px 0; } .outcome + .outcome { border-top:1px solid var(--line); } .outcome .metric-value { font-size:46px; margin:5px 0; } .outcome p { max-width:40ch; font-size:13px; } .roadmap li { grid-template-columns:27px 1fr; gap:6px 12px; } .roadmap li span { grid-column:2; } .chapter h3 { font-size:29px; } .closing .actions { width:100%; } footer { padding-bottom:30px; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    @media print { body { background:white; font-size:11pt; } .document { width:100%; } .toc,.actions,.skip-link { display:none; } .hero { padding:24px 0; } .chapter { padding:26px 0; } .chapter-label,h3,h4 { break-after:avoid; } figure,.version,.outcomes { break-inside:avoid; } .hero-figure { box-shadow:none; } }
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"CreativeWork","name":"Vantage AI — Product Management Case Study","description":"From competitive intelligence to actionable product decisions: a publicly deployed AI product, its development, trade-offs, and release validation.","url":"https://anish-g13.github.io/vantage-ai.html","author":{"@type":"Person","name":"Anish Gudipaati","url":"https://anish-g13.github.io/"},"datePublished":"2026-10-23","about":["Product management","AI product development","Product strategy"],"image":"https://anish-g13.github.io/assets/vantage-ai/hero.webp"}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#overview">Skip to case study</a>
+  <div class="document">
+    <header class="masthead mono">
+      <nav aria-label="Project navigation"><a href="index.html">Anish Gudipaati</a><a href="product-strategy.html#work">← Product &amp; Strategy</a></nav>
+      <span class="muted">Product case study / October 2026</span>
+    </header>
+
+    <section class="hero" aria-labelledby="project-title">
+      <div>
+        <p class="eyebrow">Product Management / AI Product Development</p>
+        <h1 id="project-title">Vantage AI</h1>
+        <p class="hero-subtitle">From Competitive Intelligence to Actionable Product Decisions</p>
+        <p class="hero-copy">A shipped workspace that connects source-backed AI research, editable benchmarking, and roadmap prioritization.</p>
+        <p class="hero-role"><strong>Product Owner &amp; Developer</strong><span>Individual project · Publicly deployed</span></p>
+        <div class="actions" aria-label="Explore the product">
+          <a class="button button--primary" href="https://vantageai.streamlit.app/" target="_blank" rel="noopener noreferrer">Try Live Product <span aria-hidden="true">↗</span></a>
+          <a class="button" href="https://github.com/Anish-G13/Vantage-AI" target="_blank" rel="noopener noreferrer">View Source Code <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="release-proof"><span><strong>94</strong> passing automated tests</span><span><strong>95%</strong> core module coverage</span></p>
+      </div>
+      <figure class="product-figure hero-figure">
+        <div class="figure-bar"><span>Inside the shipped product</span><span>V2 / Demonstration</span></div>
+        <a href="assets/vantage-ai/hero.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the genuine Vantage AI demonstration screenshot at full size"><img src="assets/vantage-ai/hero.webp" width="1190" height="870" fetchpriority="high" alt="Vantage AI’s actual dashboard, showing the fictional Northstar PM, Orbit Plan, and Cedar Work demonstration with scores and evidence coverage."></a>
+        <figcaption>Actual application capture. Fictional demo products; the sample scores are not customer results. Select any screenshot to inspect it full size.</figcaption>
+      </figure>
+    </section>
+
+    <dl class="project-facts" aria-label="Project at a glance">
+      <div><dt>Category</dt><dd>Product Management / AI Product Development / Product Strategy</dd></div>
+      <div><dt>Product scope</dt><dd>Five criteria · Up to three competitors · Human review</dd></div>
+      <div><dt>Technology</dt><dd>Python · Streamlit · Gemini · Pandas · Plotly</dd></div>
+    </dl>
+
+    <nav class="toc" aria-label="Case study sections">
+      <a href="#overview"><span>01</span>Overview</a><a href="#problem"><span>02</span>Problem</a><a href="#strategy"><span>03</span>Strategy</a><a href="#product"><span>04</span>Product</a><a href="#evolution"><span>05</span>Evolution</a><a href="#decisions"><span>06</span>Decisions</a><a href="#outcomes"><span>07</span>Outcomes</a><a href="#next"><span>08</span>Next</a>
+    </nav>
+
+    <main>
+      <section class="chapter" id="overview" aria-labelledby="overview-heading">
+        <h2 class="chapter-label" id="overview-heading"><span>01</span>Executive overview</h2>
+        <div class="chapter-body">
+          <h3>Bring the research and the decision into one workflow.</h3>
+          <p class="lede">I designed, developed, and launched Vantage AI to help product managers, founders, consultants, and analysts compare products, review the evidence, and decide which gaps deserve attention.</p>
+          <p class="spaced muted">The original product made feature comparison faster. Its next iteration addressed a more important question: could someone inspect, correct, and defend the resulting recommendation? V2 connects cited research, human judgment, weighted comparisons, and explicit roadmap assumptions in a publicly deployed product.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="problem" aria-labelledby="problem-heading">
+        <h2 class="chapter-label" id="problem-heading"><span>02</span>Problem identification</h2>
+        <div class="chapter-body">
+          <h3>The work is fragmented. The judgment still belongs to the user.</h3>
+          <p>Competitive research often moves from vendor pages to spreadsheets to a presentation. Information must be gathered, compared on consistent criteria, checked for evidence, and translated into priorities. Each handoff adds work and makes the reasoning harder to trace.</p>
+          <div class="problem-steps">
+            <div class="problem-step"><span class="step-number">A / Gather</span><h4>Scattered information</h4><p>Product documentation, feature pages, and pricing describe different scopes and plans.</p></div>
+            <div class="problem-step"><span class="step-number">B / Compare</span><h4>Unclear confidence</h4><p>A complete-looking AI matrix can hide unsupported claims and ambiguous evidence.</p></div>
+            <div class="problem-step"><span class="step-number">C / Decide</span><h4>Gaps without priorities</h4><p>A competitor having a feature does not establish customer demand or justify building it.</p></div>
+          </div>
+          <p class="thesis">The product needed to make the reasoning inspectable, the assessments correctable, and the prioritization explicit.</p>
+          <p class="note">This problem framing came from the initial workflow and a review of the product’s limitations. It is a product hypothesis, not a finding from customer interviews.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="strategy" aria-labelledby="strategy-heading">
+        <h2 class="chapter-label" id="strategy-heading"><span>03</span>Discovery &amp; strategy</h2>
+        <div class="chapter-body">
+          <h3>Start with a narrow decision, then build the complete path to it.</h3>
+          <p><strong>Core hypothesis:</strong> connecting research, evidence review, correction, and prioritization will reduce the work needed to produce a defensible competitive comparison.</p>
+          <p class="note spaced">Intended user personas and jobs to be done — hypotheses to test with external users.</p>
+          <dl class="audience">
+            <div><dt>Product managers</dt><dd>Compare alternatives and explain which capability gaps warrant discovery.</dd></div>
+            <div><dt>Founders</dt><dd>Assess positioning and choose where a limited product team should focus.</dd></div>
+            <div><dt>Consultants</dt><dd>Turn a reviewable comparison into a concise client decision brief.</dd></div>
+            <div><dt>Analysts</dt><dd>Inspect sources, correct assessments, and export a consistent benchmark.</dd></div>
+          </dl>
+          <div class="strategy-split">
+            <div><h4>What I prioritized</h4><ol class="plain-list"><li><strong>Evidence and state correctness.</strong> Establish traceability and prevent stale findings.</li><li><strong>Human control.</strong> Let reviewers correct the matrix without losing their work.</li><li><strong>Decision support.</strong> Connect comparisons to transparent priorities and reusable exports.</li></ol></div>
+            <div><h4>How success should be measured</h4><ul class="plain-list"><li>Time to an evidence-reviewed comparison, against a matched manual task.</li><li>Independent citation-support precision and uncertainty comprehension.</li><li>Unaided task completion, correction success, and perceived usefulness.</li><li>Consistency between the dashboard, priorities, and exported figures.</li></ul><p class="note spaced">These are evaluation criteria. External user results are still to be measured.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter" id="product" aria-labelledby="product-heading">
+        <h2 class="chapter-label" id="product-heading"><span>04</span>Development &amp; execution</h2>
+        <div class="chapter-body">
+          <h3>A connected workflow, from question to decision brief.</h3>
+          <ol class="workflow" aria-label="Product workflow: research, review, compare, prioritize, export">
+            <li><span>01</span><strong>Research</strong><p>Identify five criteria and research competitors.</p></li>
+            <li><span>02</span><strong>Review</strong><p>Inspect evidence and correct assessments.</p></li>
+            <li><span>03</span><strong>Compare</strong><p>Adjust importance and evaluate coverage.</p></li>
+            <li><span>04</span><strong>Prioritize</strong><p>Estimate impact and implementation effort.</p></li>
+            <li><span>05</span><strong>Export</strong><p>Take the comparison and roadmap into a brief.</p></li>
+          </ol>
+          <div class="feature-story">
+            <div class="feature-intro"><div><span class="feature-number">01 / Research with provenance</span><h4>Make each assessment inspectable.</h4></div><p>Gemini identifies five comparison criteria. Google Search grounding can attach sources to individual assessments, with explanations, dates, and qualitative confidence. Unsupported claims remain Unverified. Reviewers can edit ratings and add notes while retaining the original research.</p></div>
+            <figure class="product-figure"><div class="figure-bar"><span>Evidence &amp; edits</span><span>Actual live research</span></div><a href="assets/vantage-ai/evidence.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the genuine live evidence inspection screenshot at full size"><img src="assets/vantage-ai/evidence.webp" width="1190" height="786" loading="lazy" decoding="async" alt="The actual Vantage AI evidence inspector, with a real product assessment, confidence label, explanation, and source links."></a><figcaption>Captured from a live public-product research request. A linked citation provides provenance; it does not independently verify every claim, product plan, or comparison.</figcaption></figure>
+            <div class="rating-key" aria-label="Assessment choices"><span>Yes</span><span>Partial</span><span>No</span><span class="unknown">Unverified</span></div>
+          </div>
+          <div class="feature-story">
+            <div class="feature-intro"><div><span class="feature-number">02 / Compare without hiding uncertainty</span><h4>Show the score and how much is known.</h4></div><p>Importance weights drive the competitive scores and bar chart. The radar chart shows feature profiles. Unverified ratings are excluded from the known-feature score, while evidence coverage and bounds show what remains uncertain. Manual corrections recalculate the comparison immediately.</p></div>
+            <figure class="product-figure"><div class="figure-bar"><span>Weighted comparison &amp; feature profile</span><span>Fictional demo data</span></div><a href="assets/vantage-ai/comparison.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the genuine comparison and charts screenshot at full size"><img src="assets/vantage-ai/comparison.webp" width="1190" height="790" loading="lazy" decoding="async" alt="Vantage AI’s genuine demonstration showing the feature comparison table, weighted bar chart, and radar chart for fictional products."></a><figcaption>Actual application capture using clearly labeled sample products. The radar preserves gaps for unknown ratings; a high score alone is not a claim of market leadership.</figcaption></figure>
+          </div>
+          <div class="feature-story">
+            <div class="feature-intro"><div><span class="feature-number">03 / Prioritize with visible assumptions</span><h4>Turn a difference into a next action.</h4></div><p>Users adjust impact and effort to rank opportunities. Each item includes the competitive gap, rationale, and recommended next action. Missing evidence becomes a research task. Comparison CSV, roadmap CSV, and executive PDF exports use the same current calculations as the dashboard.</p></div>
+            <p class="formula">Priority = competitive gap × importance × impact ÷ effort</p>
+            <p class="note">Gap compares your rating with the strongest assessed competitor. Importance is weighted 1–10; impact and effort are relative 1–5 assumptions. These are not measured customer value or business returns.</p>
+            <figure class="product-figure spaced"><div class="figure-bar"><span>Ranked roadmap &amp; recommended actions</span><span>Fictional demo data</span></div><a href="assets/vantage-ai/roadmap.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the genuine roadmap screenshot at full size"><img src="assets/vantage-ai/roadmap.webp" width="1190" height="670" loading="lazy" decoding="async" alt="The actual product roadmap in Vantage AI, with ranked sample opportunities, a research-needed item, and an expanded recommended next action."></a><figcaption>Actual demonstration capture, cropped for legibility. The next action calls for validating customer demand and estimating delivery effort before committing to a build.</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter" id="evolution" aria-labelledby="evolution-heading">
+        <h2 class="chapter-label" id="evolution-heading"><span>05</span>V1 → V2</h2>
+        <div class="chapter-body">
+          <h3>Keep the useful comparison. Strengthen the decision behind it.</h3>
+          <p>The initial application proved out the comparison workflow. The V2 scope addressed gaps visible in the implementation: unsupported ratings, limited user correction, a simple gap list, and fragile result handling.</p>
+          <div class="evolution">
+            <article class="version"><p class="version-label">V1 / Initial product</p><h4>Generate &amp; compare</h4><ul><li>Gemini-powered five-feature comparisons.</li><li>Yes / No / Partial assessments.</li><li>Adjustable weights and competitive scores.</li><li>Interactive radar and bar charts.</li><li>CSV exports and AI executive insights.</li><li>A list of the largest feature gaps.</li></ul></article>
+            <article class="version version--current"><p class="version-label">V2 / Enhanced product · Shipped</p><h4>Research, review &amp; decide</h4><ul><li>Source-backed claims and citation inspection.</li><li>Unverified states, evidence coverage, and bounds.</li><li>Editable ratings, notes, reset, and retained originals.</li><li>Impact-versus-effort roadmap prioritization.</li><li>Executive PDF plus comparison and roadmap CSVs.</li><li>Clearer onboarding, demonstration, and safe errors.</li><li>Validated responses, session consistency, caching, and request controls.</li></ul></article>
+          </div>
+          <p class="note">The rationale came from product and implementation review, not invented customer requests. <a href="https://github.com/Anish-G13/Vantage-AI/blob/69c9b9912e73082aff1cb998083bbfd55feae294/app.py" target="_blank" rel="noopener noreferrer">Inspect V1</a> · <a href="https://github.com/Anish-G13/Vantage-AI/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer">Read the V2 changelog</a>.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="decisions" aria-labelledby="decisions-heading">
+        <h2 class="chapter-label" id="decisions-heading"><span>06</span>Product decisions</h2>
+        <div class="chapter-body">
+          <h3>Three choices that shaped the product.</h3>
+          <p class="note" style="margin-bottom:22px">Open each decision to explore the problem, alternatives, rationale, and trade-off.</p>
+          <details class="decision" open><summary><span class="decision-title"><small>Decision 01</small>Evidence quality over apparent completeness</span></summary><dl><div><dt>Problem</dt><dd>A complete AI-generated matrix can appear more certain than the underlying evidence.</dd></div><div><dt>Alternatives</dt><dd>Fill every cell from model knowledge; attach broad page-level citations; or require sources linked to the individual claim.</dd></div><div><dt>Decision</dt><dd>Accept supported assessments and classify insufficiently supported claims as Unverified.</dd></div><div><dt>Rationale</dt><dd>A reviewer should be able to inspect the basis for a claim. Missing evidence is not proof that a capability is absent.</dd></div><div><dt>Trade-off</dt><dd>The matrix may be less complete, and reviewers still need to check source quality, product identity, and plan scope.</dd></div></dl></details>
+          <details class="decision"><summary><span class="decision-title"><small>Decision 02</small>Human control over automated certainty</span></summary><dl><div><dt>Problem</dt><dd>AI assessments can be incomplete or wrong, and a fixed answer makes correction difficult.</dd></div><div><dt>Alternatives</dt><dd>Require repeated AI requests; make the generated matrix read-only; or let users correct it directly.</dd></div><div><dt>Decision</dt><dd>Add editable ratings and optional notes, preserve the originals, and recalculate every dependent result.</dd></div><div><dt>Rationale</dt><dd>The user owns the decision. Corrections should survive weight changes and remain auditable.</dd></div><div><dt>Trade-off</dt><dd>Manual changes are labeled judgments, not independently verified facts. Session work must be exported before leaving.</dd></div></dl></details>
+          <details class="decision"><summary><span class="decision-title"><small>Decision 03</small>Practical prioritization over unnecessary complexity</span></summary><dl><div><dt>Problem</dt><dd>A gap list offers limited guidance, but an elaborate scoring model would imply business evidence the product does not yet have.</dd></div><div><dt>Alternatives</dt><dd>Keep an unranked list; introduce reach and revenue estimates; or use a transparent impact/effort framework.</dd></div><div><dt>Decision</dt><dd>Rank assessed gaps using editable importance, impact, and effort assumptions. Keep the product on Streamlit.</dd></div><div><dt>Rationale</dt><dd>Users can understand and challenge the calculation while the existing Python stack supports the complete workflow.</dd></div><div><dt>Trade-off</dt><dd>The score is directional, not validated ROI. Persistent accounts, shared workspaces, and extra infrastructure remain deferred until demand is established.</dd></div></dl></details>
+        </div>
+      </section>
+
+      <section class="chapter" id="outcomes" aria-labelledby="outcomes-heading">
+        <h2 class="chapter-label" id="outcomes-heading"><span>07</span>Outcomes &amp; impact</h2>
+        <div class="chapter-body">
+          <h3>Shipped functionality, with the evidence kept in context.</h3>
+          <div class="outcomes">
+            <div class="outcome"><span class="metric-label">Personal workflow / V1</span><p class="metric-value">≈85%</p><h4>Less personal research time</h4><p>Self-recorded testing of the earlier workflow. A personal timing estimate, not an external user study or a measurement of V2.</p></div>
+            <div class="outcome"><span class="metric-label">Engineering validation</span><p class="metric-value">94</p><h4>Passing automated tests</h4><p>Scoring, manual changes, session consistency, evidence validation, exports, and API error handling.</p></div>
+            <div class="outcome"><span class="metric-label">Engineering validation</span><p class="metric-value">95%</p><h4>Core module test coverage</h4><p>According to release verification. This is coverage of the tested core modules, not the entire application or an accuracy score.</p></div>
+          </div>
+          <p class="note"><a href="https://github.com/Anish-G13/Vantage-AI/blob/main/docs/TESTING.md#release-verification--2026-10-24-utc" target="_blank" rel="noopener noreferrer">Release verification</a> documents the 94-test result, 95% core coverage, Python 3.11/3.12 checks, and live research/export checks. External API calls are mocked in the automated suite.</p>
+          <div class="validation"><div><h4>What is working</h4><p>A publicly deployed AI product with competitive analysis, editable benchmarking, ranked roadmap opportunities, and executive exports. Live research, source links, strategic insights, and downloads were checked during release.</p></div><div><h4>What remains to be established</h4><p>External user value, independent citation accuracy, repeat usage, and business outcomes. A functional release and engineering tests do not establish customer adoption or product-market fit.</p></div></div>
+        </div>
+      </section>
+
+      <section class="chapter" id="next" aria-labelledby="next-heading">
+        <h2 class="chapter-label" id="next-heading"><span>08</span>Future roadmap</h2>
+        <div class="chapter-body">
+          <h3>Validate the workflow before expanding the platform.</h3>
+          <p class="note">Proposed next steps, not shipped capabilities or completed studies.</p>
+          <ol class="roadmap"><li><strong>External user testing</strong><span>Observe intended users completing a comparison and explaining their decision.</span></li><li><strong>Independent citation evaluation</strong><span>Audit whether each linked source supports the claim and its scope.</span></li><li><strong>Better research context</strong><span>Test product URLs, category context, and plan selection to reduce ambiguity.</span></li><li><strong>Workflow usability</strong><span>Prioritize friction found in source review, correction, and exporting.</span></li><li><strong>Persistent workspaces</strong><span>Consider saved and shared work only if recurring demand is validated.</span></li></ol>
+        </div>
+      </section>
+    </main>
+
+    <section class="closing" aria-label="Explore Vantage AI">
+      <div><h2>Explore the product behind the decisions.</h2><p class="note">Start with the clearly labeled demonstration; review the sources in a live comparison when available.</p></div>
+      <div class="actions"><a class="button button--primary" href="https://vantageai.streamlit.app/" target="_blank" rel="noopener noreferrer">Try Live Product <span aria-hidden="true">↗</span></a><a class="button" href="https://github.com/Anish-G13/Vantage-AI" target="_blank" rel="noopener noreferrer">View Source Code <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <footer><span>Anish Gudipaati · Vanderbilt University · Economics + CS</span><nav aria-label="Footer navigation"><a href="product-strategy.html">All Product Work</a><a href="index.html">Portfolio Home</a><a href="mailto:anishsai.r.gudipaati@vanderbilt.edu">Email</a><a href="https://linkedin.com/in/anishgudipaati" target="_blank" rel="noopener noreferrer">LinkedIn</a></nav></footer>
+  </div>
+  <script>
+    const sectionLinks = [...document.querySelectorAll('.toc a')];
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => {
+        const visible = entries.filter(entry => entry.isIntersecting);
+        if (!visible.length) return;
+        const id = visible[0].target.id;
+        sectionLinks.forEach(link => {
+          if (link.hash === '#' + id) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+      }, { rootMargin: '-12% 0px -65% 0px', threshold: 0 });
+      document.querySelectorAll('main > section[id]').forEach(section => observer.observe(section));
+    }
+  </script>
+</body>
+</html>
