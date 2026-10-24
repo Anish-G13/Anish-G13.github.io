@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Anish Gudipaati’s Vantage AI product management case study: a publicly deployed competitive intelligence product, from AI comparisons to cited evidence, human review, and roadmap prioritization.">
-  <meta property="og:title" content="Vantage AI — Product Management Case Study · Anish Gudipaati">
-  <meta property="og:description" content="From competitive intelligence to actionable product decisions. Product ownership, a shipped AI workspace, three product trade-offs, and documented release validation.">
+  <meta name="description" content="How I built and improved Vantage AI, a live competitive research application with source citations, editable comparisons, and product prioritization.">
+  <meta property="og:title" content="Vantage AI — Product Case Study · Anish Gudipaati">
+  <meta property="og:description" content="A look at Vantage AI’s features, development, product decisions, and results.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://anish-g13.github.io/vantage-ai.html">
   <meta property="og:image" content="https://anish-g13.github.io/assets/vantage-ai/hero.webp">
-  <meta property="og:image:alt" content="The genuine Vantage AI application displaying its clearly labeled fictional demonstration.">
+  <meta property="og:image:alt" content="Vantage AI displaying its fictional demonstration products.">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://anish-g13.github.io/vantage-ai.html">
-  <title>Vantage AI — Product Management Case Study · Anish Gudipaati</title>
+  <title>Vantage AI — Product Case Study · Anish Gudipaati</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
@@ -153,7 +153,7 @@
     @media print { body { background:white; font-size:11pt; } .document { width:100%; } .toc,.actions,.skip-link { display:none; } .hero { padding:24px 0; } .chapter { padding:26px 0; } .chapter-label,h3,h4 { break-after:avoid; } figure,.version,.outcomes { break-inside:avoid; } .hero-figure { box-shadow:none; } }
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"CreativeWork","name":"Vantage AI — Product Management Case Study","description":"From competitive intelligence to actionable product decisions: a publicly deployed AI product, its development, trade-offs, and release validation.","url":"https://anish-g13.github.io/vantage-ai.html","author":{"@type":"Person","name":"Anish Gudipaati","url":"https://anish-g13.github.io/"},"datePublished":"2026-10-23","about":["Product management","AI product development","Product strategy"],"image":"https://anish-g13.github.io/assets/vantage-ai/hero.webp"}
+  {"@context":"https://schema.org","@type":"CreativeWork","name":"Vantage AI — Product Case Study","description":"How I built and improved Vantage AI, a live competitive research application.","url":"https://anish-g13.github.io/vantage-ai.html","author":{"@type":"Person","name":"Anish Gudipaati","url":"https://anish-g13.github.io/"},"datePublished":"2026-10-23","about":["Product management","AI product development","Product strategy"],"image":"https://anish-g13.github.io/assets/vantage-ai/hero.webp"}
   </script>
 </head>
 <body>
@@ -166,103 +166,99 @@
 
     <section class="hero" aria-labelledby="project-title">
       <div>
-        <p class="eyebrow">Product Management / AI Product Development</p>
+        <p class="eyebrow">Product Management / AI Development</p>
         <h1 id="project-title">Vantage AI</h1>
-        <p class="hero-subtitle">From Competitive Intelligence to Actionable Product Decisions</p>
-        <p class="hero-copy">A shipped workspace that connects source-backed AI research, editable benchmarking, and roadmap prioritization.</p>
+        <p class="hero-subtitle">AI-powered competitive research</p>
+        <p class="hero-copy">I built Vantage AI to research competitors, compare features, and prioritize product improvements.</p>
         <p class="hero-role"><strong>Product Owner &amp; Developer</strong><span>Individual project · Publicly deployed</span></p>
         <div class="actions" aria-label="Explore the product">
-          <a class="button button--primary" href="https://vantageai.streamlit.app/" target="_blank" rel="noopener noreferrer">Try Live Product <span aria-hidden="true">↗</span></a>
+          <a class="button button--primary" href="https://vantageai.streamlit.app/" target="_blank" rel="noopener noreferrer">Try the App <span aria-hidden="true">↗</span></a>
           <a class="button" href="https://github.com/Anish-G13/Vantage-AI" target="_blank" rel="noopener noreferrer">View Source Code <span aria-hidden="true">↗</span></a>
         </div>
         <p class="release-proof"><span><strong>94</strong> passing automated tests</span><span><strong>95%</strong> core module coverage</span></p>
       </div>
       <figure class="product-figure hero-figure">
-        <div class="figure-bar"><span>Inside the shipped product</span><span>V2 / Demonstration</span></div>
-        <a href="assets/vantage-ai/hero.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the genuine Vantage AI demonstration screenshot at full size"><img src="assets/vantage-ai/hero.webp" width="1190" height="870" fetchpriority="high" alt="Vantage AI’s actual dashboard, showing the fictional Northstar PM, Orbit Plan, and Cedar Work demonstration with scores and evidence coverage."></a>
-        <figcaption>Actual application capture. Fictional demo products; the sample scores are not customer results. Select any screenshot to inspect it full size.</figcaption>
+        <div class="figure-bar"><span>Vantage AI dashboard</span><span>V2 / Demo</span></div>
+        <a href="assets/vantage-ai/hero.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the dashboard screenshot at full size"><img src="assets/vantage-ai/hero.webp" width="1190" height="870" fetchpriority="high" alt="Vantage AI dashboard with scores for the fictional Northstar PM, Orbit Plan, and Cedar Work demo products."></a>
+        <figcaption>Application screenshot with fictional demo products and sample scores. Select any screenshot to view it full size.</figcaption>
       </figure>
     </section>
 
-    <dl class="project-facts" aria-label="Project at a glance">
-      <div><dt>Category</dt><dd>Product Management / AI Product Development / Product Strategy</dd></div>
-      <div><dt>Product scope</dt><dd>Five criteria · Up to three competitors · Human review</dd></div>
+    <dl class="project-facts" aria-label="Project details">
+      <div><dt>Focus</dt><dd>Product Management / Development / Strategy</dd></div>
+      <div><dt>Scope</dt><dd>Five criteria · Up to three competitors · Human review</dd></div>
       <div><dt>Technology</dt><dd>Python · Streamlit · Gemini · Pandas · Plotly</dd></div>
     </dl>
 
     <nav class="toc" aria-label="Case study sections">
-      <a href="#overview"><span>01</span>Overview</a><a href="#problem"><span>02</span>Problem</a><a href="#strategy"><span>03</span>Strategy</a><a href="#product"><span>04</span>Product</a><a href="#evolution"><span>05</span>Evolution</a><a href="#decisions"><span>06</span>Decisions</a><a href="#outcomes"><span>07</span>Outcomes</a><a href="#next"><span>08</span>Next</a>
+      <a href="#overview"><span>01</span>Overview</a><a href="#problem"><span>02</span>Problem</a><a href="#strategy"><span>03</span>Strategy</a><a href="#product"><span>04</span>Features</a><a href="#evolution"><span>05</span>V1 → V2</a><a href="#decisions"><span>06</span>Decisions</a><a href="#outcomes"><span>07</span>Results</a><a href="#next"><span>08</span>Next Steps</a>
     </nav>
 
     <main>
       <section class="chapter" id="overview" aria-labelledby="overview-heading">
-        <h2 class="chapter-label" id="overview-heading"><span>01</span>Executive overview</h2>
+        <h2 class="chapter-label" id="overview-heading"><span>01</span>Overview</h2>
         <div class="chapter-body">
-          <h3>Bring the research and the decision into one workflow.</h3>
-          <p class="lede">I designed, developed, and launched Vantage AI to help product managers, founders, consultants, and analysts compare products, review the evidence, and decide which gaps deserve attention.</p>
-          <p class="spaced muted">The original product made feature comparison faster. Its next iteration addressed a more important question: could someone inspect, correct, and defend the resulting recommendation? V2 connects cited research, human judgment, weighted comparisons, and explicit roadmap assumptions in a publicly deployed product.</p>
+          <h3>About Vantage AI</h3>
+          <p class="lede">I first built Vantage AI to automate feature comparisons. I added citations, editable ratings, and roadmap priorities so users could review the research and choose what to investigate next.</p>
         </div>
       </section>
 
       <section class="chapter" id="problem" aria-labelledby="problem-heading">
-        <h2 class="chapter-label" id="problem-heading"><span>02</span>Problem identification</h2>
+        <h2 class="chapter-label" id="problem-heading"><span>02</span>Problem</h2>
         <div class="chapter-body">
-          <h3>The work is fragmented. The judgment still belongs to the user.</h3>
-          <p>Competitive research often moves from vendor pages to spreadsheets to a presentation. Information must be gathered, compared on consistent criteria, checked for evidence, and translated into priorities. Each handoff adds work and makes the reasoning harder to trace.</p>
+          <h3>Why I built it</h3>
+          <p>Competitive research often means moving between product websites, spreadsheets, and presentations. Gathering information is only part of the work: someone still needs to check it, compare features consistently, and decide what matters.</p>
           <div class="problem-steps">
-            <div class="problem-step"><span class="step-number">A / Gather</span><h4>Scattered information</h4><p>Product documentation, feature pages, and pricing describe different scopes and plans.</p></div>
-            <div class="problem-step"><span class="step-number">B / Compare</span><h4>Unclear confidence</h4><p>A complete-looking AI matrix can hide unsupported claims and ambiguous evidence.</p></div>
-            <div class="problem-step"><span class="step-number">C / Decide</span><h4>Gaps without priorities</h4><p>A competitor having a feature does not establish customer demand or justify building it.</p></div>
+            <div class="problem-step"><span class="step-number">A / Gather</span><h4>Scattered information</h4><p>Documentation, pricing, and feature pages describe different plans and product scopes.</p></div>
+            <div class="problem-step"><span class="step-number">B / Compare</span><h4>Unsupported claims</h4><p>AI-generated comparisons can look complete even when evidence is missing.</p></div>
+            <div class="problem-step"><span class="step-number">C / Decide</span><h4>Unclear priorities</h4><p>A competitor’s feature is not enough reason to build it.</p></div>
           </div>
-          <p class="thesis">The product needed to make the reasoning inspectable, the assessments correctable, and the prioritization explicit.</p>
-          <p class="note">This problem framing came from the initial workflow and a review of the product’s limitations. It is a product hypothesis, not a finding from customer interviews.</p>
         </div>
       </section>
 
       <section class="chapter" id="strategy" aria-labelledby="strategy-heading">
-        <h2 class="chapter-label" id="strategy-heading"><span>03</span>Discovery &amp; strategy</h2>
+        <h2 class="chapter-label" id="strategy-heading"><span>03</span>Strategy</h2>
         <div class="chapter-body">
-          <h3>Start with a narrow decision, then build the complete path to it.</h3>
-          <p><strong>Core hypothesis:</strong> connecting research, evidence review, correction, and prioritization will reduce the work needed to produce a defensible competitive comparison.</p>
-          <p class="note spaced">Intended user personas and jobs to be done — hypotheses to test with external users.</p>
+          <h3>Intended users and priorities</h3>
+          <p>I chose these priorities from my own workflow and implementation review, expecting fewer steps to a useful comparison. Intended users and goals remain untested.</p>
           <dl class="audience">
-            <div><dt>Product managers</dt><dd>Compare alternatives and explain which capability gaps warrant discovery.</dd></div>
-            <div><dt>Founders</dt><dd>Assess positioning and choose where a limited product team should focus.</dd></div>
-            <div><dt>Consultants</dt><dd>Turn a reviewable comparison into a concise client decision brief.</dd></div>
-            <div><dt>Analysts</dt><dd>Inspect sources, correct assessments, and export a consistent benchmark.</dd></div>
+            <div><dt>Product managers</dt><dd>Compare products and identify gaps worth investigating.</dd></div>
+            <div><dt>Founders</dt><dd>Understand competitors and choose where to focus.</dd></div>
+            <div><dt>Consultants</dt><dd>Prepare a comparison for a client recommendation.</dd></div>
+            <div><dt>Analysts</dt><dd>Check sources, correct ratings, and export findings.</dd></div>
           </dl>
           <div class="strategy-split">
-            <div><h4>What I prioritized</h4><ol class="plain-list"><li><strong>Evidence and state correctness.</strong> Establish traceability and prevent stale findings.</li><li><strong>Human control.</strong> Let reviewers correct the matrix without losing their work.</li><li><strong>Decision support.</strong> Connect comparisons to transparent priorities and reusable exports.</li></ol></div>
-            <div><h4>How success should be measured</h4><ul class="plain-list"><li>Time to an evidence-reviewed comparison, against a matched manual task.</li><li>Independent citation-support precision and uncertainty comprehension.</li><li>Unaided task completion, correction success, and perceived usefulness.</li><li>Consistency between the dashboard, priorities, and exported figures.</li></ul><p class="note spaced">These are evaluation criteria. External user results are still to be measured.</p></div>
+            <div><h4>What I prioritized</h4><ol class="plain-list"><li><strong>Reliable research.</strong> Link claims to sources and prevent stale results.</li><li><strong>Editable ratings.</strong> Allow corrections without losing earlier work.</li><li><strong>Useful outputs.</strong> Rank gaps and export consistent results.</li></ol></div>
+            <div><h4>Planned evaluation</h4><ul class="plain-list"><li>Time to a reviewed comparison versus a matched manual task.</li><li>Citation accuracy and understanding of uncertain ratings.</li><li>Task completion, successful corrections, and usefulness.</li><li>Consistency across the dashboard and exports.</li></ul></div>
           </div>
         </div>
       </section>
 
       <section class="chapter" id="product" aria-labelledby="product-heading">
-        <h2 class="chapter-label" id="product-heading"><span>04</span>Development &amp; execution</h2>
+        <h2 class="chapter-label" id="product-heading"><span>04</span>Features</h2>
         <div class="chapter-body">
-          <h3>A connected workflow, from question to decision brief.</h3>
-          <ol class="workflow" aria-label="Product workflow: research, review, compare, prioritize, export">
-            <li><span>01</span><strong>Research</strong><p>Identify five criteria and research competitors.</p></li>
-            <li><span>02</span><strong>Review</strong><p>Inspect evidence and correct assessments.</p></li>
-            <li><span>03</span><strong>Compare</strong><p>Adjust importance and evaluate coverage.</p></li>
-            <li><span>04</span><strong>Prioritize</strong><p>Estimate impact and implementation effort.</p></li>
-            <li><span>05</span><strong>Export</strong><p>Take the comparison and roadmap into a brief.</p></li>
+          <h3>How Vantage AI works</h3>
+          <ol class="workflow" aria-label="Research, review, compare, prioritize, and export">
+            <li><span>01</span><strong>Research</strong><p>Research competitors against five criteria.</p></li>
+            <li><span>02</span><strong>Review</strong><p>Check sources and correct ratings.</p></li>
+            <li><span>03</span><strong>Compare</strong><p>Adjust weights and compare scores.</p></li>
+            <li><span>04</span><strong>Prioritize</strong><p>Estimate impact and effort.</p></li>
+            <li><span>05</span><strong>Export</strong><p>Download the results and roadmap.</p></li>
           </ol>
           <div class="feature-story">
-            <div class="feature-intro"><div><span class="feature-number">01 / Research with provenance</span><h4>Make each assessment inspectable.</h4></div><p>Gemini identifies five comparison criteria. Google Search grounding can attach sources to individual assessments, with explanations, dates, and qualitative confidence. Unsupported claims remain Unverified. Reviewers can edit ratings and add notes while retaining the original research.</p></div>
-            <figure class="product-figure"><div class="figure-bar"><span>Evidence &amp; edits</span><span>Actual live research</span></div><a href="assets/vantage-ai/evidence.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the genuine live evidence inspection screenshot at full size"><img src="assets/vantage-ai/evidence.webp" width="1190" height="786" loading="lazy" decoding="async" alt="The actual Vantage AI evidence inspector, with a real product assessment, confidence label, explanation, and source links."></a><figcaption>Captured from a live public-product research request. A linked citation provides provenance; it does not independently verify every claim, product plan, or comparison.</figcaption></figure>
-            <div class="rating-key" aria-label="Assessment choices"><span>Yes</span><span>Partial</span><span>No</span><span class="unknown">Unverified</span></div>
+            <div class="feature-intro"><div><span class="feature-number">01 / Research</span><h4>Sources and editable ratings</h4></div><p>Gemini proposes five comparison criteria. Google Search grounding links sources to individual assessments where available, alongside explanations, dates, and qualitative confidence. Unsupported claims remain Unverified. Users can edit ratings and add notes while retaining the originals.</p></div>
+            <figure class="product-figure"><div class="figure-bar"><span>Sources &amp; edits</span><span>Live research</span></div><a href="assets/vantage-ai/evidence.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the source review screenshot at full size"><img src="assets/vantage-ai/evidence.webp" width="1190" height="786" loading="lazy" decoding="async" alt="Vantage AI source review with a live product assessment, confidence label, explanation, and source links."></a><figcaption>Captured during a live research request comparing public products.</figcaption></figure>
+            <div class="rating-key" aria-label="Rating options"><span>Yes</span><span>Partial</span><span>No</span><span class="unknown">Unverified</span></div>
           </div>
           <div class="feature-story">
-            <div class="feature-intro"><div><span class="feature-number">02 / Compare without hiding uncertainty</span><h4>Show the score and how much is known.</h4></div><p>Importance weights drive the competitive scores and bar chart. The radar chart shows feature profiles. Unverified ratings are excluded from the known-feature score, while evidence coverage and bounds show what remains uncertain. Manual corrections recalculate the comparison immediately.</p></div>
-            <figure class="product-figure"><div class="figure-bar"><span>Weighted comparison &amp; feature profile</span><span>Fictional demo data</span></div><a href="assets/vantage-ai/comparison.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the genuine comparison and charts screenshot at full size"><img src="assets/vantage-ai/comparison.webp" width="1190" height="790" loading="lazy" decoding="async" alt="Vantage AI’s genuine demonstration showing the feature comparison table, weighted bar chart, and radar chart for fictional products."></a><figcaption>Actual application capture using clearly labeled sample products. The radar preserves gaps for unknown ratings; a high score alone is not a claim of market leadership.</figcaption></figure>
+            <div class="feature-intro"><div><span class="feature-number">02 / Compare</span><h4>Weighted scores and charts</h4></div><p>Adjustable importance weights drive the scores and bar chart; the radar chart shows feature profiles. Unverified ratings are excluded from the known-feature score. Evidence coverage and score bounds show how much remains unknown, and edits recalculate the results immediately.</p></div>
+            <figure class="product-figure"><div class="figure-bar"><span>Comparison &amp; charts</span><span>Fictional demo data</span></div><a href="assets/vantage-ai/comparison.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the comparison screenshot at full size"><img src="assets/vantage-ai/comparison.webp" width="1190" height="790" loading="lazy" decoding="async" alt="Feature table, weighted bar chart, and radar chart comparing fictional demo products in Vantage AI."></a><figcaption>Demo comparison. Unknown ratings remain gaps in the radar chart.</figcaption></figure>
           </div>
           <div class="feature-story">
-            <div class="feature-intro"><div><span class="feature-number">03 / Prioritize with visible assumptions</span><h4>Turn a difference into a next action.</h4></div><p>Users adjust impact and effort to rank opportunities. Each item includes the competitive gap, rationale, and recommended next action. Missing evidence becomes a research task. Comparison CSV, roadmap CSV, and executive PDF exports use the same current calculations as the dashboard.</p></div>
+            <div class="feature-intro"><div><span class="feature-number">03 / Prioritize</span><h4>A ranked product roadmap</h4></div><p>Users estimate impact and effort to rank gaps. Each item includes an explanation and next action; missing evidence prompts further research. Comparison CSV, roadmap CSV, and executive PDF exports use the dashboard’s current calculations.</p></div>
             <p class="formula">Priority = competitive gap × importance × impact ÷ effort</p>
-            <p class="note">Gap compares your rating with the strongest assessed competitor. Importance is weighted 1–10; impact and effort are relative 1–5 assumptions. These are not measured customer value or business returns.</p>
-            <figure class="product-figure spaced"><div class="figure-bar"><span>Ranked roadmap &amp; recommended actions</span><span>Fictional demo data</span></div><a href="assets/vantage-ai/roadmap.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the genuine roadmap screenshot at full size"><img src="assets/vantage-ai/roadmap.webp" width="1190" height="670" loading="lazy" decoding="async" alt="The actual product roadmap in Vantage AI, with ranked sample opportunities, a research-needed item, and an expanded recommended next action."></a><figcaption>Actual demonstration capture, cropped for legibility. The next action calls for validating customer demand and estimating delivery effort before committing to a build.</figcaption></figure>
+            <p class="note">Gap compares your rating with the strongest assessed competitor. Importance ranges from 1–10; impact and effort are relative 1–5 estimates, not measured customer value or business returns.</p>
+            <figure class="product-figure spaced"><div class="figure-bar"><span>Roadmap &amp; next actions</span><span>Fictional demo data</span></div><a href="assets/vantage-ai/roadmap.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the roadmap screenshot at full size"><img src="assets/vantage-ai/roadmap.webp" width="1190" height="670" loading="lazy" decoding="async" alt="Vantage AI demo roadmap with ranked opportunities, a research-needed item, and a recommended next action."></a><figcaption>Demo roadmap recommending customer-demand checks and effort estimates before building.</figcaption></figure>
           </div>
         </div>
       </section>
@@ -270,56 +266,55 @@
       <section class="chapter" id="evolution" aria-labelledby="evolution-heading">
         <h2 class="chapter-label" id="evolution-heading"><span>05</span>V1 → V2</h2>
         <div class="chapter-body">
-          <h3>Keep the useful comparison. Strengthen the decision behind it.</h3>
-          <p>The initial application proved out the comparison workflow. The V2 scope addressed gaps visible in the implementation: unsupported ratings, limited user correction, a simple gap list, and fragile result handling.</p>
+          <h3>Product improvements</h3>
+          <p>I expanded the original comparison tool to address unsupported ratings, limited editing, an unranked gap list, and fragile result handling.</p>
           <div class="evolution">
-            <article class="version"><p class="version-label">V1 / Initial product</p><h4>Generate &amp; compare</h4><ul><li>Gemini-powered five-feature comparisons.</li><li>Yes / No / Partial assessments.</li><li>Adjustable weights and competitive scores.</li><li>Interactive radar and bar charts.</li><li>CSV exports and AI executive insights.</li><li>A list of the largest feature gaps.</li></ul></article>
-            <article class="version version--current"><p class="version-label">V2 / Enhanced product · Shipped</p><h4>Research, review &amp; decide</h4><ul><li>Source-backed claims and citation inspection.</li><li>Unverified states, evidence coverage, and bounds.</li><li>Editable ratings, notes, reset, and retained originals.</li><li>Impact-versus-effort roadmap prioritization.</li><li>Executive PDF plus comparison and roadmap CSVs.</li><li>Clearer onboarding, demonstration, and safe errors.</li><li>Validated responses, session consistency, caching, and request controls.</li></ul></article>
+            <article class="version"><p class="version-label">V1 / Initial release</p><h4>Feature comparison</h4><ul><li>Gemini-powered five-feature comparisons.</li><li>Yes / No / Partial ratings.</li><li>Adjustable weights and scores.</li><li>Radar and bar charts.</li><li>CSV exports and AI executive insights.</li><li>A list of the largest feature gaps.</li></ul></article>
+            <article class="version version--current"><p class="version-label">V2 / Current release</p><h4>Research and prioritization</h4><ul><li>Claim-level sources and citation review.</li><li>Unverified ratings, evidence coverage, and score bounds.</li><li>Editable ratings, notes, reset, and retained originals.</li><li>Impact/effort roadmap ranking.</li><li>Executive PDF and comparison/roadmap CSVs.</li><li>Onboarding, demo mode, and clearer errors.</li><li>Response validation, session consistency, caching, and request controls.</li></ul></article>
           </div>
-          <p class="note">The rationale came from product and implementation review, not invented customer requests. <a href="https://github.com/Anish-G13/Vantage-AI/blob/69c9b9912e73082aff1cb998083bbfd55feae294/app.py" target="_blank" rel="noopener noreferrer">Inspect V1</a> · <a href="https://github.com/Anish-G13/Vantage-AI/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer">Read the V2 changelog</a>.</p>
+          <p class="note"><a href="https://github.com/Anish-G13/Vantage-AI/blob/69c9b9912e73082aff1cb998083bbfd55feae294/app.py" target="_blank" rel="noopener noreferrer">View V1 code</a> · <a href="https://github.com/Anish-G13/Vantage-AI/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer">Read the V2 changelog</a>.</p>
         </div>
       </section>
 
       <section class="chapter" id="decisions" aria-labelledby="decisions-heading">
-        <h2 class="chapter-label" id="decisions-heading"><span>06</span>Product decisions</h2>
+        <h2 class="chapter-label" id="decisions-heading"><span>06</span>Decisions</h2>
         <div class="chapter-body">
-          <h3>Three choices that shaped the product.</h3>
-          <p class="note" style="margin-bottom:22px">Open each decision to explore the problem, alternatives, rationale, and trade-off.</p>
-          <details class="decision" open><summary><span class="decision-title"><small>Decision 01</small>Evidence quality over apparent completeness</span></summary><dl><div><dt>Problem</dt><dd>A complete AI-generated matrix can appear more certain than the underlying evidence.</dd></div><div><dt>Alternatives</dt><dd>Fill every cell from model knowledge; attach broad page-level citations; or require sources linked to the individual claim.</dd></div><div><dt>Decision</dt><dd>Accept supported assessments and classify insufficiently supported claims as Unverified.</dd></div><div><dt>Rationale</dt><dd>A reviewer should be able to inspect the basis for a claim. Missing evidence is not proof that a capability is absent.</dd></div><div><dt>Trade-off</dt><dd>The matrix may be less complete, and reviewers still need to check source quality, product identity, and plan scope.</dd></div></dl></details>
-          <details class="decision"><summary><span class="decision-title"><small>Decision 02</small>Human control over automated certainty</span></summary><dl><div><dt>Problem</dt><dd>AI assessments can be incomplete or wrong, and a fixed answer makes correction difficult.</dd></div><div><dt>Alternatives</dt><dd>Require repeated AI requests; make the generated matrix read-only; or let users correct it directly.</dd></div><div><dt>Decision</dt><dd>Add editable ratings and optional notes, preserve the originals, and recalculate every dependent result.</dd></div><div><dt>Rationale</dt><dd>The user owns the decision. Corrections should survive weight changes and remain auditable.</dd></div><div><dt>Trade-off</dt><dd>Manual changes are labeled judgments, not independently verified facts. Session work must be exported before leaving.</dd></div></dl></details>
-          <details class="decision"><summary><span class="decision-title"><small>Decision 03</small>Practical prioritization over unnecessary complexity</span></summary><dl><div><dt>Problem</dt><dd>A gap list offers limited guidance, but an elaborate scoring model would imply business evidence the product does not yet have.</dd></div><div><dt>Alternatives</dt><dd>Keep an unranked list; introduce reach and revenue estimates; or use a transparent impact/effort framework.</dd></div><div><dt>Decision</dt><dd>Rank assessed gaps using editable importance, impact, and effort assumptions. Keep the product on Streamlit.</dd></div><div><dt>Rationale</dt><dd>Users can understand and challenge the calculation while the existing Python stack supports the complete workflow.</dd></div><div><dt>Trade-off</dt><dd>The score is directional, not validated ROI. Persistent accounts, shared workspaces, and extra infrastructure remain deferred until demand is established.</dd></div></dl></details>
+          <h3>Key product decisions</h3>
+          <p class="note" style="margin-bottom:22px">Select a decision to read more.</p>
+          <details class="decision" open><summary><span class="decision-title"><small>Decision 01</small>Leave unsupported claims unverified</span></summary><dl><div><dt>Problem</dt><dd>A filled-in matrix can hide weak evidence.</dd></div><div><dt>Options</dt><dd>Use model knowledge, broad page citations, or claim-level sources.</dd></div><div><dt>Choice</dt><dd>I required supporting sources and marked other claims Unverified.</dd></div><div><dt>Why</dt><dd>Missing evidence does not establish that a feature is absent.</dd></div><div><dt>Trade-off</dt><dd>Results may be incomplete. Reviewers still need to check sources, product identity, and plan scope.</dd></div></dl></details>
+          <details class="decision"><summary><span class="decision-title"><small>Decision 02</small>Let users correct the research</span></summary><dl><div><dt>Problem</dt><dd>AI ratings can be incomplete or wrong.</dd></div><div><dt>Options</dt><dd>Rerun the request, lock the results, or allow direct edits.</dd></div><div><dt>Choice</dt><dd>I added editable ratings and notes, retaining originals and recalculating dependent results.</dd></div><div><dt>Why</dt><dd>Corrections should survive weight changes and be easy to review.</dd></div><div><dt>Trade-off</dt><dd>Edits are labeled user judgments. Work must be exported before leaving the session.</dd></div></dl></details>
+          <details class="decision"><summary><span class="decision-title"><small>Decision 03</small>Keep prioritization simple</span></summary><dl><div><dt>Problem</dt><dd>A gap list gives little guidance; detailed revenue forecasts would lack supporting data.</dd></div><div><dt>Options</dt><dd>Leave gaps unranked, estimate reach and revenue, or use impact and effort.</dd></div><div><dt>Choice</dt><dd>I used editable importance, impact, and effort estimates and kept Streamlit.</dd></div><div><dt>Why</dt><dd>The calculation is easy to review, and the existing Python stack supports the workflow.</dd></div><div><dt>Trade-off</dt><dd>Scores guide discussion, not validated ROI. Accounts and shared workspaces remain deferred.</dd></div></dl></details>
         </div>
       </section>
 
       <section class="chapter" id="outcomes" aria-labelledby="outcomes-heading">
-        <h2 class="chapter-label" id="outcomes-heading"><span>07</span>Outcomes &amp; impact</h2>
+        <h2 class="chapter-label" id="outcomes-heading"><span>07</span>Results</h2>
         <div class="chapter-body">
-          <h3>Shipped functionality, with the evidence kept in context.</h3>
+          <h3>Results and testing</h3>
           <div class="outcomes">
-            <div class="outcome"><span class="metric-label">Personal workflow / V1</span><p class="metric-value">≈85%</p><h4>Less personal research time</h4><p>Self-recorded testing of the earlier workflow. A personal timing estimate, not an external user study or a measurement of V2.</p></div>
-            <div class="outcome"><span class="metric-label">Engineering validation</span><p class="metric-value">94</p><h4>Passing automated tests</h4><p>Scoring, manual changes, session consistency, evidence validation, exports, and API error handling.</p></div>
-            <div class="outcome"><span class="metric-label">Engineering validation</span><p class="metric-value">95%</p><h4>Core module test coverage</h4><p>According to release verification. This is coverage of the tested core modules, not the entire application or an accuracy score.</p></div>
+            <div class="outcome"><span class="metric-label">Personal workflow / V1</span><p class="metric-value">≈85%</p><h4>Less personal research time</h4><p>Self-recorded testing of the earlier V1 workflow; not an external user study or a V2 result.</p></div>
+            <div class="outcome"><span class="metric-label">Automated testing</span><p class="metric-value">94</p><h4>Passing tests</h4><p>Covering scoring, edits, sessions, evidence validation, exports, and API errors.</p></div>
+            <div class="outcome"><span class="metric-label">Automated testing</span><p class="metric-value">95%</p><h4>Core module coverage</h4><p>Core modules only; this is test coverage, not whole-app coverage or research accuracy.</p></div>
           </div>
-          <p class="note"><a href="https://github.com/Anish-G13/Vantage-AI/blob/main/docs/TESTING.md#release-verification--2026-10-24-utc" target="_blank" rel="noopener noreferrer">Release verification</a> documents the 94-test result, 95% core coverage, Python 3.11/3.12 checks, and live research/export checks. External API calls are mocked in the automated suite.</p>
-          <div class="validation"><div><h4>What is working</h4><p>A publicly deployed AI product with competitive analysis, editable benchmarking, ranked roadmap opportunities, and executive exports. Live research, source links, strategic insights, and downloads were checked during release.</p></div><div><h4>What remains to be established</h4><p>External user value, independent citation accuracy, repeat usage, and business outcomes. A functional release and engineering tests do not establish customer adoption or product-market fit.</p></div></div>
+          <p class="note"><a href="https://github.com/Anish-G13/Vantage-AI/blob/main/docs/TESTING.md#release-verification--2026-10-24-utc" target="_blank" rel="noopener noreferrer">Release verification</a> records these results, Python 3.11/3.12 checks, and live research/export checks. Automated tests mock external API calls.</p>
+          <div class="validation"><div><h4>Release checks</h4><p>Live research, source links, AI insights, and downloads were checked in the deployed app.</p></div><div><h4>Still unmeasured</h4><p>External usability, independent citation accuracy, repeat usage, and business impact. Linked sources still need review; engineering tests do not establish customer adoption.</p></div></div>
         </div>
       </section>
 
       <section class="chapter" id="next" aria-labelledby="next-heading">
-        <h2 class="chapter-label" id="next-heading"><span>08</span>Future roadmap</h2>
+        <h2 class="chapter-label" id="next-heading"><span>08</span>Next Steps</h2>
         <div class="chapter-body">
-          <h3>Validate the workflow before expanding the platform.</h3>
-          <p class="note">Proposed next steps, not shipped capabilities or completed studies.</p>
-          <ol class="roadmap"><li><strong>External user testing</strong><span>Observe intended users completing a comparison and explaining their decision.</span></li><li><strong>Independent citation evaluation</strong><span>Audit whether each linked source supports the claim and its scope.</span></li><li><strong>Better research context</strong><span>Test product URLs, category context, and plan selection to reduce ambiguity.</span></li><li><strong>Workflow usability</strong><span>Prioritize friction found in source review, correction, and exporting.</span></li><li><strong>Persistent workspaces</strong><span>Consider saved and shared work only if recurring demand is validated.</span></li></ol>
+          <h3>What I would test next</h3>
+          <ol class="roadmap"><li><strong>User testing</strong><span>Observe intended users preparing and explaining a comparison.</span></li><li><strong>Citation review</strong><span>Check whether sources support each claim and its scope.</span></li><li><strong>Research context</strong><span>Test product URLs, categories, and plan selection.</span></li><li><strong>Usability improvements</strong><span>Address friction in source review, editing, and exports.</span></li><li><strong>Saved workspaces</strong><span>Consider saving and sharing if recurring demand emerges.</span></li></ol>
         </div>
       </section>
     </main>
 
     <section class="closing" aria-label="Explore Vantage AI">
-      <div><h2>Explore the product behind the decisions.</h2><p class="note">Start with the clearly labeled demonstration; review the sources in a live comparison when available.</p></div>
-      <div class="actions"><a class="button button--primary" href="https://vantageai.streamlit.app/" target="_blank" rel="noopener noreferrer">Try Live Product <span aria-hidden="true">↗</span></a><a class="button" href="https://github.com/Anish-G13/Vantage-AI" target="_blank" rel="noopener noreferrer">View Source Code <span aria-hidden="true">↗</span></a></div>
+      <div><h2>Try Vantage AI</h2><p class="note">Explore the demo or start a live comparison.</p></div>
+      <div class="actions"><a class="button button--primary" href="https://vantageai.streamlit.app/" target="_blank" rel="noopener noreferrer">Try the App <span aria-hidden="true">↗</span></a><a class="button" href="https://github.com/Anish-G13/Vantage-AI" target="_blank" rel="noopener noreferrer">View Source Code <span aria-hidden="true">↗</span></a></div>
     </section>
-    <footer><span>Anish Gudipaati · Vanderbilt University · Economics + CS</span><nav aria-label="Footer navigation"><a href="product-strategy.html">All Product Work</a><a href="index.html">Portfolio Home</a><a href="mailto:anishsai.r.gudipaati@vanderbilt.edu">Email</a><a href="https://linkedin.com/in/anishgudipaati" target="_blank" rel="noopener noreferrer">LinkedIn</a></nav></footer>
+    <footer><span>Anish Gudipaati · Vanderbilt University · Economics + CS</span><nav aria-label="Footer navigation"><a href="product-strategy.html">Product &amp; Strategy</a><a href="index.html">Portfolio Home</a><a href="mailto:anishsai.r.gudipaati@vanderbilt.edu">Email</a><a href="https://linkedin.com/in/anishgudipaati" target="_blank" rel="noopener noreferrer">LinkedIn</a></nav></footer>
   </div>
   <script>
     const sectionLinks = [...document.querySelectorAll('.toc a')];
