@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Anish Gudipaati’s product portfolio: Vantage AI, a publicly deployed competitive intelligence product, plus SiteFlow, CapStack, and DraftDesk product strategy case studies.">
+<meta name="description" content="Vantage AI, an app I built and deployed, and three product concepts covering PRDs, wireframes, competitor research, and prioritization.">
 <title>Product &amp; Strategy · Anish Gudipaati</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -388,6 +388,7 @@
   .portfolio-nav a:hover { color:var(--accent); }
   .portfolio-nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); }
   .memo-head h1.title { max-width:none; }
+  .concept-note { margin:28px 0 0; color:var(--ink-soft); font-size:13px; line-height:1.65; max-width:66ch; }
 </style>
 </head>
 <body>
@@ -396,64 +397,46 @@
 
   <!-- MEMO HEADER -->
   <header class="memo-head">
-    <a class="section-back" href="index.html">← Choose a focus</a>
+    <a class="section-back" href="index.html">← Portfolio home</a>
     <div class="memo-bar"><span>Product &amp; Strategy</span><span>October 2026</span></div>
     <nav class="portfolio-nav" aria-label="Portfolio sections"><a href="investment-research.html">Investment Research</a><a href="private-equity.html">Private Equity</a><a href="product-strategy.html" aria-current="page">Product &amp; Strategy</a></nav>
-    <dl class="memo-fields">
-      <dt>Re</dt>
-      <dd>One publicly deployed product and three product concepts</dd>
-      <dt>From</dt>
-      <dd>Anish Gudipaati</dd>
-    </dl>
-    <h1 class="title">Product thinking,<br><em>built &amp; documented.</em></h1>
-    <p class="lede">A publicly deployed AI product and three product strategy case studies, spanning competitive positioning, product requirements, execution, and evaluation plans.</p>
+    <h1 class="title">Product Development<br><em>&amp; Strategy</em></h1>
+    <p class="lede">I built Vantage AI and explored three product ideas through PRDs, wireframes, competitor research, and test plans.</p>
 
-    <div class="byline">
-      <div class="byline-item">
-        <span class="byline-label">Author</span>
-        <span class="byline-value">Anish Gudipaati</span>
-      </div>
-      <div class="byline-item">
-        <span class="byline-label">School</span>
-        <span class="byline-value">Vanderbilt University · Economics + CS</span>
-      </div>
-      <div class="byline-item">
-        <span class="byline-label">Focus</span>
-        <span class="byline-value">Product ownership · Strategy · Execution</span>
-      </div>
-    </div>
   </header>
 
   <main id="work">
     <div class="exhibits-intro">
-      <span class="exhibits-label">Exhibits</span>
+      <span class="exhibits-label">Projects</span>
     </div>
 
     <!-- EXHIBIT A: Vantage AI -->
     <article class="exhibit" id="vantage-ai">
-      <div class="exhibit-tag"><span><span class="label">Exhibit A</span> · Shipped AI Product</span><span class="count">01 / 04</span></div>
+      <div class="exhibit-tag"><span class="label">Deployed product</span><span class="count">01 / 04</span></div>
       <h3 class="exhibit-title">Vantage AI</h3>
-      <p class="exhibit-tagline">From competitive intelligence to actionable product decisions</p>
-      <p class="exhibit-desc">Designed, developed, and launched an AI-powered competitive intelligence platform combining source-backed research, editable feature assessments, interactive benchmarking, and roadmap prioritization. The case study follows the product from its original comparison workflow to a deployed workspace with evidence review and human control.</p>
+      <p class="exhibit-tagline">Competitor research and feature planning</p>
+      <p class="exhibit-desc">I designed, built, and deployed this Python and Gemini app to compare competitors and prioritize product features. The case study covers the first release and the improvements I made in V2.</p>
       <div class="ledger"><div class="ledger-row"><span class="ledger-label">Role</span><span class="ledger-value">Product Owner &amp; Developer</span></div><div class="ledger-row"><span class="ledger-label">Status</span><span class="ledger-value">Publicly deployed · Version 2.0</span></div><div class="ledger-row ledger-row--star"><span class="ledger-label">Release validation</span><span class="ledger-value">94 passing automated tests · 95% core module coverage</span></div></div>
-      <div class="deliverables"><span class="deliverables-label">Product scope</span><span class="deliverables-list">Cited AI Research · Human Review · Weighted Benchmarking · Impact/Effort Roadmap · Executive Exports</span></div>
-      <div class="actions"><a href="vantage-ai.html" class="action action--primary">View Case Study <span class="arrow" aria-hidden="true">→</span></a><a href="https://vantageai.streamlit.app/" class="action" target="_blank" rel="noopener noreferrer">Try Live Product <span class="arrow" aria-hidden="true">↗</span></a></div>
+      <div class="deliverables"><span class="deliverables-label">Features</span><span class="deliverables-list">Cited research · Editable ratings · Charts · Roadmap priorities · PDF &amp; CSV exports</span></div>
+      <div class="actions"><a href="vantage-ai.html" class="action action--primary">View Case Study <span class="arrow" aria-hidden="true">→</span></a><a href="https://vantageai.streamlit.app/" class="action" target="_blank" rel="noopener noreferrer">Try the App <span class="arrow" aria-hidden="true">↗</span></a></div>
     </article>
+
+    <p class="concept-note">SiteFlow, CapStack, and DraftDesk are unlaunched concepts. Their market estimates, pricing, revenue scenarios, and pilot goals are planning assumptions.</p>
 
     <!-- EXHIBIT B: SiteFlow -->
     <article class="exhibit">
       <div class="exhibit-tag">
-        <span><span class="label">Exhibit B</span> · Healthtech</span>
+        <span><span class="label">Product concept</span> · Healthtech</span>
         <span class="count">02 / 04</span>
       </div>
       <h3 class="exhibit-title">SiteFlow</h3>
-      <p class="exhibit-tagline">Mobile-first workflow automation for Clinical Research Coordinators</p>
-      <p class="exhibit-desc">SiteFlow is a proposed mobile workflow for coordinators at small independent clinical research sites. It focuses on visit documentation and investigator review. Existing tools such as Veeva SiteVault already serve sites; the case study tests whether a narrower workflow can reduce total administrative time enough to justify a paid product.</p>
+      <p class="exhibit-tagline">Visit documentation for clinical research coordinators</p>
+      <p class="exhibit-desc">A mobile app concept for documenting clinical research visits and sending reports for investigator review. I focused on small independent sites and existing tools such as Veeva SiteVault.</p>
 
       <div class="ledger">
         <div class="ledger-row">
-          <span class="ledger-label">Market input</span>
-          <span class="ledger-value">9,700 sites · original planning estimate</span>
+          <span class="ledger-label">Market estimate</span>
+          <span class="ledger-value">9,700 sites</span>
         </div>
         <div class="ledger-row">
           <span class="ledger-label">Proposed pricing</span>
@@ -465,35 +448,35 @@
         </div>
         <div class="ledger-row ledger-row--star">
           <span class="ledger-label">Pilot goal</span>
-          <span class="ledger-value">≥30% less administrative time per visit, without worse completeness</span>
+          <span class="ledger-value">≥30% less administrative time per visit, without reducing completeness</span>
         </div>
       </div>
 
       <div class="deliverables">
-        <span class="deliverables-label">Deliverables</span>
-        <span class="deliverables-list">Customer Discovery · PRD v2 · Competitive Analysis · Case Study · Validation Plan · Workflow Requirements</span>
+        <span class="deliverables-label">Project files</span>
+        <span class="deliverables-list">PRD v2 · Competitive analysis · Metrics · Test plan</span>
       </div>
 
       <div class="actions">
-        <a href="siteflow-onepager.html" class="action action--primary" target="_blank">One-Pager <span class="arrow">→</span></a>
-        <a href="siteflow-prd.docx" class="action" target="_blank">Full PRD <span class="arrow">→</span></a>
+        <a href="siteflow-onepager.html" class="action action--primary" target="_blank">View Case Study <span class="arrow">→</span></a>
+        <a href="siteflow-prd.docx" class="action" target="_blank">Read PRD <span class="arrow">→</span></a>
       </div>
     </article>
 
     <!-- EXHIBIT C: CapStack -->
     <article class="exhibit">
       <div class="exhibit-tag">
-        <span><span class="label">Exhibit C</span> · Fintech</span>
+        <span><span class="label">Product concept</span> · Fintech</span>
         <span class="count">03 / 04</span>
       </div>
       <h3 class="exhibit-title">CapStack</h3>
-      <p class="exhibit-tagline">Mobile-first cross-account scenario planning for active retail investors</p>
-      <p class="exhibit-desc">CapStack is a proposed cross-account planning tool for active investors aged roughly 22–35. It compares two ways to allocate the same contribution across existing accounts, with visible assumptions. Empower and Boldin already offer planning and linked accounts; the opportunity is a faster, clearer contribution decision.</p>
+      <p class="exhibit-tagline">Investment planning across multiple accounts</p>
+      <p class="exhibit-desc">A planning app concept for comparing two ways to invest the same contribution across existing accounts. I considered active investors aged 22–35 and alternatives such as Empower and Boldin.</p>
 
       <div class="ledger">
         <div class="ledger-row">
-          <span class="ledger-label">Market input</span>
-          <span class="ledger-value">52M investors · original research estimate</span>
+          <span class="ledger-label">Market estimate</span>
+          <span class="ledger-value">52M investors</span>
         </div>
         <div class="ledger-row">
           <span class="ledger-label">Proposed pricing</span>
@@ -510,30 +493,30 @@
       </div>
 
       <div class="deliverables">
-        <span class="deliverables-label">Deliverables</span>
-        <span class="deliverables-list">Customer Discovery · PRD v2 · Competitive Analysis · Case Study · Validation Plan · Workflow Requirements</span>
+        <span class="deliverables-label">Project files</span>
+        <span class="deliverables-list">PRD v2 · Competitive analysis · Metrics · Test plan</span>
       </div>
 
       <div class="actions">
-        <a href="capstack-onepager.html" class="action action--primary" target="_blank">One-Pager <span class="arrow">→</span></a>
-        <a href="capstack-prd.docx" class="action" target="_blank">Full PRD <span class="arrow">→</span></a>
+        <a href="capstack-onepager.html" class="action action--primary" target="_blank">View Case Study <span class="arrow">→</span></a>
+        <a href="capstack-prd.docx" class="action" target="_blank">Read PRD <span class="arrow">→</span></a>
       </div>
     </article>
 
     <!-- EXHIBIT D: DraftDesk -->
     <article class="exhibit">
       <div class="exhibit-tag">
-        <span><span class="label">Exhibit D</span> · AI Productivity</span>
+        <span><span class="label">Product concept</span> · AI Productivity</span>
         <span class="count">04 / 04</span>
       </div>
       <h3 class="exhibit-title">DraftDesk</h3>
-      <p class="exhibit-tagline">Source-linked QBRs and escalation summaries for customer success teams</p>
-      <p class="exhibit-desc">DraftDesk is a proposed drafting workflow for customer success managers producing QBRs and escalation summaries. It combines permitted account context with source-linked facts and human review. Microsoft and Notion already connect business context; the case study focuses on reducing preparation and review time for these specific documents.</p>
+      <p class="exhibit-tagline">Quarterly reviews and escalation summaries for customer success teams</p>
+      <p class="exhibit-desc">An AI writing tool concept for customer success teams preparing quarterly reviews and escalation summaries. Drafts would cite account records and require human review. I compared the idea with Microsoft and Notion.</p>
 
       <div class="ledger">
         <div class="ledger-row">
-          <span class="ledger-label">Market input</span>
-          <span class="ledger-value">70M+ US knowledge workers · broad research estimate</span>
+          <span class="ledger-label">Market estimate</span>
+          <span class="ledger-value">70M+ US knowledge workers</span>
         </div>
         <div class="ledger-row">
           <span class="ledger-label">Proposed pricing</span>
@@ -550,13 +533,13 @@
       </div>
 
       <div class="deliverables">
-        <span class="deliverables-label">Deliverables</span>
-        <span class="deliverables-list">Customer Discovery · PRD v2 · Competitive Analysis · Case Study · Validation Plan · Workflow Requirements</span>
+        <span class="deliverables-label">Project files</span>
+        <span class="deliverables-list">PRD v2 · Competitive analysis · Metrics · Test plan</span>
       </div>
 
       <div class="actions">
-        <a href="draftdesk-onepager.html" class="action action--primary" target="_blank">One-Pager <span class="arrow">→</span></a>
-        <a href="draftdesk-prd.docx" class="action" target="_blank">Full PRD <span class="arrow">→</span></a>
+        <a href="draftdesk-onepager.html" class="action action--primary" target="_blank">View Case Study <span class="arrow">→</span></a>
+        <a href="draftdesk-prd.docx" class="action" target="_blank">Read PRD <span class="arrow">→</span></a>
       </div>
     </article>
   </main>
